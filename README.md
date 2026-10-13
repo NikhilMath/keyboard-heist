@@ -38,6 +38,7 @@ Then open http://localhost:8000.
 | `BRANCHES.md` | A flowchart of every branch plus the full story text (**spoilers**) |
 | `story-map.txt`, `spine-draft.txt` | Planning notes from writing the story |
 | `tools/branches.js` | Rebuilds `BRANCHES.md` from the story |
+| `story-lock.json`, `tools/lock.js` | The story is locked: a fingerprint of every scene, and a check that none of them changed |
 | `AGENTS.md` | Instructions for AI assistants that work on this project |
 
 ## Help and contact

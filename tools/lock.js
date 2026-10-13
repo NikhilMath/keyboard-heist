@@ -1,0 +1,95 @@
+// Story lock (user's direction, 2026-10-13): checks that no locked scene or scene drawing in index.html has changed.
+// Only the user can unlock a scene, by saying so in chat. See "Story lock" at the top of AGENTS.md.
+// Run from the repo root before every commit:
+//   osascript -l JavaScript tools/lock.js            (or: node tools/lock.js)
+// Only after the user has unlocked something in chat and the change is done:
+//   osascript -l JavaScript tools/lock.js relock     accepts the new version of the scenes already locked
+//   osascript -l JavaScript tools/lock.js lock-all   also locks every scene and drawing not locked yet
+// Never relock a change the user did not unlock.
+
+const isJXA = typeof ObjC !== 'undefined';
+if (isJXA) { ObjC.import('Foundation'); ObjC.import('stdlib'); }
+
+function read(file) {
+  if (isJXA) return $.NSString.stringWithContentsOfFileEncodingError(file, $.NSUTF8StringEncoding, null).js;
+  return require('fs').readFileSync(file, 'utf8');
+}
+function write(file, text) {
+  if (isJXA) return $(text).writeToFileAtomicallyEncodingError(file, true, $.NSUTF8StringEncoding, null);
+  require('fs').writeFileSync(file, text);
+}
+function quit(code) { if (isJXA) $.exit(code); else process.exit(code); }
+
+const root = isJXA ? $.NSFileManager.defaultManager.currentDirectoryPath.js : process.cwd();
+const args = isJXA ? ObjC.deepUnwrap($.NSProcessInfo.processInfo.arguments) : process.argv;
+const mode = args.includes('relock') ? 'relock' : args.includes('lock-all') ? 'lock-all' : 'check';
+const html = read(root + '/index.html');
+
+// Cut the STORY object literal out of the script by matching braces (skipping strings), as tools/branches.js does.
+const start = html.indexOf('const STORY = ') + 'const STORY = '.length;
+let depth = 0, i = start;
+for (;; i++) {
+  const c = html[i];
+  if (c === '"') { i++; while (html[i] !== '"') { if (html[i] === '\\') i++; i++; } continue; }
+  if (c === '{') depth++;
+  else if (c === '}' && --depth === 0) break;
+}
+const STORY = JSON.parse(html.slice(start, i + 1));
+
+// Each drawing is one line inside VIGNETTES: " id:{alt:'...',svg:'...'},".
+const drawings = {};
+const block = html.slice(html.indexOf('const VIGNETTES={'));
+for (const line of block.slice(0, block.indexOf('\n};')).split('\n').slice(1)) {
+  const m = line.match(/^ ([a-z0-9_]+):(\{.*\}),?$/);
+  if (m) drawings[m[1]] = m[2];
+}
+
+// A 53-bit string hash (cyrb53). Any change to a scene's words, choices, flags or drawing changes it.
+function hash(str) {
+  let h1 = 0xdeadbeef, h2 = 0x41c6ce57;
+  for (let k = 0; k < str.length; k++) {
+    const ch = str.charCodeAt(k);
+    h1 = Math.imul(h1 ^ ch, 2654435761);
+    h2 = Math.imul(h2 ^ ch, 1597334677);
+  }
+  h1 = Math.imul(h1 ^ (h1 >>> 16), 2246822507) ^ Math.imul(h2 ^ (h2 >>> 13), 3266489909);
+  h2 = Math.imul(h2 ^ (h2 >>> 16), 2246822507) ^ Math.imul(h1 ^ (h1 >>> 13), 3266489909);
+  return (4294967296 * (2097151 & h2) + (h1 >>> 0)).toString(16).padStart(14, '0');
+}
+const now = {
+  scenes: Object.fromEntries(Object.keys(STORY).map(id => [id, hash(JSON.stringify(STORY[id]))])),
+  drawings: Object.fromEntries(Object.keys(drawings).map(id => [id, hash(drawings[id])]))
+};
+
+const lockFile = root + '/story-lock.json';
+let lock = null;
+try { lock = JSON.parse(read(lockFile)); } catch (e) { lock = null; }
+const today = new Date().toISOString().slice(0, 10);
+const about = 'Fingerprints of the locked story. Only the user can unlock a scene, by saying so in chat. See "Story lock" in AGENTS.md. Rewrite this file only with tools/lock.js relock or lock-all, and only for a change the user unlocked.';
+
+if (mode !== 'check') {
+  const next = { about, lockedOn: lock ? lock.lockedOn : today, updated: today, scenes: {}, drawings: {} };
+  for (const kind of ['scenes', 'drawings']) {
+    const ids = mode === 'lock-all' || !lock ? Object.keys(now[kind]) : Object.keys(lock[kind]).filter(id => id in now[kind]);
+    for (const id of ids) next[kind][id] = now[kind][id];
+  }
+  write(lockFile, JSON.stringify(next, null, 2) + '\n');
+  console.log(`Story lock: ${mode} wrote ${Object.keys(next.scenes).length} scenes and ${Object.keys(next.drawings).length} drawings to story-lock.json.`);
+  quit(0);
+}
+
+if (!lock) { console.log('Story lock: BROKEN. story-lock.json is missing or unreadable.'); quit(1); }
+const problems = [], unlocked = [];
+for (const kind of ['scenes', 'drawings']) {
+  for (const id of Object.keys(lock[kind])) {
+    if (!(id in now[kind])) problems.push(`${kind === 'scenes' ? 'scene' : 'drawing'} ${id} was removed`);
+    else if (now[kind][id] !== lock[kind][id]) problems.push(`${kind === 'scenes' ? 'scene' : 'drawing'} ${id} was changed`);
+  }
+  for (const id of Object.keys(now[kind])) if (!(id in lock[kind])) unlocked.push(`${kind === 'scenes' ? 'scene' : 'drawing'} ${id}`);
+}
+if (unlocked.length) console.log('Not locked (new since the lock, allowed): ' + unlocked.join(', '));
+if (problems.length) {
+  console.log('Story lock: BROKEN. ' + problems.join('; ') + '. Undo it unless the user unlocked exactly this in chat.');
+  quit(1);
+}
+console.log(`Story lock: OK. ${Object.keys(lock.scenes).length} locked scenes and ${Object.keys(lock.drawings).length} locked drawings are unchanged.`);
