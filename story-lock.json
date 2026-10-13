@@ -189,6 +189,167 @@
         "0b8408cba22bd4"
       ]
     },
+    "mom_lands": {
+      "rest": "158d21b1098fa2",
+      "text": [
+        "0f50af7ddc2e9f",
+        "17e605054d989b",
+        "0829a3f75101a3",
+        "0c99fa05dafbd2",
+        "1c83aec2218a9f"
+      ],
+      "choices": [
+        "0bf1045c21ba21",
+        "0dca1c2d24466b"
+      ]
+    },
+    "field_trip": {
+      "rest": "1abf99506761e6",
+      "text": [
+        "0fe39b48777761",
+        "059df524a5abdb",
+        "1932aa6622407f",
+        "0b5b0593d1618a"
+      ],
+      "choices": [
+        "0370a6b637a596"
+      ]
+    },
+    "closing_time": {
+      "rest": "09c897e4fdfbee",
+      "text": [
+        "19238ad63145e1",
+        "1468461b046ffc",
+        "11c8a050dec05d",
+        "1dcf7267adc126"
+      ],
+      "choices": [
+        "0891d1d36cd5ab"
+      ]
+    },
+    "moon_rock": {
+      "rest": "1af25e0d542867",
+      "text": [
+        "024b355258036e",
+        "09bfd91363c2d4",
+        "08fa6cc5ba22ed",
+        "1672938bb531e1",
+        "09f83ad0291470"
+      ],
+      "choices": [
+        "05091aa29fb198",
+        "1e534a9eb51c7d"
+      ]
+    },
+    "printer_kennedy": {
+      "rest": "152f7a0b2b95f9",
+      "text": [
+        "064986c2bc191b",
+        "184ce0cea06137",
+        "01888b42e9127d",
+        "0cc2e89027b034"
+      ],
+      "choices": [
+        "1c7ffb0b3d7234"
+      ]
+    },
+    "crew_supplies": {
+      "rest": "0f887e8f506fc9",
+      "text": [
+        "09652bb8e6d8e4",
+        "1b7068ab8ed76c",
+        "1d2b0165b1864d",
+        "1184921aa4dbf4"
+      ],
+      "choices": [
+        "18c5de8fe465a8"
+      ]
+    },
+    "liftoff": {
+      "rest": "147c33e03b5d41",
+      "text": [
+        "1c6a41facf4944",
+        "17c10ff87ae30f",
+        "08992ac96c353a",
+        "1dae21ca51860b",
+        "14ec27dc059db5"
+      ],
+      "choices": [
+        "09c97c3820dd62",
+        "190bdbede830a4"
+      ]
+    },
+    "lights_out": {
+      "rest": "0c2356612aee8f",
+      "text": [
+        "0398e92f61e825",
+        "0ab363d6a6182a",
+        "1b86e21a768c86",
+        "0bbd34d5374703"
+      ],
+      "choices": [
+        "12b3885b43e6ea"
+      ]
+    },
+    "mom_tour": {
+      "rest": "115fc665cd8d1f",
+      "text": [
+        "0e99067c39ed05",
+        "09b1e19c433c0b",
+        "16cb1a566396fa",
+        "196f4037b9a422"
+      ],
+      "choices": [
+        "14bd2798a368d1"
+      ]
+    },
+    "toilet": {
+      "rest": "0887fee466cce7",
+      "text": [
+        "1ef8f936f8ba0d",
+        "07ebf1d2a7d8de",
+        "12ba788f5bd5bc",
+        "05c1a120d011e4"
+      ],
+      "choices": [
+        "0cbe423ea6de88",
+        "072a7098fd49a9"
+      ]
+    },
+    "escape_pod": {
+      "rest": "030c57a147707b",
+      "text": [
+        "0d6add828011c2",
+        "12a23f8f8f331c",
+        "168249afc22ab0",
+        "091027be0d764a"
+      ],
+      "choices": [
+        "036e647e9b253d"
+      ]
+    },
+    "spice": {
+      "rest": "19fa9acdfdbe2a",
+      "text": [
+        "1a5935c68a0f84",
+        "1552eabef861b9",
+        "087f208d182041",
+        "079037b1b0dc92",
+        "0d5856222328ac"
+      ],
+      "choices": []
+    },
+    "far_side": {
+      "rest": "0cdedb9d724bc3",
+      "text": [
+        "06dc66bb778ba2",
+        "081b4c564e5d91",
+        "1e812da8d51848",
+        "0345ddc509c589",
+        "19d388d105e124"
+      ],
+      "choices": []
+    },
     "end_method": {
       "rest": "1021da10b9ba7b",
       "text": [
@@ -772,6 +933,19 @@
     "jordan_together": "1c5f5b0cfeeb0d",
     "jordan_breakup": "1a1572f645390f",
     "end_mom": "0d152cd240dfbc",
+    "mom_lands": "0d4fc52d873e48",
+    "field_trip": "0ed38f5b65818a",
+    "closing_time": "19b1c9c7e09c01",
+    "moon_rock": "07d6ce277b6c21",
+    "printer_kennedy": "1a221e8144863b",
+    "crew_supplies": "08c68cc189b39f",
+    "liftoff": "0795df6f5d0045",
+    "lights_out": "0eade1c271c322",
+    "mom_tour": "1b42f7975599c5",
+    "toilet": "0f7ac9241b217d",
+    "escape_pod": "0d8d24602ccb8e",
+    "spice": "185b554c05d0b0",
+    "far_side": "19ceab7b04d502",
     "end_method": "0dd18bbb91a682",
     "end_red": "12a88f9c328cf0",
     "end_running": "09985ab4d17bbc",
