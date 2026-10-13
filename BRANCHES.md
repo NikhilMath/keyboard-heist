@@ -622,7 +622,7 @@ A pitchfork given for keeps comes with its owner’s job. It’s in the bylaws. 
 
 Your desk faces a wall of monitors. On every one, an IT Support Manager is reading “Driver unavailable.” You tap a key with the pitchfork. A printer in Tulsa stops working.
 
-You hate printer drivers, and you are extraordinary at this. It’s the most alive you’ve felt in years.
+You hate printer drivers, and you are extraordinary at this. You just weren’t expecting to do it for the rest of your life.
 
 *The end.*
 
