@@ -1,4 +1,4 @@
-// Rebuilds BRANCHES.md (a Mermaid flowchart of every scene and a clickable scene index) from STORY in index.html.
+// Rebuilds BRANCHES.md (a Mermaid flowchart with every choice on its arrow, a scene index, and the full story text) from STORY in index.html.
 // Run from the repo root after any change to the story graph:
 //   node tools/branches.js
 //   osascript -l JavaScript tools/branches.js   (macOS without node)
@@ -73,7 +73,9 @@ if (hell.length) {
 const hellEdges = [];
 let edge = 0;
 for (const id of ids) for (const c of STORY[id].choices || []) {
-  mer.push(`  ${id} --> ${c.next}`);
+  // Each arrow carries the choice you click, with its stamp, so the chart reads as the story.
+  const choiceText = (c.stamp ? c.stamp.toUpperCase() + ': ' : '') + c.label;
+  mer.push(`  ${id} -->|"${choiceText.replace(/"/g, '#quot;')}"| ${c.next}`);
   if (STORY[id].hell) hellEdges.push(edge);
   edge++;
 }
@@ -91,12 +93,26 @@ mer.push(
 );
 
 const cell = text => text.replace(/\|/g, '\\|');
-const table = ['| Scene | Kind | Leads to |', '| --- | --- | --- |'];
+const table = ['| Scene | Kind | Leads to | Code |', '| --- | --- | --- | --- |'];
 for (const id of ids) {
   const s = STORY[id];
   const name = s.ending ? (s.name || s.title) : s.title;
-  const next = (s.choices || []).map(c => `[\`${c.next}\`](index.html#L${lineOf[c.next]})`).join(', ') || '(end)';
-  table.push(`| [${cell(name)}](index.html#L${lineOf[id]}) \`${id}\`${s.hell ? ' (Hell)' : ''} | ${kind(id)} | ${next} |`);
+  const next = (s.choices || []).map(c => `[\`${c.next}\`](#${c.next})`).join(', ') || '(end)';
+  table.push(`| [${cell(name)}](#${id}) \`${id}\`${s.hell ? ' (Hell)' : ''} | ${kind(id)} | ${next} | [code](index.html#L${lineOf[id]}) |`);
+}
+
+// The full story: every scene's text and choices, each with an anchor the table and choices link to.
+const story = [];
+for (const id of ids) {
+  const s = STORY[id];
+  story.push(`<a name="${id}"></a>`, '', `### ${s.title}`, '');
+  story.push(`\`${id}\` · ${kind(id)}${s.ending ? ': ' + (s.name || s.title) : ''}${s.hell ? ' · Hell' : ''}`, '');
+  for (const p of s.text) story.push(p, '');
+  if (s.ticket) story.push(`> **From:** ${s.ticket.from}<br>`, `> **Subject:** ${s.ticket.subject}<br>`, `> ${s.ticket.body}`, '');
+  for (const p of s.afterTicket || []) story.push(p, '');
+  for (const c of s.choices || []) story.push(`- ${c.stamp ? '**' + c.stamp.toUpperCase() + '** ' : ''}[${c.label}](#${c.next}) *${c.hint}*`);
+  if (s.choices) story.push('');
+  if (s.finale) story.push('*The end.*', '');
 }
 
 const real = ids.filter(id => STORY[id].finale).length;
@@ -113,10 +129,15 @@ const doc = [
   '',
   '## Every scene',
   '',
-  'Each link opens that scene in `index.html`.',
+  'Each scene name jumps to its full text below; “code” opens it in `index.html`.',
   '',
   ...table,
-  ''
+  '',
+  '## The full story',
+  '',
+  'Every scene in story order, with its choices. Click a choice to jump to the scene it leads to.',
+  '',
+  ...story
 ].join('\n');
 
 write(root + '/BRANCHES.md', doc);

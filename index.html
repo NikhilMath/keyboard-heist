@@ -355,13 +355,13 @@ const STORY = {
     ],
     "choices": [
       {
-        "label": "Sign in.",
-        "hint": "It’s a lanyard. You know how lanyards work.",
+        "label": "Sign in. Keep the keyboard.",
+        "hint": "Everyone brings something. You brought someone else’s.",
         "stamp": "sin",
         "next": "hell_orientation"
       },
       {
-        "label": "Run back up the stairs.",
+        "label": "Run back up and face it.",
         "hint": "Up has to be somewhere. So does everything you ran from.",
         "stamp": "virtue",
         "next": "hell_upstairs"
@@ -370,7 +370,7 @@ const STORY = {
   },
   "hell_upstairs": {
     "location": "Ending · Not the hero",
-    "title": "Run back up the stairs.",
+    "title": "Run back up and face it.",
     "hell": true,
     "ending": true,
     "text": [
@@ -393,14 +393,14 @@ const STORY = {
     ],
     "choices": [
       {
-        "label": "Keep holding it. Walk out.",
+        "label": "Steal it. Walk out.",
         "hint": "Nobody stops someone who looks busy.",
         "stamp": "sin",
         "next": "hell_grab"
       },
       {
         "label": "Hand it back. Smile.",
-        "hint": "It isn’t yours. Not yet.",
+        "hint": "It isn’t yours.",
         "stamp": "virtue",
         "next": "hell_plan"
       }
@@ -408,7 +408,7 @@ const STORY = {
   },
   "hell_grab": {
     "location": "Day one · Then that night",
-    "title": "Keep holding it. Walk out.",
+    "title": "Steal it. Walk out.",
     "hell": true,
     "text": [
       "You walk out of the safety video holding the pitchfork, like you have somewhere to be. Nobody stops you.",
@@ -416,13 +416,13 @@ const STORY = {
     ],
     "choices": [
       {
-        "label": "Say nothing.",
+        "label": "Say nothing. Let them take the fall.",
         "hint": "They’ll be fine in Ohio. Probably.",
         "stamp": "sin",
         "next": "hell_quiet"
       },
       {
-        "label": "Give it back.",
+        "label": "Give it back before morning.",
         "hint": "Walk it over. Hope nobody asks why you had it.",
         "stamp": "virtue",
         "next": "hell_committee"
@@ -431,7 +431,7 @@ const STORY = {
   },
   "hell_committee": {
     "location": "Ending · Then every Tuesday",
-    "title": "Give it back.",
+    "title": "Give it back before morning.",
     "hell": true,
     "ending": true,
     "text": [
@@ -444,7 +444,7 @@ const STORY = {
   },
   "hell_quiet": {
     "location": "Day two · Then day three",
-    "title": "Say nothing.",
+    "title": "Say nothing. Let them take the fall.",
     "hell": true,
     "text": [
       "You say nothing. You’re better at this than you should be.",
@@ -459,8 +459,8 @@ const STORY = {
         "next": "hell_devil"
       },
       {
-        "label": "File Form 666 to bring them back.",
-        "hint": "There’s always a form.",
+        "label": "Confess on Form 666. Bring them back.",
+        "hint": "There’s always a form. Even for this.",
         "stamp": "virtue",
         "next": "hell_form"
       }
@@ -468,7 +468,7 @@ const STORY = {
   },
   "hell_form": {
     "location": "Ending · Pending",
-    "title": "File Form 666 to bring them back.",
+    "title": "Confess on Form 666. Bring them back.",
     "hell": true,
     "ending": true,
     "text": [
@@ -490,14 +490,14 @@ const STORY = {
     ],
     "choices": [
       {
-        "label": "Offer him the keyboard.",
-        "hint": "It was the most important thing in your life last week.",
+        "label": "Sell him Daniel’s keyboard.",
+        "hint": "It was never yours to sell. That never stopped you.",
         "stamp": "sin",
         "next": "hell_job"
       },
       {
-        "label": "Keep the keyboard. Walk out.",
-        "hint": "Some things you don’t sell. Probably.",
+        "label": "Refuse. Walk out.",
+        "hint": "Some things you don’t sell, even here.",
         "stamp": "virtue",
         "next": "hell_plateau"
       }
@@ -505,7 +505,7 @@ const STORY = {
   },
   "hell_job": {
     "location": "Ending · Driver unavailable",
-    "title": "Offer him the keyboard.",
+    "title": "Sell him Daniel’s keyboard.",
     "hell": true,
     "ending": true,
     "text": [
@@ -619,13 +619,13 @@ const STORY = {
     ],
     "choices": [
       {
-        "label": "Offer him the keyboard.",
+        "label": "Trade him Daniel’s keyboard.",
         "hint": "It was the most important thing in your life last week.",
         "stamp": "sin",
         "next": "hell_trade"
       },
       {
-        "label": "Say no.",
+        "label": "Say no. Give it all back.",
         "hint": "It isn’t yours to take. Neither is the keyboard.",
         "stamp": "virtue",
         "next": "hell_truth"
@@ -634,7 +634,7 @@ const STORY = {
   },
   "hell_trade": {
     "location": "Ending · Fair trade",
-    "title": "Offer him the keyboard.",
+    "title": "Trade him Daniel’s keyboard.",
     "hell": true,
     "ending": true,
     "text": [
@@ -648,7 +648,7 @@ const STORY = {
   },
   "hell_truth": {
     "location": "Day eleven · Then the express elevator",
-    "title": "Say no.",
+    "title": "Say no. Give it all back.",
     "hell": true,
     "text": [
       "“No,” you say. “It’s theirs.” You hold up the keyboard. “And this isn’t mine. I stole it from a very nice man, then left another one on the floor.”",
@@ -1162,7 +1162,8 @@ const HELL=new Set(ALL_SCENES.filter(id=>STORY[id].hell));
 // from Orientation on (Compliance opens your file there); the stamps on "The choice" and "Keep running."
 // show on their buttons but stay out of the record, so the 4 slots match the two ladders.
 const RECORD_SLOTS=4;
-function record(){const start=path.indexOf('hell_orientation'),out=[];if(start<0)return out;for(let i=start+1;i<path.length;i++){const c=STORY[path[i-1]].choices?.find(c=>c.next===path[i]);if(c?.stamp)out.push(c.stamp);}return out;}
+// Each entry is {stamp, at}: at is where that choice led in path, so a stamp can jump back to its branch.
+function record(){const start=path.indexOf('hell_orientation'),out=[];if(start<0)return out;for(let i=start+1;i<path.length;i++){const c=STORY[path[i-1]].choices?.find(c=>c.next===path[i]);if(c?.stamp)out.push({stamp:c.stamp,at:i});}return out;}
 let path=['arrival'];
 let seen=new Set();
 let canSave=true;
@@ -1270,12 +1271,14 @@ function render(focus=false){
  const container=document.getElementById('scene');container.replaceChildren();
  const title=document.createElement('h2');title.textContent=node.title;title.tabIndex=-1;container.append(title);
  if(HELL.has(path.at(-1))&&path.includes('hell_orientation')){
-  const stamps=record(),sins=stamps.filter(s=>s==='sin').length,virtues=stamps.length-sins;
+  const stamps=record(),sins=stamps.filter(s=>s.stamp==='sin').length,virtues=stamps.length-sins;
   const bar=document.createElement('div');bar.className='record';
   const name=document.createElement('span');name.className='record-label';name.textContent='Your record';
   const note=document.createElement('span');note.className='visually-hidden';note.textContent=': '+sins+(sins===1?' sin, ':' sins, ')+virtues+(virtues===1?' virtue.':' virtues.');
-  const slots=document.createElement('span');slots.className='record-slots';slots.setAttribute('aria-hidden','true');
-  for(let i=0;i<RECORD_SLOTS;i++){const slot=document.createElement('span');slot.className='record-slot'+(stamps[i]?' stamp stamp-'+stamps[i]:'');slot.textContent=stamps[i]||'';slots.append(slot);}
+  const slots=document.createElement('span');slots.className='record-slots';
+  // A stamp is a link back to the scene that choice led to (user's request), like the journey links; the latest one is where you are.
+  for(let i=0;i<RECORD_SLOTS;i++){const s=stamps[i],live=s&&s.at<path.length-1;const slot=document.createElement(live?'button':'span');slot.className='record-slot'+(s?' stamp stamp-'+s.stamp:'');slot.textContent=s?s.stamp:'';
+   if(live){slot.title='Go back to: '+STORY[path[s.at]].title;slot.setAttribute('aria-label',slot.title);slot.addEventListener('click',()=>{path=path.slice(0,s.at+1);render(true);});}else slot.setAttribute('aria-hidden','true');slots.append(slot);}
   bar.append(name,note,slots);container.append(bar);
  }
  const prose=document.createElement('div');prose.className='prose';node.text.forEach(text=>{const p=document.createElement('p');p.textContent=text;prose.append(p);});container.append(prose);

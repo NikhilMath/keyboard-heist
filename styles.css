@@ -350,6 +350,9 @@ html.hell {
 }
 .record-slot.stamp { border-style: solid; padding: 0 6px; }
 .record-slot:nth-child(even).stamp { transform: rotate(2deg); }
+/* Earlier stamps are buttons that jump back to that branch. */
+button.record-slot { background: transparent; font-family: inherit; cursor: pointer; transition: background .18s; }
+button.record-slot:hover { background: rgba(255, 90, 60, .14); }
 .hell .key-earth { display: none; }
 .hell .key-hell { display: inline; }
 
