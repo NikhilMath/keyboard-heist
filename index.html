@@ -1468,7 +1468,7 @@ const ALL_ENDINGS=ALL_SCENES.filter(id=>STORY[id].ending&&STORY[id].finale);
 const ALL_DEAD=ALL_SCENES.filter(id=>STORY[id].ending&&!STORY[id].finale);
 // Hell (everything after "Keep running."): red map dots, a black page, a pitchfork marker.
 const HELL=new Set(ALL_SCENES.filter(id=>STORY[id].hell));
-// Space (everything after Long distance, user's direction): blue map dots, a navy page, a rocket marker.
+// Space (everything after Long distance, user's direction): blue map dots, a light blue page, a rocket marker.
 const SPACE=new Set(ALL_SCENES.filter(id=>STORY[id].space));
 // Hell's record (user's direction): every stamped choice from "The choice" on goes on your record, so the
 // stamps on "Keep running." and "Sign in." count too (user, 2026-10-13): two to get in, then four on a ladder.
@@ -1731,7 +1731,7 @@ function updateHeaderVisual(){
  if(v){vignetteArt.innerHTML=v.svg;vignetteArt.setAttribute('aria-label',v.alt);vignetteArt.hidden=false;coverArt.hidden=true;coverTitle.hidden=true;}
  else{vignetteArt.hidden=true;coverArt.hidden=false;coverTitle.hidden=false;}
 }
-// The whole page goes black while you are in Hell and navy while you are in space (styles.css keys off html.hell and html.space).
+// The whole page goes black while you are in Hell and light blue while you are in space (styles.css keys off html.hell and html.space).
 const themeColor=document.querySelector('meta[name="theme-color"]');
 function updateTheme(){
  const hell=HELL.has(path.at(-1)),space=SPACE.has(path.at(-1));

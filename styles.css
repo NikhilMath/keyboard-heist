@@ -266,11 +266,11 @@ hr {
 .map-node.map-hell.map-dead { fill: var(--paper); stroke: #b3261e; }
 .map-node.map-hell.map-unseen { fill: #eec6c1; }
 .key-hell { display: none; }
-.map-here .rk-halo { fill: #16305c; }
-.map-here .rk-body { fill: #e8eef8; }
-.map-here .rk-window { fill: #2f8cff; }
+.map-here .rk-halo { fill: #cbdaf0; }
+.map-here .rk-body { fill: #0f2a4f; }
+.map-here .rk-window { fill: #7cc4ff; }
 .map-here .rk-fin { fill: #fc3d21; }
-.map-here .rk-flame { fill: #ffb347; }
+.map-here .rk-flame { fill: #ff9f1c; }
 .map-edge.map-space { stroke: #a9bfe2; }
 .map-edge.map-space.map-dim { stroke: #d2ddef; }
 .map-node.map-space { fill: #2257b0; }
@@ -371,43 +371,37 @@ button.record-slot:hover { background: rgba(255, 90, 60, .14); }
 .hell .key-earth { display: none; }
 .hell .key-hell { display: inline; }
 
-/* Space (user's direction): after Long distance, the page goes NASA navy.
+/* Space (user's direction): after Long distance, the page goes light NASA blue
+   with navy text (the user found white on navy hard to read). The drawings keep
+   their dark navy panels, the way the cream page keeps dark green ones.
    html.space is toggled by updateTheme() in index.html. */
 html.space {
-  color-scheme: dark;
-  --paper: #0a1630;
-  --ink: #e8eef8;
-  --muted: #93a6c4;
-  --line: #22365c;
-  --accent: #1d4a94;
+  --paper: #e6f0fb;
+  --ink: #0f2a4f;
+  --muted: #566c8c;
+  --line: #c3d4ea;
+  --accent: #bfdcff;
 }
-.space h1 em { color: #6fb6ff; }
-.space .prose { color: #cbd7ea; }
+.space h1 em { color: #2f6fd0; }
+.space .prose { color: #2f4566; }
 .space .art { background: #0f2140; }
-.space .art-caption { color: #9fb2d0; }
-.space .choice { background: #0f1f3d; }
-.space .choice:hover { background: #16305c; border-color: #3d6ab0; }
-.space .choice-number { border-color: #2f4670; color: #9fb6dc; }
-.space .choice.primary small,
-.space .choice.visited small { color: #c9dbf5; }
-.space .choice.visited .choice-number { border-color: #5b8fd6; color: #dceaff; }
-.space .ticket { background: #0f1f3d; border-left-color: #5b8fd6; }
+.space .choice { background: #f4f8fd; }
+.space .choice:hover { background: #d6e7fb; border-color: #8fb3e3; }
+/* Explored choices get the light blue accent, like the lime ones on the cream page. */
+.space .choice.primary,
+.space .choice.visited { background: var(--accent); border-color: var(--accent); }
+.space .choice-number { border-color: #c3d4ea; color: #4f6f9c; }
+.space .choice.visited .choice-number { border-color: #7fb0ec; color: #1d4a94; }
+.space .ticket { background: #f4f8fd; border-left-color: #3d78c9; }
 .space #found-list li::before,
-.space #dead-list li::before { color: #6fb6ff; }
+.space #dead-list li::before { color: #2f6fd0; }
 .space button:focus-visible,
 .space summary:focus-visible,
-.space .map-hit:focus-visible { outline-color: #6fb6ff; }
-.space .map-edge { stroke: #2c3c58; }
-.space .map-edge.map-dim { stroke: #1f2c44; }
-.space .map-node.map-unseen { fill: #2e3d58; }
-.space .map-edge.map-space { stroke: #3d6cb8; }
-.space .map-edge.map-space.map-dim { stroke: #233e6c; }
-.space .map-node.map-space { fill: #4f8fe8; }
-.space .map-node.map-space.map-finale { fill: #7cc4ff; }
-.space .map-node.map-space.map-unseen { fill: #1f3a66; }
-.space .map-edge.map-hell { stroke: #6a2a24; }
-.space .map-edge.map-hell.map-dim { stroke: #3a1f1c; }
-.space .map-node.map-hell.map-unseen { fill: #4a2420; }
+.space .map-hit:focus-visible { outline-color: #2f6fd0; }
+.space .map-edge { stroke: #bccbe0; }
+.space .map-edge.map-dim { stroke: #d3dfee; }
+.space .map-node.map-unseen { fill: #c2d0e3; }
+.space .map-node.map-space.map-unseen { fill: #b4c7e6; }
 .space .key-earth { display: none; }
 .space .key-space { display: inline; }
 
