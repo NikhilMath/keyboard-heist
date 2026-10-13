@@ -349,21 +349,21 @@ const STORY = {
     "title": "Keep running.",
     "hell": true,
     "text": [
-      "You keep running. Past Marcy, who is coming down the hall with a granola bar.",
-      "You take the stairs, because the elevator is for people with nothing to hide. Lobby. Basement. B2. The building doesn’t have a B2. B3. B9. The stairwell gets warm. Then it gets very warm.",
-      "At the bottom: a door, a sign that says WELCOME TO HELL, PLEASE TAKE A NUMBER, and a demon in a headset at the front desk, typing with two claws.",
-      "“Name?” You give it. The demon scrolls. “You’re early. Most people die first. The auditor’s going to be fine, by the way. You didn’t know that when you ran. That’s the part that counts.”",
-      "The demon prints you a lanyard with a photo you don’t remember posing for. “The keyboard can come. Everyone brings something. Orientation is at nine. Once you sign in, everything goes on your record.”"
+      "You keep running. Past Marcy and her granola bar. Down the stairs: lobby, basement, B2, which the building doesn’t have. B9. It gets warm. Then very warm.",
+      "At the bottom, a sign: WELCOME TO HELL, PLEASE TAKE A NUMBER. A demon at the front desk prints you a lanyard. “You’re early. Most people die first. The auditor will be fine, by the way. You didn’t know that when you ran.”",
+      "“Bring the keyboard. Orientation is at nine. Once you sign in, everything goes on your record.”"
     ],
     "choices": [
       {
         "label": "Sign in.",
         "hint": "It’s a lanyard. You know how lanyards work.",
+        "stamp": "sin",
         "next": "hell_orientation"
       },
       {
         "label": "Run back up the stairs.",
         "hint": "Up has to be somewhere. So does everything you ran from.",
+        "stamp": "virtue",
         "next": "hell_upstairs"
       }
     ]
@@ -374,10 +374,9 @@ const STORY = {
     "hell": true,
     "ending": true,
     "text": [
-      "You run back up. B9. B3. B2, which still doesn’t exist. The stairwell cools down one floor at a time, like it’s disappointed in you.",
-      "You come out next to the fern at 8:59 the next morning. Marcy found the auditor, and the inhaler by the fern. He’s fine. He’s also very clear about who ran.",
-      "HR is waiting by your desk. Daniel stands behind them. He looks so disappointed you almost feel something. Security takes the keyboard back and walks you to the exit.",
-      "Out on the sidewalk, it’s a normal morning. You ran from the auditor. You ran from Hell. You never even signed in. At least you’re consistent."
+      "You run back up, past the B2 that doesn’t exist, and come out by the fern at 8:59 the next morning. The auditor is fine. He’s also very clear about who ran.",
+      "HR is waiting. Daniel looks so disappointed you almost feel something. Security takes the keyboard and walks you out.",
+      "You went back to face it. You’re just a day late, and nobody up here gives points for that."
     ],
     "prompt": "The end.",
     "finale": true,
@@ -388,12 +387,9 @@ const STORY = {
     "title": "Orientation",
     "hell": true,
     "text": [
-      "Orientation is in a conference room with no windows. The lights hum at a pitch someone chose on purpose. There’s a tray of deviled eggs.",
-      "Three demons run it. The one from the front desk. One from Compliance, with a clipboard, who counts the chairs twice and opens a file with your name on it. And the one who brought the eggs, who is so happy you’re here that their tail wags.",
-      "That one is the nicest demon in Hell. Everyone says so, a little tiredly.",
-      "Every demon carries a pitchfork. Standard issue. The nice demon hands you theirs so you can “get a feel for it” during the safety video.",
-      "You get a feel for it. The handle is warm. The balance is perfect. You poke the air, and the air seems grateful.",
-      "The keyboard is under your other arm. You haven’t put it down since Daniel’s office. It feels like nothing now. Uh oh."
+      "Orientation: no windows, a hum someone chose on purpose, deviled eggs. Compliance counts the chairs twice and opens a file with your name on it.",
+      "The demon who brought the eggs is so happy you’re here their tail wags. The nicest demon in Hell, everyone says, a little tiredly. They hand you their pitchfork to “get a feel for it” during the safety video.",
+      "The handle is warm. The balance is perfect. You poke the air, and the air seems grateful. The keyboard under your other arm feels like nothing now. Uh oh."
     ],
     "choices": [
       {
@@ -415,10 +411,8 @@ const STORY = {
     "title": "Keep holding it. Walk out.",
     "hell": true,
     "text": [
-      "You stand up in the middle of the safety video and walk out holding the pitchfork, like you have somewhere to be. Nobody stops you.",
-      "You lean it in the corner of your new cubicle. You poke the air. The air seems grateful again.",
-      "That night, Compliance counts every pitchfork in Hell. One is missing. The nice demon pats every pocket they have, twice. Their tail stops wagging.",
-      "“Losing an implement is a transfer offense,” Compliance says. “Up. Middle management. Ohio.” They have until morning."
+      "You walk out of the safety video holding the pitchfork, like you have somewhere to be. Nobody stops you.",
+      "That night, Compliance counts. One pitchfork is missing. The nice demon pats every pocket twice. “Losing an implement is a transfer offense,” Compliance says. “Up. Middle management. Ohio.” They have until morning."
     ],
     "choices": [
       {
@@ -441,10 +435,8 @@ const STORY = {
     "hell": true,
     "ending": true,
     "text": [
-      "You walk it over before morning. The nice demon sees it and lights up so hard their tail knocks over a chair.",
-      "“You took it home to test it? For the Pitchfork Safety Committee? Nobody ever volunteers!”",
-      "You open your mouth. Compliance has already written your name down.",
-      "The committee meets every Tuesday, forever. Somebody has to take the minutes. Every head turns to you. You will always take the minutes."
+      "You walk it back before morning. The nice demon lights up so hard their tail knocks over a chair. “You were testing it? For the Pitchfork Safety Committee? Nobody ever volunteers!”",
+      "Compliance has already written your name down. The committee meets every Tuesday, forever. Somebody has to take the minutes. It’s you. It will always be you."
     ],
     "prompt": "The end.",
     "finale": true,
@@ -455,10 +447,9 @@ const STORY = {
     "title": "Say nothing.",
     "hell": true,
     "text": [
-      "You say nothing. You look at the floor. You’re better at this than you should be.",
-      "In the morning, the nice demon packs a box. A mug that says WORLD’S OKAYEST DEMON. A photo of their kids. A Post-it with a verse on it, upside down.",
-      "They hug you goodbye. It takes a while. They mean it. The elevator only goes up for them.",
-      "The pitchfork leans in your cubicle. Every night, Compliance counts, and every night you hide it somewhere new. It isn’t officially yours. It never will be, unless somebody signs it over."
+      "You say nothing. You’re better at this than you should be.",
+      "In the morning, the nice demon packs a mug that says WORLD’S OKAYEST DEMON and hugs you goodbye. It takes a while. They mean it.",
+      "The pitchfork is yours now, unofficially. Every night you hide it from the count. It won’t be yours for real unless somebody signs it over."
     ],
     "choices": [
       {
@@ -481,10 +472,9 @@ const STORY = {
     "hell": true,
     "ending": true,
     "text": [
-      "Requisitions is down the hall, past a water cooler that is boiling. There’s a line. The line has a line.",
-      "At window 4, a demon slides you Form 666: Request for Reinstatement (Pronged). It’s nine hundred pages. Page one asks for your printer model.",
-      "Section 12 needs a manager’s signature. Section 13 needs a second manager to confirm the first one exists. Section 400 asks why, in a box the size of a stamp. You write “x factor.” You erase it. You write “I took it.”",
-      "Window 4 stamps it PENDING. You check back every day. It’s always pending. Somewhere in Ohio, the nice demon is being very nice to everyone. Your form will be pending for as long as Hell has windows."
+      "At Requisitions, window 4, a demon slides you Form 666: Request for Reinstatement (Pronged). Nine hundred pages. Page one asks for your printer model.",
+      "Section 400 asks why, in a box the size of a stamp. You write “x factor.” You erase it. You write “I took it.”",
+      "Window 4 stamps it PENDING. It will be pending for as long as Hell has windows."
     ],
     "prompt": "The end.",
     "finale": true,
@@ -495,10 +485,8 @@ const STORY = {
     "title": "The corner office",
     "hell": true,
     "text": [
-      "The Devil has the corner office. The door is open. It’s always open. He waves you in without looking up.",
-      "You explain. The pitchfork. The nice demon, now in Ohio. You’d like it signed over to you, for keeps. Your soul in exchange, if that’s still how it works.",
-      "He pulls up your soul on his monitor and scrolls for a long time. “It’s mostly Outlook,” he says, not unkindly. “I can’t take this.”",
-      "His eyes drift to the keyboard under your arm."
+      "The Devil’s door is always open. You ask him to sign the pitchfork over to you, for keeps. Your soul in exchange, if that’s still how it works.",
+      "He scrolls through your soul for a long time. “It’s mostly Outlook,” he says, not unkindly. His eyes drift to the keyboard under your arm."
     ],
     "choices": [
       {
@@ -521,11 +509,10 @@ const STORY = {
     "hell": true,
     "ending": true,
     "text": [
-      "The Devil plugs in Daniel’s keyboard. He types his name. He types it again. “Oh,” he says. “Oh, I see.” He signs before you can change your mind.",
-      "The nice demon’s pitchfork is yours, for keeps. Given for keeps, the job comes with it. It’s in the bylaws. A headset arrives from Ohio with a note: “Gosh! Thank you! First vacation since the Bronze Age!”",
-      "Your desk faces a wall of monitors. On every one, somewhere up there, an IT Support Manager is reading “Driver unavailable.”",
-      "You tap a key with the pitchfork. A printer in Tulsa stops working. Somewhere, a very nice CEO opens a ticket. Somewhere, someone sighs.",
-      "Through the wall, the Devil is still typing his name. The pitchfork leans in the corner. It feels like a pitchfork. You don’t mind. You hate printer drivers, and you are extraordinary at this. It’s the most alive you’ve felt in years."
+      "The Devil types his name on Daniel’s keyboard. Then again. “Oh,” he says. “Oh, I see.” He signs before you can change your mind.",
+      "A pitchfork given for keeps comes with its owner’s job. It’s in the bylaws. A headset arrives from Ohio with a note: “Gosh! First vacation since the Bronze Age!”",
+      "Your desk faces a wall of monitors. On every one, an IT Support Manager is reading “Driver unavailable.” You tap a key with the pitchfork. A printer in Tulsa stops working.",
+      "You hate printer drivers, and you are extraordinary at this. It’s the most alive you’ve felt in years."
     ],
     "prompt": "The end.",
     "finale": true,
@@ -537,10 +524,9 @@ const STORY = {
     "hell": true,
     "ending": true,
     "text": [
-      "You keep the keyboard. You walk out. The Devil doesn’t look up. He has seen people keep things before.",
-      "The pitchfork leans against your cubicle wall. Nobody is cheering. The Lake of Fire hums.",
-      "You poke a sinner with it, the way the safety video showed you. It feels like a pitchfork. It always did. What you felt at orientation was never the pitchfork.",
-      "The keyboard is in your desk drawer. It feels like nothing too. You wait for the rest of it. You give it a minute. You give it a thousand years.",
+      "You keep the keyboard and walk out. Back at your cubicle, the pitchfork leans against the wall. Nobody is cheering. The Lake of Fire hums.",
+      "You poke a sinner with it. It feels like a pitchfork. It always did. What you felt at orientation was never the pitchfork.",
+      "You wait for the rest of it. You give it a thousand years.",
       "Nothing is especially wrong. Nothing is especially interesting. You’ve reached the plateau again, a little lower this time, and the view is mostly the Lake of Fire."
     ],
     "prompt": "The end.",
@@ -552,10 +538,9 @@ const STORY = {
     "title": "The plan, again",
     "hell": true,
     "text": [
-      "Hell gives you a cubicle. The monitor faces a wall of flames, which turns out to be a screensaver. You can’t stop thinking about the pitchfork.",
-      "Spare pitchforks are in a bin by the elevator, no form required, which nobody mentions at orientation. You take one. Same prongs. Same handle. You poke the air. Nothing. It has to be theirs. Well. Now you have a decoy.",
-      "You open a spreadsheet. Column A: the nice demon’s schedule. Column B: things that could go wrong. You’ve done this before.",
-      "Every day at three, there’s a Torment Huddle by the deviled eggs. The nice demon leans their pitchfork on the table to hug people. Every night, Compliance counts every pitchfork in Hell."
+      "Hell gives you a cubicle. You can’t stop thinking about the pitchfork.",
+      "There’s a bin of spares by the elevator. You take one and poke the air. Nothing. It has to be theirs. Well. Now you have a decoy.",
+      "Every day at three, the nice demon leans their pitchfork on a table at the Torment Huddle to hug people. Every night, Compliance counts."
     ],
     "choices": [
       {
@@ -578,11 +563,9 @@ const STORY = {
     "hell": true,
     "ending": true,
     "text": [
-      "Three p.m. The Torment Huddle. The nice demon leans their pitchfork on the table and starts hugging everyone, one at a time. You swap them on hug four.",
-      "The real one goes into the Lake of Fire at the end of the hall, just until the count is over. It sinks without a sound.",
-      "That night, Compliance counts by serial number, stamped on every handle. The nice demon holds out your decoy. It doesn’t have one. Then everyone goes looking.",
-      "Pitchforks are fireproof. So, it turns out, are lanyards. Yours caught on the prongs when you let go. It’s floating face up, with your photo.",
-      "Compliance assigns you to Lost and Found, a folding table at the edge of the lake. You sort the socks by size. You alphabetize the umbrellas. Nobody ever comes to claim anything, including you."
+      "You swap them at the huddle, on hug four, and drop the real one in the Lake of Fire until the count is over.",
+      "The count goes by serial number. Your decoy doesn’t have one. Everyone goes looking. Pitchforks are fireproof. So, it turns out, are lanyards. Yours caught on the prongs. It’s floating face up, with your photo.",
+      "Compliance assigns you to Lost and Found, a folding table by the lake. You sort the socks. Nobody ever comes to claim anything, including you."
     ],
     "prompt": "The end.",
     "finale": true,
@@ -593,10 +576,8 @@ const STORY = {
     "title": "Just ask for it.",
     "hell": true,
     "text": [
-      "You ask the nice demon for their pitchfork. You just say it. It’s the most honest you’ve been in weeks.",
-      "Their whole face lights up. Nobody in Hell asks for anything. They just take it. “Of course! Gosh! Let me just check something.”",
-      "They come back slower. “So, funny thing. Whoever a demon gives their pitchfork to, for keeps, does that demon’s job. It’s in the bylaws.”",
-      "“What’s your job?” you ask. “Printer drivers,” they say. “All of them. Every driver that won’t install, anywhere. That’s me.”"
+      "You just ask. It’s the most honest you’ve been in weeks. The nice demon lights up. “Of course! Gosh! Let me check something.”",
+      "They come back slower. “Whoever a demon gives their pitchfork to, for keeps, does that demon’s job. It’s in the bylaws. Mine is printer drivers. Every driver that won’t install, anywhere.”"
     ],
     "choices": [
       {
@@ -619,11 +600,10 @@ const STORY = {
     "hell": true,
     "ending": true,
     "text": [
-      "Three p.m. The Torment Huddle. Forty demons stand around the deviled eggs and share wins. Someone made a man in Delaware step on a Lego.",
-      "Tonight’s count goes by serial number, so you’ve scratched one into the decoy with a paper clip: theirs, with one digit changed. You’ve done this before.",
-      "The nice demon leans their pitchfork on the table and hugs everyone, one at a time. Hug forty. You make the swap. You walk back to your cubicle at a normal speed, which is the hardest thing you have ever done.",
-      "That night, the decoy passes. Then the nice demon looks down at it. “This isn’t mine,” they say. “It doesn’t feel like mine.” Compliance squints at the handle. “Losing an implement is a transfer offense. Up. Middle management. Ohio.”",
-      "They hug you goodbye. It takes a while. The pitchfork in your cubicle feels like a pitchfork. You have the thing you wanted, and nobody left to show it to."
+      "The count goes by serial number, so you scratch one into the decoy: theirs, one digit changed. You’ve done this before.",
+      "At the huddle, the nice demon hugs forty demons, one at a time. On hug forty, you swap. You walk away at a normal speed, which is the hardest thing you’ve ever done.",
+      "The decoy passes. Then the nice demon looks at it. “This isn’t mine. It doesn’t feel like mine.” Compliance: “Transfer offense. Up. Middle management. Ohio.”",
+      "They hug you goodbye. You have the thing you wanted, and nobody left to show it to."
     ],
     "prompt": "The end.",
     "finale": true,
@@ -634,10 +614,8 @@ const STORY = {
     "title": "The Devil’s offer",
     "hell": true,
     "text": [
-      "The next morning, the Devil calls you into the corner office. The door is open. It’s always open.",
-      "“I hear you asked,” he says. “Nobody asks.” The nice demon’s pitchfork is in his hand. “They’ll get a new one. They always do. Yours, no job attached. I wrote the bylaws. I can skip a page.”",
-      "He doesn’t want your soul. He has already looked at it. It’s mostly Outlook.",
-      "His eyes drift to the keyboard under your arm."
+      "The next morning, the Devil calls you in. “I hear you asked. Nobody asks.” He’s holding the nice demon’s pitchfork. “Yours, no job attached. I wrote the bylaws. I can skip a page.”",
+      "They’ll get a new one, he says. He doesn’t want your soul. He’s seen it, and it’s mostly Outlook. His eyes drift to the keyboard under your arm."
     ],
     "choices": [
       {
@@ -660,10 +638,9 @@ const STORY = {
     "hell": true,
     "ending": true,
     "text": [
-      "The Devil plugs in Daniel’s keyboard. He types his name. He types it again. He goes very quiet. “Oh,” he says. “Oh, I see.”",
-      "By lunch, the nice demon has a brand-new pitchfork and you have theirs, fair and square, with a receipt. No job attached.",
-      "You poke the air. Nothing. Same prongs, same handle. It only ever felt like something when it wasn’t yours.",
-      "Through the open door, you can hear the Devil typing his name. He doesn’t stop. Hell falls behind on everything. You stand in the hallway with a pitchfork that feels like nothing, listening to someone else be happy."
+      "The Devil types his name on Daniel’s keyboard. Then again. “Oh,” he says. “Oh, I see.”",
+      "By lunch, the pitchfork is yours, fair and square, with a receipt. You poke the air. Nothing. It only ever felt like something when it wasn’t yours.",
+      "Through the open door, the Devil is still typing his name. You stand in the hallway, listening to someone else be happy."
     ],
     "prompt": "The end.",
     "finale": true,
@@ -674,9 +651,8 @@ const STORY = {
     "title": "Say no.",
     "hell": true,
     "text": [
-      "“No,” you say. “It’s theirs.” You hold up the keyboard. “And this isn’t mine either. I stole it from a very nice man. Then I left another one on the floor.”",
-      "The Devil puts the pitchfork down. Nobody in Hell has ever turned him down to give something back. There isn’t a form for it.",
-      "The front desk calls. Your record is spotless. You’ve been flagged: too good for Hell. It’s nothing personal. They send you up the express way, keyboard and all."
+      "“No,” you say. “It’s theirs.” You hold up the keyboard. “And this isn’t mine. I stole it from a very nice man, then left another one on the floor.”",
+      "Nobody has ever turned the Devil down to give something back. There isn’t a form for it. The front desk calls: too good for Hell. They send you up the express way, keyboard and all."
     ],
     "choices": [
       {
@@ -691,9 +667,8 @@ const STORY = {
     "title": "Return to sender",
     "hell": true,
     "text": [
-      "The elevator has one button. It goes up for a long time.",
-      "The doors open next to the fern. The clock in the hall says 11:19, the minute you ran. You were gone a long time. Up here, none of it has happened yet.",
-      "The keyboard is in your arms. Something is under your shoe. It’s the inhaler. Somewhere behind you, a man is wheezing."
+      "The elevator has one button. The doors open next to the fern. The clock says 11:19, the minute you ran. Up here, none of it has happened yet.",
+      "The keyboard is in your arms. The inhaler is under your shoe. Somewhere behind you, a man is wheezing."
     ],
     "choices": [
       {
@@ -1183,10 +1158,11 @@ const ALL_DEAD=ALL_SCENES.filter(id=>STORY[id].ending&&!STORY[id].finale);
 // Hell (everything after "Keep running."): red map dots, a black page, a pitchfork marker.
 const HELL=new Set(ALL_SCENES.filter(id=>STORY[id].hell));
 // Hell's record (user's direction): every Hell choice after signing in carries a SIN or VIRTUE stamp.
-// The record is read back off the current path, so it needs no saved state of its own. Only choices
-// made in Hell count; the stamp on "The choice" (Keep running / go back) shows on its buttons only.
+// The record is read back off the current path, so it needs no saved state of its own. It only counts
+// from Orientation on (Compliance opens your file there); the stamps on "The choice" and "Keep running."
+// show on their buttons but stay out of the record, so the 4 slots match the two ladders.
 const RECORD_SLOTS=4;
-function record(){const out=[];for(let i=1;i<path.length;i++){if(!HELL.has(path[i-1]))continue;const c=STORY[path[i-1]].choices?.find(c=>c.next===path[i]);if(c?.stamp)out.push(c.stamp);}return out;}
+function record(){const start=path.indexOf('hell_orientation'),out=[];if(start<0)return out;for(let i=start+1;i<path.length;i++){const c=STORY[path[i-1]].choices?.find(c=>c.next===path[i]);if(c?.stamp)out.push(c.stamp);}return out;}
 let path=['arrival'];
 let seen=new Set();
 let canSave=true;

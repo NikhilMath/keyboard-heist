@@ -248,7 +248,7 @@ sense, so there's less dead ends"). Five dead ends became one.
 UPDATE 2026-10-13: Hell rebuilt as two sin/virtue ladders (user's direction).
 Every Hell choice after signing in is stamped SIN or VIRTUE, and "Your record"
 shows 4 slots. Stepping off a ladder ends the story at that rung; all 8 Hell
-endings are real endings. "The choice" buttons are stamped too (not counted).
+endings are real endings. "The choice" and "Keep running." buttons are stamped too (not counted).
   end_running ...... "Sign in."                        -> hell_orientation
                      "Run back up the stairs."         -> hell_upstairs   ENDING "Not the hero" (0)
   hell_orientation . SIN "Keep holding it. Walk out."  -> hell_grab       (sin ladder)

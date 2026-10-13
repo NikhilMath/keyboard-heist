@@ -150,9 +150,9 @@ Each link opens that scene in `index.html`.
 
 | Scene | Kind | Leads to |
 | --- | --- | --- |
-| [Quick printer help? 🙂](index.html#L41) `arrival` | Scene | [`office`](index.html#L74), [`restart`](index.html#L706), [`printer_model`](index.html#L909) |
-| [Head to his office.](index.html#L74) `office` | Scene | [`end_spare`](index.html#L295), [`plan`](index.html#L107), [`walk_away`](index.html#L776) |
-| [The plan](index.html#L107) `plan` | Scene | [`outage`](index.html#L131), [`ask`](index.html#L832) |
+| [Quick printer help? 🙂](index.html#L41) `arrival` | Scene | [`office`](index.html#L74), [`restart`](index.html#L681), [`printer_model`](index.html#L884) |
+| [Head to his office.](index.html#L74) `office` | Scene | [`end_spare`](index.html#L295), [`plan`](index.html#L107), [`walk_away`](index.html#L751) |
+| [The plan](index.html#L107) `plan` | Scene | [`outage`](index.html#L131), [`ask`](index.html#L807) |
 | [The outage](index.html#L131) `outage` | Scene | [`grandmother`](index.html#L149) |
 | [The grandmother](index.html#L149) `grandmother` | Scene | [`visit`](index.html#L173), [`end_mom`](index.html#L311) |
 | [The visit](index.html#L173) `visit` | Scene | [`audit`](index.html#L196), [`end_method`](index.html#L323) |
@@ -165,47 +165,47 @@ Each link opens that scene in `index.html`.
 | [Long distance](index.html#L311) `end_mom` | Dead end | (end) |
 | [Method](index.html#L323) `end_method` | Dead end | (end) |
 | [Asset not found](index.html#L335) `end_red` | Dead end | (end) |
-| [Keep running.](index.html#L347) `end_running` (Hell) | Scene | [`hell_orientation`](index.html#L386), [`hell_upstairs`](index.html#L371) |
+| [Keep running.](index.html#L347) `end_running` (Hell) | Scene | [`hell_orientation`](index.html#L385), [`hell_upstairs`](index.html#L371) |
 | [Not the hero](index.html#L371) `hell_upstairs` (Hell) | Real ending | (end) |
-| [Orientation](index.html#L386) `hell_orientation` (Hell) | Scene | [`hell_grab`](index.html#L413), [`hell_plan`](index.html#L550) |
-| [Keep holding it. Walk out.](index.html#L413) `hell_grab` (Hell) | Scene | [`hell_quiet`](index.html#L453), [`hell_committee`](index.html#L438) |
-| [The committee](index.html#L438) `hell_committee` (Hell) | Real ending | (end) |
-| [Say nothing.](index.html#L453) `hell_quiet` (Hell) | Scene | [`hell_devil`](index.html#L493), [`hell_form`](index.html#L478) |
-| [Pending](index.html#L478) `hell_form` (Hell) | Real ending | (end) |
-| [The corner office](index.html#L493) `hell_devil` (Hell) | Scene | [`hell_job`](index.html#L518), [`hell_plateau`](index.html#L534) |
-| [Driver unavailable](index.html#L518) `hell_job` (Hell) | Real ending | (end) |
-| [The lower plateau](index.html#L534) `hell_plateau` (Hell) | Real ending | (end) |
-| [The plan, again](index.html#L550) `hell_plan` (Hell) | Scene | [`hell_lake`](index.html#L575), [`hell_ask`](index.html#L591) |
-| [Lost and found](index.html#L575) `hell_lake` (Hell) | Real ending | (end) |
-| [Just ask for it.](index.html#L591) `hell_ask` (Hell) | Scene | [`hell_count`](index.html#L616), [`hell_offer`](index.html#L632) |
-| [The count](index.html#L616) `hell_count` (Hell) | Real ending | (end) |
-| [The Devil’s offer](index.html#L632) `hell_offer` (Hell) | Scene | [`hell_trade`](index.html#L657), [`hell_truth`](index.html#L672) |
-| [Fair trade](index.html#L657) `hell_trade` (Hell) | Real ending | (end) |
-| [Say no.](index.html#L672) `hell_truth` (Hell) | Scene | [`hell_return`](index.html#L689) |
-| [Return to sender](index.html#L689) `hell_return` (Hell) | Scene | [`lie`](index.html#L260) |
-| [Have you tried restarting the printer?](index.html#L706) `restart` | Scene | [`ceremony`](index.html#L728), [`end_sick`](index.html#L749) |
-| [The ceremony](index.html#L728) `ceremony` | Scene | [`end_speech`](index.html#L759), [`lemon`](index.html#L925) |
-| [Get well soon](index.html#L749) `end_sick` | Dead end | (end) |
-| [Say a few words.](index.html#L759) `end_speech` | Scene | [`jordan_drink`](index.html#L1105) |
-| [Stand up. Walk away. Never think about this again.](index.html#L776) `walk_away` | Scene | [`resigned`](index.html#L798), [`draft`](index.html#L941) |
-| [The resignation](index.html#L798) `resigned` | Scene | [`end_sabbatical`](index.html#L821), [`typo`](index.html#L956) |
-| [Paid leave](index.html#L821) `end_sabbatical` | Dead end | (end) |
-| [Just ask him about it.](index.html#L832) `ask` | Scene | [`garage`](index.html#L854), [`end_founding`](index.html#L880) |
-| [The garage](index.html#L854) `garage` | Scene | [`end_founding`](index.html#L880), [`end_borrowed`](index.html#L897), [`declined`](index.html#L973) |
-| [The founding keyboard](index.html#L880) `end_founding` | Scene | [`invoices`](index.html#L990) |
-| [Monday](index.html#L897) `end_borrowed` | Dead end | (end) |
-| [Look up the printer’s model in inventory.](index.html#L909) `printer_model` | Scene | [`office`](index.html#L74) |
-| [Say “thank you” and sit down.](index.html#L925) `lemon` | Scene | [`office`](index.html#L74) |
-| [Save it as a draft.](index.html#L941) `draft` | Scene | [`plan`](index.html#L107) |
-| [Say it was a typo.](index.html#L956) `typo` | Scene | [`plan`](index.html#L107) |
-| [Say you couldn’t possibly.](index.html#L973) `declined` | Scene | [`outage`](index.html#L131) |
-| [Go look.](index.html#L990) `invoices` | Scene | [`wizard`](index.html#L1008) |
-| [Take it back to him.](index.html#L1008) `wizard` | Scene | [`end_wizard`](index.html#L1042), [`refuse`](index.html#L1058), [`end_report`](index.html#L1074), [`pretend`](index.html#L1088) |
-| [Eleven years](index.html#L1042) `end_wizard` | Real ending | (end) |
-| [The first no](index.html#L1058) `refuse` | Real ending | (end) |
-| [The fall guy](index.html#L1074) `end_report` | Dead end | (end) |
-| [Walk out and pretend you never saw it.](index.html#L1088) `pretend` | Scene | [`outage`](index.html#L131) |
-| [Get a drink after work.](index.html#L1105) `jordan_drink` | Scene | [`jordan_weeks`](index.html#L1123) |
-| [See them again.](index.html#L1123) `jordan_weeks` | Scene | [`jordan_together`](index.html#L1145), [`jordan_breakup`](index.html#L1160) |
-| [The one who didn’t laugh](index.html#L1145) `jordan_together` | Real ending | (end) |
-| [Say you’re just tired.](index.html#L1160) `jordan_breakup` | Scene | [`plan`](index.html#L107) |
+| [Orientation](index.html#L385) `hell_orientation` (Hell) | Scene | [`hell_grab`](index.html#L409), [`hell_plan`](index.html#L536) |
+| [Keep holding it. Walk out.](index.html#L409) `hell_grab` (Hell) | Scene | [`hell_quiet`](index.html#L445), [`hell_committee`](index.html#L432) |
+| [The committee](index.html#L432) `hell_committee` (Hell) | Real ending | (end) |
+| [Say nothing.](index.html#L445) `hell_quiet` (Hell) | Scene | [`hell_devil`](index.html#L483), [`hell_form`](index.html#L469) |
+| [Pending](index.html#L469) `hell_form` (Hell) | Real ending | (end) |
+| [The corner office](index.html#L483) `hell_devil` (Hell) | Scene | [`hell_job`](index.html#L506), [`hell_plateau`](index.html#L521) |
+| [Driver unavailable](index.html#L506) `hell_job` (Hell) | Real ending | (end) |
+| [The lower plateau](index.html#L521) `hell_plateau` (Hell) | Real ending | (end) |
+| [The plan, again](index.html#L536) `hell_plan` (Hell) | Scene | [`hell_lake`](index.html#L560), [`hell_ask`](index.html#L574) |
+| [Lost and found](index.html#L560) `hell_lake` (Hell) | Real ending | (end) |
+| [Just ask for it.](index.html#L574) `hell_ask` (Hell) | Scene | [`hell_count`](index.html#L597), [`hell_offer`](index.html#L612) |
+| [The count](index.html#L597) `hell_count` (Hell) | Real ending | (end) |
+| [The Devil’s offer](index.html#L612) `hell_offer` (Hell) | Scene | [`hell_trade`](index.html#L635), [`hell_truth`](index.html#L649) |
+| [Fair trade](index.html#L635) `hell_trade` (Hell) | Real ending | (end) |
+| [Say no.](index.html#L649) `hell_truth` (Hell) | Scene | [`hell_return`](index.html#L665) |
+| [Return to sender](index.html#L665) `hell_return` (Hell) | Scene | [`lie`](index.html#L260) |
+| [Have you tried restarting the printer?](index.html#L681) `restart` | Scene | [`ceremony`](index.html#L703), [`end_sick`](index.html#L724) |
+| [The ceremony](index.html#L703) `ceremony` | Scene | [`end_speech`](index.html#L734), [`lemon`](index.html#L900) |
+| [Get well soon](index.html#L724) `end_sick` | Dead end | (end) |
+| [Say a few words.](index.html#L734) `end_speech` | Scene | [`jordan_drink`](index.html#L1080) |
+| [Stand up. Walk away. Never think about this again.](index.html#L751) `walk_away` | Scene | [`resigned`](index.html#L773), [`draft`](index.html#L916) |
+| [The resignation](index.html#L773) `resigned` | Scene | [`end_sabbatical`](index.html#L796), [`typo`](index.html#L931) |
+| [Paid leave](index.html#L796) `end_sabbatical` | Dead end | (end) |
+| [Just ask him about it.](index.html#L807) `ask` | Scene | [`garage`](index.html#L829), [`end_founding`](index.html#L855) |
+| [The garage](index.html#L829) `garage` | Scene | [`end_founding`](index.html#L855), [`end_borrowed`](index.html#L872), [`declined`](index.html#L948) |
+| [The founding keyboard](index.html#L855) `end_founding` | Scene | [`invoices`](index.html#L965) |
+| [Monday](index.html#L872) `end_borrowed` | Dead end | (end) |
+| [Look up the printer’s model in inventory.](index.html#L884) `printer_model` | Scene | [`office`](index.html#L74) |
+| [Say “thank you” and sit down.](index.html#L900) `lemon` | Scene | [`office`](index.html#L74) |
+| [Save it as a draft.](index.html#L916) `draft` | Scene | [`plan`](index.html#L107) |
+| [Say it was a typo.](index.html#L931) `typo` | Scene | [`plan`](index.html#L107) |
+| [Say you couldn’t possibly.](index.html#L948) `declined` | Scene | [`outage`](index.html#L131) |
+| [Go look.](index.html#L965) `invoices` | Scene | [`wizard`](index.html#L983) |
+| [Take it back to him.](index.html#L983) `wizard` | Scene | [`end_wizard`](index.html#L1017), [`refuse`](index.html#L1033), [`end_report`](index.html#L1049), [`pretend`](index.html#L1063) |
+| [Eleven years](index.html#L1017) `end_wizard` | Real ending | (end) |
+| [The first no](index.html#L1033) `refuse` | Real ending | (end) |
+| [The fall guy](index.html#L1049) `end_report` | Dead end | (end) |
+| [Walk out and pretend you never saw it.](index.html#L1063) `pretend` | Scene | [`outage`](index.html#L131) |
+| [Get a drink after work.](index.html#L1080) `jordan_drink` | Scene | [`jordan_weeks`](index.html#L1098) |
+| [See them again.](index.html#L1098) `jordan_weeks` | Scene | [`jordan_together`](index.html#L1120), [`jordan_breakup`](index.html#L1135) |
+| [The one who didn’t laugh](index.html#L1120) `jordan_together` | Real ending | (end) |
+| [Say you’re just tired.](index.html#L1135) `jordan_breakup` | Scene | [`plan`](index.html#L107) |
