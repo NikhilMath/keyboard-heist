@@ -5,11 +5,11 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="theme-color" content="#142c29">
 <title>Keyboard Heist: An office comedy</title>
-<meta name="description" content="Steal a keyboard just to feel something. An interactive office comedy with eight real endings and eight ways to miss them.">
+<meta name="description" content="Steal a keyboard just to feel something. An interactive office comedy with eight real endings and five ways to miss them.">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Keyboard Heist">
 <meta property="og:title" content="Keyboard Heist: An office comedy">
-<meta property="og:description" content="Steal a keyboard just to feel something. An interactive office comedy with eight real endings and eight ways to miss them.">
+<meta property="og:description" content="Steal a keyboard just to feel something. An interactive office comedy with eight real endings and five ways to miss them.">
 <meta property="og:url" content="https://keyboardheist.com/">
 <meta property="og:image" content="https://keyboardheist.com/og-image.jpg">
 <meta property="og:image:type" content="image/jpeg">
@@ -18,7 +18,7 @@
 <meta property="og:image:alt" content="Keyboard Heist">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Keyboard Heist: An office comedy">
-<meta name="twitter:description" content="Steal a keyboard just to feel something. An interactive office comedy with eight real endings and eight ways to miss them.">
+<meta name="twitter:description" content="Steal a keyboard just to feel something. An interactive office comedy with eight real endings and five ways to miss them.">
 <meta name="twitter:image" content="https://keyboardheist.com/og-image.jpg">
 <link rel="stylesheet" href="styles.css">
 <link rel="icon" href="favicon.svg?v=2" type="image/svg+xml">
@@ -751,14 +751,20 @@ const STORY = {
     ]
   },
   "end_sick": {
-    "location": "Ending · Get well soon",
+    "location": "Friday · Then Monday",
     "title": "Call in sick Friday.",
-    "ending": true,
     "text": [
       "You call in sick. Daniel sends soup. Forty people sign a card. Marcy, Daniel’s assistant, brings the plaque to your apartment herself and stays for an hour to tell you about her cat.",
-      "You have never been so celebrated. You have never been so bored."
+      "You have never been so celebrated. You have never been so bored.",
+      "On Monday, the plaque is on your desk and the soup is in your fridge. Somebody should say thank you."
     ],
-    "name": "Get well soon"
+    "choices": [
+      {
+        "label": "Go thank Daniel for the soup.",
+        "hint": "Manners. That’s all this is.",
+        "next": "office"
+      }
+    ]
   },
   "end_speech": {
     "location": "Friday · 3:10 p.m. · The all-hands",
@@ -823,15 +829,20 @@ const STORY = {
     ]
   },
   "end_sabbatical": {
-    "location": "Ending · Paid leave",
+    "location": "Day one of six weeks · Then day fourteen",
     "title": "Take the sabbatical.",
-    "ending": true,
     "text": [
       "Six weeks, paid. You buy nothing. You go nowhere. You lie on the couch and wait to feel rested.",
-      "On day thirteen, you catch yourself typing on the arm of the couch.",
-      "On day forty-two, you go back. There is a ticket."
+      "On day thirteen, you catch yourself typing on the arm of the couch. Your fingers know exactly which keyboard they think it is.",
+      "On day fourteen, you email Daniel that you’re feeling much better. You aren’t. You’re just feeling something."
     ],
-    "name": "Paid leave"
+    "choices": [
+      {
+        "label": "Go back early.",
+        "hint": "Rested enough. Probably.",
+        "next": "plan"
+      }
+    ]
   },
   "ask": {
     "location": "Late afternoon · Daniel’s office",
@@ -899,16 +910,20 @@ const STORY = {
     ]
   },
   "end_borrowed": {
-    "location": "Ending · Monday",
+    "location": "The weekend · Then Monday",
     "title": "Borrow it for the weekend.",
-    "ending": true,
     "text": [
       "You take it home for the weekend. You type your name. You type the alphabet. You type a very short letter to nobody. Nothing.",
-      "On Monday, you carry it back. “How was it?” Daniel asks.",
-      "“Fine,” you say. “It’s a keyboard.” He laughs, delighted, as if you’ve said something profound.",
-      "Tomorrow there will be a ticket."
+      "On Monday, you carry it back. “How was it?” Daniel asks. “Fine,” you say. “It’s a keyboard.” He laughs, delighted, as if you’ve said something profound.",
+      "He sets it back on his desk. The second it’s his again, you want it again. That’s worse."
     ],
-    "name": "Monday"
+    "choices": [
+      {
+        "label": "Back to the plan.",
+        "hint": "Borrowing was never the point.",
+        "next": "outage"
+      }
+    ]
   },
   "printer_model": {
     "location": "4:52 p.m. · Your desk",
