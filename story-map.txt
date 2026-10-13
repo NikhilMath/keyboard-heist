@@ -266,3 +266,11 @@ endings are real endings. "The choice" and "Keep running." buttons are stamped t
   hell_offer ....... SIN "Offer him the keyboard."     -> hell_trade      ENDING "Fair trade" (3 virtues)
                      VIRTUE "Say no."                  -> hell_truth -> hell_return -> lie (4 virtues)
 Cut: hell_requisition, hell_huddle, hell_lost, hell_table.
+
+UPDATE 2026-10-13: too many endings. Hell's step-offs now share one ending
+per ladder (sin side: The lower plateau; virtue side: Lost and found), and
+three Earth dead ends rejoin the story:
+  end_sick ......... "Go thank Daniel for the soup."  -> office
+  end_sabbatical ... "Go back early."                 -> plan
+  end_borrowed ..... "Back to the plan."              -> outage
+Now 8 real endings and 5 dead ends.
