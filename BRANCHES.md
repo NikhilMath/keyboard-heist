@@ -290,10 +290,10 @@ You’re early the next morning. You open a spreadsheet. Column A: Daniel’s sc
 
 IT can go anywhere. Nobody asks why. Daniel eats lunch at 12:15 and leaves his door open. Always. His assistant, Marcy, sits outside it and sees everything.
 
-Over her shoulder, her calendar: the company retreat, next Friday. Daniel brings his own keyboard to everything. She calls it “the founding keyboard.” He started the company on it. Once it leaves the building, it’s gone.
+Over her shoulder, her calendar: the company retreat, next Friday. Daniel brings his own keyboard to every offsite. She calls it “the founding keyboard.” He started the company on it. Once it leaves the building, it’s gone.
 
 - [Case the office.](#outage) *Professionally. You are a professional.*
-- [Just ask him about it.](#ask) *Normal. He might even say yes.*
+- [Just ask him about it.](#ask) *Normal. He loves talking about his stuff.*
 
 <a name="outage"></a>
 
@@ -363,7 +363,7 @@ You paid Mrs. Cox $150 in cash in a parking lot. She asked for a good review and
 
 Then, a new email, all staff: an asset audit. Every keyboard, every monitor, every stapler, scanned and logged.
 
-Every keyboard is tagged. Yours isn’t. The moment anyone scans your decoy, it’s over. You have exactly one day.
+Every keyboard is tagged. Your decoy isn’t. The moment anyone scans it, it’s over. You have exactly one day.
 
 - [Make a tag.](#swap) *You’re in IT. You’re allowed a label printer.*
 - [Skip it. Nobody checks.](#end_red) *Nobody ever checks. Probably.*
@@ -986,7 +986,7 @@ Afterward, Daniel catches you by the elevator. “Come by my office before you g
 
 You save it as a draft. It joins fourteen others. The oldest is from 2021 and just says “Dear Daniel,” which is somehow the saddest one.
 
-It wasn’t quitting you liked. It was the feeling. You’ve only had it one other time this year, with your hands on a keyboard that wasn’t yours.
+It wasn’t quitting you liked. It was the feeling. You’ve only had it one other time lately, with your hands on a keyboard that wasn’t yours.
 
 - [Look it up.](#plan) *Just to be sure it’s normal.*
 
@@ -1000,9 +1000,9 @@ It wasn’t quitting you liked. It was the feeling. You’ve only had it one oth
 
 Daniel reads the email. It says, in full, “Dear Daniel, I quit.” He looks at you for a long moment. “A typo,” he says gently. “Okay.”
 
-He believes you. He hugs you anyway. He smells like granola.
+He doesn’t believe you. He hugs you anyway. He smells like granola.
 
-It was the best ninety seconds you’ve had all year, and you didn’t even leave. You want to feel it again. You’re not sure how.
+It was the best ninety seconds you’ve had in a long time, and you didn’t even leave. You want to feel it again. You’re not sure how.
 
 - [Figure out how.](#plan) *You already know how.*
 
