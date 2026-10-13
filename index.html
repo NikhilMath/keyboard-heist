@@ -5,11 +5,11 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="theme-color" content="#142c29">
 <title>Keyboard Heist: An office comedy</title>
-<meta name="description" content="Steal a keyboard just to feel something. An interactive office comedy with eight real endings and five ways to miss them.">
+<meta name="description" content="Steal a keyboard just to feel something. An interactive office comedy with eight real endings and four ways to miss them.">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Keyboard Heist">
 <meta property="og:title" content="Keyboard Heist: An office comedy">
-<meta property="og:description" content="Steal a keyboard just to feel something. An interactive office comedy with eight real endings and five ways to miss them.">
+<meta property="og:description" content="Steal a keyboard just to feel something. An interactive office comedy with eight real endings and four ways to miss them.">
 <meta property="og:url" content="https://keyboardheist.com/">
 <meta property="og:image" content="https://keyboardheist.com/og-image.jpg">
 <meta property="og:image:type" content="image/jpeg">
@@ -18,7 +18,7 @@
 <meta property="og:image:alt" content="Keyboard Heist">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Keyboard Heist: An office comedy">
-<meta name="twitter:description" content="Steal a keyboard just to feel something. An interactive office comedy with eight real endings and five ways to miss them.">
+<meta name="twitter:description" content="Steal a keyboard just to feel something. An interactive office comedy with eight real endings and four ways to miss them.">
 <meta name="twitter:image" content="https://keyboardheist.com/og-image.jpg">
 <link rel="stylesheet" href="styles.css">
 <link rel="icon" href="favicon.svg?v=2" type="image/svg+xml">
@@ -293,9 +293,8 @@ const STORY = {
     "name": "The plateau"
   },
   "end_spare": {
-    "location": "Ending · The spare",
+    "location": "The hallway · Then your desk, then his office",
     "title": "Take it. Right now.",
-    "ending": true,
     "text": [
       "You pick it up. It weighs almost nothing. You walk out holding it in both hands, like a casserole.",
       "Daniel is in the hallway, phone already lowered. “Oh! What are you doing with that?”",
@@ -304,9 +303,18 @@ const STORY = {
       "He does it for you, right there in the hallway. It works. Of course it works. “Honestly, keep it! I’ve got a spare in a drawer.” He holds it out to you with both hands.",
       "It slips. It hits the floor. The space bar skates down the hall. Something inside makes a small, final sound.",
       "Daniel looks at it. “Oh. Never mind. I’ll use the spare.”",
-      "You go back to your desk, where Outlook is waiting."
+      "You go back to your desk, where Outlook is waiting.",
+      "You step away for coffee. When you come back, it’s on your desk, the space bar in a sandwich bag. A Post-it in Daniel’s handwriting: “Can you save him?”",
+      "You’re IT. Broken things come to you. You open it up. One spring, knocked loose. You put it back. You click the space bar on. You could tell Daniel it’s dead and keep it. Nobody would ever know.",
+      "You walk it back to his office instead. He plugs it in with a cable this time, “so he can’t get away again,” and offers you his chair to test it. You type your name. It still feels wonderful."
     ],
-    "name": "The spare"
+    "choices": [
+      {
+        "label": "Go home. Try not to think about it.",
+        "hint": "You will anyway.",
+        "next": "plan"
+      }
+    ]
   },
   "end_mom": {
     "location": "Ending · Long distance",
