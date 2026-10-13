@@ -338,7 +338,7 @@ html.hell {
 .hell .stamp-sin { color: #ff5a3c; }
 .record { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 12px; margin: -6px 0 22px; }
 .record-label { color: var(--muted); font-size: 11px; letter-spacing: .14em; text-transform: uppercase; }
-.record-slots { display: flex; gap: 8px; }
+.record-slots { display: flex; flex-wrap: wrap; gap: 8px; }
 .record-slot {
   display: grid;
   place-items: center;

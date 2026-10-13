@@ -351,7 +351,7 @@ const STORY = {
     "text": [
       "You keep running. Past Marcy and her granola bar. Down the stairs: lobby, basement, B2, which the building doesn’t have. B9. It gets warm. Then very warm.",
       "At the bottom, a sign: WELCOME TO HELL, PLEASE TAKE A NUMBER. A demon at the front desk prints you a lanyard. “You’re early. Most people die first. The auditor will be fine, by the way. You didn’t know that when you ran.”",
-      "“Bring the keyboard. Orientation is at nine. Once you sign in, everything goes on your record.”"
+      "“Bring the keyboard. Orientation is at nine. And yes, the running is already on your record.”"
     ],
     "choices": [
       {
@@ -1201,13 +1201,12 @@ const ALL_ENDINGS=ALL_SCENES.filter(id=>STORY[id].ending&&STORY[id].finale);
 const ALL_DEAD=ALL_SCENES.filter(id=>STORY[id].ending&&!STORY[id].finale);
 // Hell (everything after "Keep running."): red map dots, a black page, a pitchfork marker.
 const HELL=new Set(ALL_SCENES.filter(id=>STORY[id].hell));
-// Hell's record (user's direction): every Hell choice after signing in carries a SIN or VIRTUE stamp.
-// The record is read back off the current path, so it needs no saved state of its own. It only counts
-// from Orientation on (Compliance opens your file there); the stamps on "The choice" and "Keep running."
-// show on their buttons but stay out of the record, so the 4 slots match the two ladders.
-const RECORD_SLOTS=4;
+// Hell's record (user's direction): every stamped choice from "The choice" on goes on your record, so the
+// stamps on "Keep running." and "Sign in." count too (user, 2026-10-13): two to get in, then four on a ladder.
+// The record is read back off the current path, so it needs no saved state of its own.
+const RECORD_SLOTS=6;
 // Each entry is {stamp, at}: at is where that choice led in path, so a stamp can jump back to its branch.
-function record(){const start=path.indexOf('hell_orientation'),out=[];if(start<0)return out;for(let i=start+1;i<path.length;i++){const c=STORY[path[i-1]].choices?.find(c=>c.next===path[i]);if(c?.stamp)out.push({stamp:c.stamp,at:i});}return out;}
+function record(){const start=path.indexOf('choice'),out=[];if(start<0)return out;for(let i=start+1;i<path.length;i++){const c=STORY[path[i-1]].choices?.find(c=>c.next===path[i]);if(c?.stamp)out.push({stamp:c.stamp,at:i});}return out;}
 let path=['arrival'];
 let seen=new Set();
 let canSave=true;
@@ -1314,7 +1313,7 @@ function render(focus=false){
  const node=STORY[path.at(-1)];
  const container=document.getElementById('scene');container.replaceChildren();
  const title=document.createElement('h2');title.textContent=node.title;title.tabIndex=-1;container.append(title);
- if(HELL.has(path.at(-1))&&path.includes('hell_orientation')){
+ if(HELL.has(path.at(-1))){
   const stamps=record(),sins=stamps.filter(s=>s.stamp==='sin').length,virtues=stamps.length-sins;
   const bar=document.createElement('div');bar.className='record';
   const name=document.createElement('span');name.className='record-label';name.textContent='Your record';

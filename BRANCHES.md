@@ -519,7 +519,7 @@ You keep running. Past Marcy and her granola bar. Down the stairs: lobby, baseme
 
 At the bottom, a sign: WELCOME TO HELL, PLEASE TAKE A NUMBER. A demon at the front desk prints you a lanyard. “You’re early. Most people die first. The auditor will be fine, by the way. You didn’t know that when you ran.”
 
-“Bring the keyboard. Orientation is at nine. Once you sign in, everything goes on your record.”
+“Bring the keyboard. Orientation is at nine. And yes, the running is already on your record.”
 
 - **SIN** [Sign in. Keep the keyboard.](#hell_orientation) *Everyone brings something. You brought someone else’s.*
 - **VIRTUE** [Run back up and face it.](#hell_upstairs) *Up has to be somewhere. So does everything you ran from.*
