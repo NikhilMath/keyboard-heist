@@ -142,7 +142,7 @@ flowchart TD
   jordan_drink -->|"See them again."| jordan_weeks
   jordan_weeks -->|"Tell them everything."| jordan_together
   jordan_weeks -->|"Say you’re just tired."| jordan_breakup
-  jordan_breakup -->|"Think about something else."| plan
+  jordan_breakup -->|"Think about something else."| office
   linkStyle 19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41 stroke:#ff5a3c
   classDef scene fill:#f6f1e3,stroke:#193b37,color:#193b37
   classDef finale fill:#d8eeaa,stroke:#193b37,stroke-width:3px,color:#193b37
@@ -218,7 +218,7 @@ Each scene name jumps to its full text below; “code” opens it in `index.html
 | [Get a drink after work.](#jordan_drink) `jordan_drink` | Scene | [`jordan_weeks`](#jordan_weeks) | [code](index.html#L1124) |
 | [See them again.](#jordan_weeks) `jordan_weeks` | Scene | [`jordan_together`](#jordan_together), [`jordan_breakup`](#jordan_breakup) | [code](index.html#L1142) |
 | [The one who didn’t laugh](#jordan_together) `jordan_together` | Real ending | (end) | [code](index.html#L1164) |
-| [Say you’re just tired.](#jordan_breakup) `jordan_breakup` | Scene | [`plan`](#plan) | [code](index.html#L1179) |
+| [Say you’re just tired.](#jordan_breakup) `jordan_breakup` | Scene | [`office`](#office) | [code](index.html#L1179) |
 
 ## The full story
 
@@ -507,7 +507,7 @@ The auditor checks. He scans the keyboard on Daniel’s desk. It beeps once. Red
 
 He looks at the keyboard. He looks at you. He has seen this before, and he is sad about it. He calls Daniel in.
 
-Daniel arrives holding a granola bar. He looks at the keyboard, then at you. He is heartbroken. “I just wish you’d asked.” You are asked to leave. The real keyboard was in your bag the whole time. It feels like nothing.
+Daniel arrives holding a granola bar. He looks at the keyboard, then at you. He is heartbroken. “I would’ve just given it to you.” You are asked to leave. The real keyboard was in your bag the whole time. It feels like nothing.
 
 <a name="end_running"></a>
 
@@ -757,7 +757,7 @@ Nobody ever comes to claim anything, including you.
 
 `hell_truth` · Scene · Hell
 
-“No,” you say. “It’s theirs.” You hold up the keyboard. “And this isn’t mine. I stole it from a very nice man, then left another one on the floor.”
+“No,” you say. “It’s theirs.” You hold up the keyboard. “And this isn’t mine. I stole it from a very nice man, then left another man on the floor.”
 
 Nobody has ever turned the Devil down to give something back. There isn’t a form for it. The front desk calls: too good for Hell. They send you up the express way, keyboard and all.
 
@@ -773,7 +773,7 @@ The elevator has one button. The doors open next to the fern. The clock says 11:
 
 The keyboard is in your arms. The inhaler is under your shoe. Somewhere behind you, a man is wheezing.
 
-- [Go back with the inhaler.](#lie) *The keyboard is still coming with you.*
+- [Go back with the inhaler.](#lie) *You said you’d give it all back. Start with this.*
 
 <a name="restart"></a>
 
@@ -847,7 +847,7 @@ You say goodbye to Daniel. You say goodbye to the keyboard, silently, like an id
 
 You go home. You do not think about it. You think about it in the shower. You think about it at dinner.
 
-The next morning, at your desk, you open a blank email and type: “Dear Daniel, I quit.” It feels wonderful.
+Back at your desk, you open a blank email and type: “Dear Daniel, I quit.” It feels wonderful.
 
 You backspace it. You type it again. Your cursor hovers over Send.
 
@@ -899,7 +899,7 @@ He lights up like you’ve asked about his kids. “Oh, gosh, this old thing? Si
 
 He bought it in a garage, on a Tuesday, for $150, with a partner who quit two years later to open a kayak shop. He typed his first invoice on it. He has typed every invoice since.
 
-It’s the first time anyone has talked to you in weeks without a ticket number. Somewhere in your bag, the decoy is very, very quiet.
+He talks to you like you’re a person, not a ticket number. Somewhere in your bag, the decoy is very, very quiet.
 
 - [Let him finish.](#garage) *He has more. He always has more.*
 - [Ask if you could have it.](#end_founding) *Bold. He might say yes.*
@@ -1056,7 +1056,7 @@ His name also isn’t Daniel Hall. It is Danal, seventh and most evil wizard of 
 
 “That’s money laundering,” you say. “Is it?” he says, delighted, as though you’ve taught him something. “Do I still call you Daniel?” “Oh, please do. I love it here.”
 
-He’s evil the way a spreadsheet is evil. He’s never once had a single thing to worry about. That’s what you’ve been looking at this whole time. That’s the face you wanted.
+He’s evil the way a spreadsheet is evil. He’s never once had a single thing to worry about. That’s what you’ve been looking at this whole time. That’s the face you wanted. “It could be yours,” he says.
 
 - [Ask him to show you.](#end_wizard) *You already know what you’re going to say.*
 - [Tell him no.](#refuse) *You came here for a keyboard, not a career in sorcery.*
@@ -1184,7 +1184,7 @@ Jordan doesn’t laugh, not even a little, which by now you’d expect. They jus
 
 “So that’s what was wrong with you,” they say. Not unkindly.
 
-“That’s wrong with me,” you start to say. Then: “Was.”
+“That’s what’s wrong with me,” you start to say. Then: “Was.”
 
 Congratulations. You found love. You are no longer bored, worried about tickets, or stuck on the plateau...
 
@@ -1202,6 +1202,6 @@ You keep letting things go. Eventually there’s nothing left to hold.
 
 Two months later, Jordan’s toothbrush is gone from the bathroom, and you don’t remember watching them take it. You just notice the empty cup where it stood.
 
-You cry once, brief and confusing. Then you think about something else.
+You cry once, brief and confusing. Then a ticket pops up: Daniel, the printer, again. “Whenever you have a minute. Appreciate you!”
 
-- [Think about something else.](#plan) *You already know what.*
+- [Think about something else.](#office) *A printer is something else.*

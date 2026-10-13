@@ -274,3 +274,8 @@ three Earth dead ends rejoin the story:
   end_sabbatical ... "Go back early."                 -> plan
   end_borrowed ..... "Back to the plan."              -> outage
 Now 8 real endings and 5 dead ends.
+
+UPDATE 2026-10-13: continuity review. The Jordan arc never passes the office,
+so rejoining at the plan meant thinking about a keyboard you had never touched.
+  jordan_breakup ... "Think about something else."    -> office   (a new printer ticket from Daniel)
+Still 60 scenes, 8 real endings and 5 dead ends.
