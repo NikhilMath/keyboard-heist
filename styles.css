@@ -318,6 +318,38 @@ html.hell {
 .hell .map-edge.map-hell { stroke: #7a2a22; }
 .hell .map-edge.map-hell.map-dim { stroke: #43201c; }
 .hell .map-node.map-hell.map-unseen { fill: #4e211d; }
+/* Hell's stamps (user's direction): each Hell choice is stamped SIN or VIRTUE,
+   and "Your record" under the title shows the stamps you have collected. */
+.stamp {
+  display: inline-block;
+  border: 1.5px solid currentColor;
+  border-radius: 3px;
+  padding: 1px 6px;
+  margin-bottom: 5px;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: .14em;
+  line-height: 1.5;
+  text-transform: uppercase;
+  transform: rotate(-3deg);
+}
+.stamp-sin { color: #b3261e; }
+.stamp-virtue { color: var(--ink); }
+.hell .stamp-sin { color: #ff5a3c; }
+.record { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 12px; margin: -6px 0 22px; }
+.record-label { color: var(--muted); font-size: 11px; letter-spacing: .14em; text-transform: uppercase; }
+.record-slots { display: flex; gap: 8px; }
+.record-slot {
+  display: grid;
+  place-items: center;
+  min-width: 58px;
+  height: 22px;
+  margin: 0;
+  border: 1.5px dashed var(--line);
+  border-radius: 3px;
+}
+.record-slot.stamp { border-style: solid; padding: 0 6px; }
+.record-slot:nth-child(even).stamp { transform: rotate(2deg); }
 .hell .key-earth { display: none; }
 .hell .key-hell { display: inline; }
 

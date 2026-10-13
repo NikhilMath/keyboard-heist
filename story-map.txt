@@ -244,3 +244,25 @@ sense, so there's less dead ends"). Five dead ends became one.
                      "Stay behind the table."        -> hell_table  DEAD END "Unclaimed"
   hell_truth ....... "Get in the elevator."          -> hell_return
   hell_return ...... "Go back with the inhaler."     -> lie (rejoins the main story)
+
+UPDATE 2026-10-13: Hell rebuilt as two sin/virtue ladders (user's direction).
+Every Hell choice after signing in is stamped SIN or VIRTUE, and "Your record"
+shows 4 slots. Stepping off a ladder ends the story at that rung; all 8 Hell
+endings are real endings. "The choice" buttons are stamped too (not counted).
+  end_running ...... "Sign in."                        -> hell_orientation
+                     "Run back up the stairs."         -> hell_upstairs   ENDING "Not the hero" (0)
+  hell_orientation . SIN "Keep holding it. Walk out."  -> hell_grab       (sin ladder)
+                     VIRTUE "Hand it back. Smile."     -> hell_plan       (virtue ladder)
+  hell_grab ........ SIN "Say nothing."                -> hell_quiet
+                     VIRTUE "Give it back."            -> hell_committee  ENDING "The committee" (1 sin)
+  hell_quiet ....... SIN "Make a deal with the Devil." -> hell_devil
+                     VIRTUE "File Form 666..."         -> hell_form       ENDING "Pending" (2 sins)
+  hell_devil ....... SIN "Offer him the keyboard."     -> hell_job        ENDING "Driver unavailable" (4 sins)
+                     VIRTUE "Keep the keyboard..."     -> hell_plateau    ENDING "The lower plateau" (3 sins)
+  hell_plan ........ SIN "Swap it at the huddle..."    -> hell_lake       ENDING "Lost and found" (1 virtue)
+                     VIRTUE "Just ask for it."         -> hell_ask
+  hell_ask ......... SIN "Say no thanks. Steal it..."  -> hell_count      ENDING "The count" (2 virtues)
+                     VIRTUE "Say no thanks. Let them keep it." -> hell_offer
+  hell_offer ....... SIN "Offer him the keyboard."     -> hell_trade      ENDING "Fair trade" (3 virtues)
+                     VIRTUE "Say no."                  -> hell_truth -> hell_return -> lie (4 virtues)
+Cut: hell_requisition, hell_huddle, hell_lost, hell_table.
