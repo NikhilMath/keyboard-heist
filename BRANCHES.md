@@ -759,7 +759,7 @@ Nobody ever comes to claim anything, including you.
 
 “No,” you say. “It’s theirs.” You hold up the keyboard. “And this isn’t mine. I stole it from a very nice man, then left another man on the floor.”
 
-Nobody has ever turned the Devil down to give something back. There isn’t a form for it. The front desk calls: too good for Hell. They send you up the express way, keyboard and all.
+Nobody has ever turned the Devil down to give something back. There isn’t a form for it. The front desk calls: too good for Hell. They send you up the express elevator, keyboard and all.
 
 - [Get in the elevator.](#hell_return) *It only goes one direction for you now.*
 
@@ -1054,13 +1054,13 @@ He explains it cheerfully, the same way he told you the garage story. Except he 
 
 His name also isn’t Daniel Hall. It is Danal, seventh and most evil wizard of Xeon, a realm from which unwavering capitalism was first spawned. He mentions this while hunting for the granola bars.
 
-“That’s money laundering,” you say. “Is it?” he says, delighted, as though you’ve taught him something. “Do I still call you Daniel?” “Oh, please do. I love it here.”
+“That’s money laundering,” you say. “Is it?” he says, delighted, as though you’ve taught him something. “Do I still call you Daniel?” you ask. “Oh, please do. I love it here.”
 
 He’s evil the way a spreadsheet is evil. He’s never once had a single thing to worry about. That’s what you’ve been looking at this whole time. That’s the face you wanted. “It could be yours,” he says.
 
 - [Ask him to show you.](#end_wizard) *You already know what you’re going to say.*
 - [Tell him no.](#refuse) *You came here for a keyboard, not a career in sorcery.*
-- [Report him.](#end_report) *Somebody should do something about this.*
+- [Report him.](#end_report) *Somebody should do something about this. He doesn’t look worried.*
 - [Walk out and pretend you never saw it.](#pretend) *You’re very good at not noticing things.*
 
 <a name="end_wizard"></a>
