@@ -1,68 +1,729 @@
 {
-  "about": "Fingerprints of the locked story. Only the user can unlock a scene, by saying so in chat. See \"Story lock\" in AGENTS.md. Rewrite this file only with tools/lock.js relock or lock-all, and only for a change the user unlocked.",
+  "about": "Fingerprints of the locked story. You can add to it (new scenes, new paragraphs at the end of a scene, new choices after its existing ones) but not change it. Only the user can unlock a change, by saying so in chat. See \"Story lock\" in AGENTS.md. Rewrite this file only with tools/lock.js relock or lock-all.",
   "lockedOn": "2026-10-13",
   "updated": "2026-10-13",
   "scenes": {
-    "arrival": "07287af97805e8",
-    "office": "1d358109eb9d6f",
-    "plan": "049f8e95c8d0d6",
-    "outage": "1f1c196f74ac6b",
-    "grandmother": "036d61d73a99ac",
-    "visit": "023c414bf00527",
-    "audit": "05720961cb8d0c",
-    "swap": "07e83e82fcbe29",
-    "choice": "0ec8dab635ec5b",
-    "lie": "137a496a1a0f34",
-    "end_plateau": "1b6ec5d695d39e",
-    "end_spare": "10df7d53505cb4",
-    "end_mom": "0ec3cb4d36c515",
-    "end_method": "15a05a446af53c",
-    "end_red": "19e043a10ac746",
-    "end_running": "14f2f28cf71fd3",
-    "hell_upstairs": "043a645f016c37",
-    "hell_orientation": "1787a70103c371",
-    "hell_grab": "082e3e17f3a847",
-    "hell_committee": "02e0c87130fee8",
-    "hell_quiet": "0d7a0e8b62d269",
-    "hell_form": "1be4574fbcb863",
-    "hell_devil": "18630fc9a3465c",
-    "hell_job": "028c7614309e09",
-    "hell_plateau": "117f00716bec9f",
-    "hell_plan": "17f4c238efedae",
-    "hell_lake": "1d2df753ce862a",
-    "hell_ask": "1c094677417edb",
-    "hell_count": "0a6742a92b3c4f",
-    "hell_offer": "0438f8d8f5870f",
-    "hell_trade": "1cd785765351b1",
-    "hell_lost": "12fac98921298a",
-    "hell_truth": "14575b1f311a7c",
-    "hell_return": "1a4b09ead81aba",
-    "restart": "04ca67603cd0b0",
-    "ceremony": "0603a2340ab9f0",
-    "end_sick": "019d44fc32db44",
-    "end_speech": "02672e23808a90",
-    "walk_away": "0c74269be41bab",
-    "resigned": "14d8f74387d7af",
-    "end_sabbatical": "19aad94bee7475",
-    "ask": "0b82c4903404de",
-    "garage": "1bacb7bc9f2e45",
-    "end_founding": "1000b8e42921c3",
-    "end_borrowed": "1f716733a1a0ca",
-    "printer_model": "11e38d4974399a",
-    "lemon": "0040e456268374",
-    "draft": "0ed17d901acad7",
-    "typo": "008b6cfcf73a47",
-    "declined": "0690f4d3d0dec0",
-    "invoices": "121ffdb8e3f1d2",
-    "wizard": "0dae0ce68d7a01",
-    "end_wizard": "1913b17e9e74e6",
-    "refuse": "060e3ef7a8e360",
-    "end_report": "1593033009f46d",
-    "pretend": "010b6d086a65f6",
-    "jordan_drink": "1a11bb87e152c8",
-    "jordan_weeks": "17a0ef4a8533e7",
-    "jordan_together": "1666182c84c752",
-    "jordan_breakup": "05629c942e39ad"
+    "arrival": {
+      "rest": "0d0e84cadf1b93",
+      "text": [
+        "16761bbbad1b98",
+        "15a30f9134be2a"
+      ],
+      "choices": [
+        "1f738bb71eac66",
+        "0013a7ad4b6678",
+        "1282e1468444df"
+      ]
+    },
+    "office": {
+      "rest": "10091b1724445e",
+      "text": [
+        "0b8a452464594c",
+        "1f99ba6a9f4723",
+        "0f8f67fe2f3902",
+        "0159c631ad62c4",
+        "1ca6030ebbe90b",
+        "142ff8cbe525d4",
+        "171e261322f202",
+        "10e917f512634c",
+        "14cd74b2ca5fc1",
+        "141a7f8ce3850b"
+      ],
+      "choices": [
+        "0cb31fe761a85c",
+        "1d94f4c20ed563",
+        "1a15929bf5bcde"
+      ]
+    },
+    "plan": {
+      "rest": "12059350b79aab",
+      "text": [
+        "00d2c86ca3cf87",
+        "1a7689475c9cf8",
+        "1f09fe3e3c187c",
+        "0c8cf90e294286",
+        "060d750c6c27a2",
+        "191945b3d8f4de"
+      ],
+      "choices": [
+        "166707099a5886",
+        "128d252580c02b"
+      ]
+    },
+    "outage": {
+      "rest": "0a29bc123daf6b",
+      "text": [
+        "10b7124617de67",
+        "161f68899bd0ef",
+        "1946a106b60cca",
+        "1ab5f444d22b1e",
+        "0c82f02e4bc3d6"
+      ],
+      "choices": [
+        "13448312d472a4"
+      ]
+    },
+    "grandmother": {
+      "rest": "110f5f932cb284",
+      "text": [
+        "0f8dad045fa548",
+        "1b336d19f68c48",
+        "00a1e46ace59ef",
+        "1a036945ba2515",
+        "04aeab61851789",
+        "0cd213e8cc65f2"
+      ],
+      "choices": [
+        "067b8e4bd33b8a",
+        "1319247bbdb359"
+      ]
+    },
+    "visit": {
+      "rest": "1848408b57b83c",
+      "text": [
+        "1eb1d0798004c0",
+        "10451f352c135c",
+        "10e9d426f405eb",
+        "0fadcde0575911",
+        "00ec5f87af073f"
+      ],
+      "choices": [
+        "02d19dbdc04ed4",
+        "0006945b1294b8"
+      ]
+    },
+    "audit": {
+      "rest": "0b83caeceb46c5",
+      "text": [
+        "19ddb1556e5066",
+        "02c587881f7dea",
+        "12ea3e8d5cd716"
+      ],
+      "choices": [
+        "13d91ad5c7e1b5",
+        "09389dedbddded"
+      ]
+    },
+    "swap": {
+      "rest": "04abd02cbd40cc",
+      "text": [
+        "03c481c70332d7",
+        "1acc011fab1b66",
+        "093d4c25167717",
+        "0103456e8b1241",
+        "08fea05be171ad"
+      ],
+      "choices": [
+        "14138805a41dab"
+      ]
+    },
+    "choice": {
+      "rest": "1b6ccd594da357",
+      "text": [
+        "097d736b2be903",
+        "06bf55765bcc57",
+        "0dc9babab324df",
+        "0c9dd47f218bb2",
+        "165c6b7b9f7ccf"
+      ],
+      "choices": [
+        "0118023e986438",
+        "003e3903b20d1f"
+      ]
+    },
+    "lie": {
+      "rest": "0e3c65d1becf7a",
+      "text": [
+        "11f1147d070c5a",
+        "19e05c8cf495d6",
+        "1f1315745796ea",
+        "1c2804989b72f1",
+        "0efa0d4740cf01",
+        "0c4cc7c1c6d650"
+      ],
+      "choices": [
+        "105a38acf140be"
+      ]
+    },
+    "end_plateau": {
+      "rest": "17e008987f40a4",
+      "text": [
+        "1163384394b1b0",
+        "1ceb7972c46656",
+        "0e06cd5bcd8bbe",
+        "09fc5ddeca0e80",
+        "1f1905eec056c2",
+        "038ebdafecc482"
+      ],
+      "choices": []
+    },
+    "end_spare": {
+      "rest": "0ded569190b743",
+      "text": [
+        "1273d6a9e135d8",
+        "1dd1c8b3b23a2f",
+        "1eb32c5d5c006a",
+        "01c4500afff510",
+        "05e7ff7644ee9e",
+        "02c8554a8931bc",
+        "09b8ddd9aa5c3d",
+        "07bdcfede9b164"
+      ],
+      "choices": []
+    },
+    "end_mom": {
+      "rest": "16dee64af33078",
+      "text": [
+        "05a245bcb1b9a8",
+        "09cb7208116839",
+        "00bef3cf1dec8e",
+        "07a16e397f3f46"
+      ],
+      "choices": []
+    },
+    "end_method": {
+      "rest": "1021da10b9ba7b",
+      "text": [
+        "07ba5537e5fab0",
+        "1f51c85995bc35",
+        "1715c725ea58ad",
+        "1c09f86fdcdb4e"
+      ],
+      "choices": []
+    },
+    "end_red": {
+      "rest": "021fda87addfb5",
+      "text": [
+        "075c1986b200c9",
+        "144b9e794761f2",
+        "03dca5f90c3241",
+        "01cda7aa281476"
+      ],
+      "choices": []
+    },
+    "end_running": {
+      "rest": "13aeadc2e21a2a",
+      "text": [
+        "0323ec25fd6a48",
+        "17ed6903d4d8e2",
+        "03af0321321c92"
+      ],
+      "choices": [
+        "104a2ef2793b98",
+        "04b7ded0ba6efa"
+      ]
+    },
+    "hell_upstairs": {
+      "rest": "1f7eadef96ec28",
+      "text": [
+        "165e18a3cf1507",
+        "0c86a0f31fee87",
+        "18b4df1891adeb"
+      ],
+      "choices": []
+    },
+    "hell_orientation": {
+      "rest": "0982fa079e6e8f",
+      "text": [
+        "1e6b8fba88cbd2",
+        "159dfb37b154b9",
+        "1cf5bda47b22d8"
+      ],
+      "choices": [
+        "0c9fee898c23ce",
+        "0482e956bb5203"
+      ]
+    },
+    "hell_grab": {
+      "rest": "0e5862bfdd8f4a",
+      "text": [
+        "0fc484c7a5d913",
+        "13dc96a2864810"
+      ],
+      "choices": [
+        "109f44caca1b06",
+        "1dfb928244d10d"
+      ]
+    },
+    "hell_committee": {
+      "rest": "1501f771bb6ac1",
+      "text": [
+        "166bca96d7474d",
+        "0938a38eb3f139"
+      ],
+      "choices": [
+        "0074e22addbb2c"
+      ]
+    },
+    "hell_quiet": {
+      "rest": "0ca58679bc309b",
+      "text": [
+        "1f3955e43f70e5",
+        "14c86f2c6d6a45",
+        "1085e8f1295009"
+      ],
+      "choices": [
+        "0209bbd1977bb1",
+        "0a0b3bce257b4e"
+      ]
+    },
+    "hell_form": {
+      "rest": "1a8b0b5a955ddb",
+      "text": [
+        "1052c0a36311bd",
+        "1f1dc2872fbe91",
+        "17452cca834ec9"
+      ],
+      "choices": [
+        "1062930a39c27f"
+      ]
+    },
+    "hell_devil": {
+      "rest": "11804f99a8377e",
+      "text": [
+        "0517a79fc55352",
+        "09514a4a8e5397"
+      ],
+      "choices": [
+        "045edd9f9c54b7",
+        "049c1f06f884ac"
+      ]
+    },
+    "hell_job": {
+      "rest": "084199c6c09201",
+      "text": [
+        "11fb77255fb828",
+        "18a2af965a217d",
+        "0ac71860ffe1ac",
+        "120aa349585ce6"
+      ],
+      "choices": []
+    },
+    "hell_plateau": {
+      "rest": "076c2a0dacd129",
+      "text": [
+        "15d393bec73f9c",
+        "10fd064682a3fe",
+        "00e82247e72757",
+        "1b16f50a8578e6"
+      ],
+      "choices": []
+    },
+    "hell_plan": {
+      "rest": "19ef040407cb92",
+      "text": [
+        "00bf32eb166356",
+        "16c1d12a4fbfe4",
+        "0f1a5a60910449"
+      ],
+      "choices": [
+        "00cfef0e0faa03",
+        "007a2af93b86b6"
+      ]
+    },
+    "hell_lake": {
+      "rest": "02da437f66c92b",
+      "text": [
+        "0ea6c701e0b5b4",
+        "1730523a5be789",
+        "0bbcd6d4228165"
+      ],
+      "choices": [
+        "19ab0255d76b14"
+      ]
+    },
+    "hell_ask": {
+      "rest": "08d172e5a23eeb",
+      "text": [
+        "1630d211baa02f",
+        "1b8290b8fda702"
+      ],
+      "choices": [
+        "01c62f3685fbe7",
+        "0c4807135cc74d"
+      ]
+    },
+    "hell_count": {
+      "rest": "0bb2afd0c36279",
+      "text": [
+        "17507303981275",
+        "0692b43b1784fa",
+        "0ee8cfd9efb279",
+        "046d13a2516bdb"
+      ],
+      "choices": [
+        "11f164438f215a"
+      ]
+    },
+    "hell_offer": {
+      "rest": "117711c6b6ba4f",
+      "text": [
+        "0ba5a1903ca634",
+        "184e8b9679b3d9"
+      ],
+      "choices": [
+        "17caa05b605b70",
+        "1389910f6bddb0"
+      ]
+    },
+    "hell_trade": {
+      "rest": "0a7ca33057cff2",
+      "text": [
+        "0b9d7a0801c74b",
+        "1837ae4184ce6b",
+        "14a26e66909bd5"
+      ],
+      "choices": [
+        "115d713484f8a9"
+      ]
+    },
+    "hell_lost": {
+      "rest": "05198b8b6becd2",
+      "text": [
+        "1962dc1e3a03ba",
+        "10f448d6fc64b8",
+        "0818d2dfecede3"
+      ],
+      "choices": []
+    },
+    "hell_truth": {
+      "rest": "01a7732b341885",
+      "text": [
+        "0d1fb751a856a2",
+        "1c45d3c078e621"
+      ],
+      "choices": [
+        "1e43cd98d1c10f"
+      ]
+    },
+    "hell_return": {
+      "rest": "05bdb8d6290ef2",
+      "text": [
+        "0f0df91e8c4533",
+        "0cde533ce153f3"
+      ],
+      "choices": [
+        "14af110932a81d"
+      ]
+    },
+    "restart": {
+      "rest": "1358e45f1eb681",
+      "text": [
+        "0138e07cd57a9f",
+        "101f7b71f051e4",
+        "1de4bb7f334757",
+        "1d78f723872348"
+      ],
+      "choices": [
+        "0de61f50a848d0",
+        "1ef55bed63ecb8"
+      ]
+    },
+    "ceremony": {
+      "rest": "0577d7d86c6cec",
+      "text": [
+        "08453713b342ef",
+        "14eb1c6823a08d",
+        "06a22a5ed8feb5"
+      ],
+      "choices": [
+        "1a9f3a1ab079e9",
+        "0a9270828b8c93"
+      ]
+    },
+    "end_sick": {
+      "rest": "0ca5408da91aa7",
+      "text": [
+        "05aa22f69d08bd",
+        "0a5a69732548b6",
+        "12cad82447d491"
+      ],
+      "choices": [
+        "1de8f40e1b3da2"
+      ]
+    },
+    "end_speech": {
+      "rest": "1b887479ff67d3",
+      "text": [
+        "1cd277908f3af0",
+        "0060e8e1cb1e98",
+        "05af12662692ac",
+        "0f230f4a13c7c7"
+      ],
+      "choices": [
+        "1e85f89d6143d4"
+      ]
+    },
+    "walk_away": {
+      "rest": "1641934981a119",
+      "text": [
+        "113f4ec8868f33",
+        "121c937bc78e23",
+        "09a6bcd56160be",
+        "1cbc6aa90aa8bc"
+      ],
+      "choices": [
+        "04afcbebe75330",
+        "0dc29dbb834c9b"
+      ]
+    },
+    "resigned": {
+      "rest": "1aef616d30f842",
+      "text": [
+        "0fcb6c7764cd8f",
+        "169c0049a342b9",
+        "0881dc89917420",
+        "02f0393fbb9b5b",
+        "1af47444049263"
+      ],
+      "choices": [
+        "17e1cc35a2ae1b",
+        "00af74a09040db"
+      ]
+    },
+    "end_sabbatical": {
+      "rest": "1cb4528506f048",
+      "text": [
+        "169a8039d38971",
+        "05b497287b59af",
+        "01c002d03161f4"
+      ],
+      "choices": [
+        "0fa2ae36c58663"
+      ]
+    },
+    "ask": {
+      "rest": "1c9f1b4581d8eb",
+      "text": [
+        "05dfd554613138",
+        "0a63e8f50dc59a",
+        "00885cd7b6a3ee",
+        "1bb2233c3c5226"
+      ],
+      "choices": [
+        "0316b7bdfe82a1",
+        "1790643147ad96"
+      ]
+    },
+    "garage": {
+      "rest": "1b593b8e29276b",
+      "text": [
+        "0dd357710107dd",
+        "00dafc75403b9a",
+        "054e0221e92c1f"
+      ],
+      "choices": [
+        "0cbd188c9621d4",
+        "0ac1f34f602722",
+        "07a5cb98d5dde6"
+      ]
+    },
+    "end_founding": {
+      "rest": "018a2b34c0ac9d",
+      "text": [
+        "16b0505a409052",
+        "1857be42abeef4",
+        "0557af8aa56af4",
+        "05c49e03306594"
+      ],
+      "choices": [
+        "1a668fa9fe5e5d"
+      ]
+    },
+    "end_borrowed": {
+      "rest": "0eac698ea22c7a",
+      "text": [
+        "137af2eb4c3f93",
+        "13dfc4a25cbfec",
+        "0706715a534d03"
+      ],
+      "choices": [
+        "1b6e578b5bb90c"
+      ]
+    },
+    "printer_model": {
+      "rest": "1601b225e7ef7a",
+      "text": [
+        "129641ef347959",
+        "18c4795daff065",
+        "1de48b636dcddf"
+      ],
+      "choices": [
+        "1f738bb71eac66"
+      ]
+    },
+    "lemon": {
+      "rest": "01aa21c5f65264",
+      "text": [
+        "02dc6d002278ae",
+        "1eb1f502dfbece",
+        "1fd400e5c0bb8b"
+      ],
+      "choices": [
+        "1f738bb71eac66"
+      ]
+    },
+    "draft": {
+      "rest": "0129502d6415b3",
+      "text": [
+        "093b65fe8a5bca",
+        "13915f49292744"
+      ],
+      "choices": [
+        "0152e85f107c8d"
+      ]
+    },
+    "typo": {
+      "rest": "05e72170436b2a",
+      "text": [
+        "1adde49db746f4",
+        "1fec3997e23831",
+        "14b4f451d9ee64",
+        "036992166e7027"
+      ],
+      "choices": [
+        "0274a685497dfa"
+      ]
+    },
+    "declined": {
+      "rest": "04bff0a81d7d9a",
+      "text": [
+        "019b804c7170fa",
+        "06e2840ab77305",
+        "1bc3d30ffbe9bd",
+        "07f84f2df0102e"
+      ],
+      "choices": [
+        "1c81a3fe5f498a"
+      ]
+    },
+    "invoices": {
+      "rest": "003ee25d21ab1c",
+      "text": [
+        "1ef1bfdc3c2964",
+        "02aa57f0b886e8",
+        "0884da1673e8c1",
+        "0e557dde5b2fed",
+        "1baed21ad0b667"
+      ],
+      "choices": [
+        "13fb32cf74b9d3"
+      ]
+    },
+    "wizard": {
+      "rest": "064e9c02aafa9b",
+      "text": [
+        "0133dce1ba3867",
+        "0eb6afe3e590c6",
+        "0eb7d3b6c80616",
+        "04227c3206aba3",
+        "0427f242ac90ad",
+        "04180974217e3a"
+      ],
+      "choices": [
+        "04bb71e6fb6035",
+        "0dc882114a7710",
+        "1d59f07b90a21d",
+        "11d5215d41e388"
+      ]
+    },
+    "end_wizard": {
+      "rest": "10dd5d845984e2",
+      "text": [
+        "189e085ee14823",
+        "0a6228de1ecaea",
+        "15217d5129fb83",
+        "1646770e586034",
+        "0f32138d5e0e91",
+        "0e3f3e23bf8c36"
+      ],
+      "choices": []
+    },
+    "refuse": {
+      "rest": "1e7ae20c5d86ea",
+      "text": [
+        "161ec4dac2f2fc",
+        "1904fbdfdb69b0",
+        "0b3509bbb08958",
+        "034f8ab0d1ffea",
+        "013da73c67bb19",
+        "10f0b76b9febb1"
+      ],
+      "choices": []
+    },
+    "end_report": {
+      "rest": "09789059cf8e10",
+      "text": [
+        "0e9878e9730a0d",
+        "13f382a6a9b59a",
+        "01d61018bd2222",
+        "1e383044313f03",
+        "024d896e640de0",
+        "0c801f7c82f6ea"
+      ],
+      "choices": []
+    },
+    "pretend": {
+      "rest": "171e4026c1d6f9",
+      "text": [
+        "151949fa44ad42",
+        "0dcb272e11a734",
+        "1f3cc66ceede60",
+        "077be6dc5c5bf3"
+      ],
+      "choices": [
+        "03107bde9401c4"
+      ]
+    },
+    "jordan_drink": {
+      "rest": "118ce4126cf6ef",
+      "text": [
+        "01119a08b7eb3f",
+        "1262dc34f4dcf7",
+        "12730697c3048f",
+        "1cd28160a40a6e",
+        "17096b1e69d026"
+      ],
+      "choices": [
+        "0a78a9fc292224"
+      ]
+    },
+    "jordan_weeks": {
+      "rest": "1e3f839d8a8d3d",
+      "text": [
+        "1ddfe2c730145e",
+        "0c8a30088062e3",
+        "131b1c7723d53b",
+        "14ca48bdcbb044"
+      ],
+      "choices": [
+        "1d7981105a74d3",
+        "03f467454e2d03"
+      ]
+    },
+    "jordan_together": {
+      "rest": "122e6e922909de",
+      "text": [
+        "1da52bece44140",
+        "0789dac86930cf",
+        "0c4e55b95a3d0a",
+        "09b19f887f1df2",
+        "156e1be8c3d172"
+      ],
+      "choices": []
+    },
+    "jordan_breakup": {
+      "rest": "1a3bc6b5490890",
+      "text": [
+        "1685038fbab6fb",
+        "073da0028f29b2",
+        "023568e3d7cbb7",
+        "01574536264e1c"
+      ],
+      "choices": [
+        "1e2baa1895da0a"
+      ]
+    }
   },
   "drawings": {
     "office": "034657c46e95de",
