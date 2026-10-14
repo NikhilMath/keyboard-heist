@@ -1610,11 +1610,11 @@ function render(focus=false){
  if(node.afterTicket){const after=document.createElement('div');after.className='prose';node.afterTicket.forEach(text=>{const p=document.createElement('p');p.textContent=text;after.append(p);});container.append(after);}
  const prompt=document.createElement('p');prompt.className=node.finale?'decision finale':'decision';prompt.textContent=node.prompt||(node.checkpoint?'To be continued':node.ending?'Every ending is another beginning.':'What will you do?');container.append(prompt);
  const choices=document.createElement('div');choices.className='choices';
- (node.choices||(node.checkpoint||node.finale?[]:[{label:'Try a different choice',hint:'Go back to the last choice you made.',next:'arrival'}])).forEach((choice,i)=>{
+ (node.choices||(node.checkpoint||node.finale?[]:[{label:'Try a different choice',next:'arrival'}])).forEach((choice,i)=>{
  const visited=!node.ending&&seen.has(choice.next);
  const button=document.createElement('button');button.className='choice'+(node.ending?' primary':visited?' visited':'');
  const number=document.createElement('span');number.className='choice-number';number.textContent=node.ending?'↻':visited?'✓':String(i+1).padStart(2,'0');number.setAttribute('aria-hidden','true');
- const copy=document.createElement('span');const label=document.createElement('strong');label.textContent=choice.label;const hint=document.createElement('small');hint.textContent=choice.hint;if(choice.stamp){const stamp=document.createElement('span');stamp.className='stamp stamp-'+choice.stamp;stamp.textContent=choice.stamp;copy.append(stamp);}copy.append(label,hint);if(visited){const note=document.createElement('span');note.className='visually-hidden';note.textContent=' Already explored.';copy.append(note);}
+ const copy=document.createElement('span');const label=document.createElement('strong');label.textContent=choice.label;if(choice.stamp){const stamp=document.createElement('span');stamp.className='stamp stamp-'+choice.stamp;stamp.textContent=choice.stamp;copy.append(stamp);}copy.append(label);if(visited){const note=document.createElement('span');note.className='visually-hidden';note.textContent=' Already explored.';copy.append(note);}
  const arrow=document.createElement('span');arrow.className='arrow';arrow.textContent='↗';arrow.setAttribute('aria-hidden','true');button.append(number,copy,arrow);
  button.addEventListener('click',()=>{if(node.ending)path.pop();else path.push(choice.next);render(true);});choices.append(button);
  });container.append(choices);

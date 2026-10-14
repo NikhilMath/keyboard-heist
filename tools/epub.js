@@ -80,9 +80,9 @@ ${body}
 `;
 const paras = list => (list || []).map(t => `<p>${esc(t)}</p>`).join('\n');
 const stamp = c => c.stamp ? `<span class="stamp">${esc(c.stamp.toUpperCase())}</span> ` : '';
-const link = (id, label, hint, pre = '') => `<div class="choice">
+// Choices show the label only; the hints stay in STORY but are not shown (user's request, 2026-10-14).
+const link = (id, label, pre = '') => `<div class="choice">
 <p class="choice-label">${pre}<a href="${file(id)}">${esc(label)} <span class="turn">Turn to ${num[id]}.</span></a></p>
-${hint ? `<p class="hint">${esc(hint)}</p>` : ''}
 </div>`;
 
 function section(id) {
@@ -105,11 +105,10 @@ function section(id) {
     const back = parents(id);
     body.push(`<p class="decision">${esc(s.prompt || 'Every ending is another beginning.')}</p>`,
       `<p class="ending-name">Dead end: ${esc(s.name || s.title)}</p>`,
-      `<div class="choice"><p class="choice-label">Try a different choice. ${back.map(p => `<a href="${file(p)}">Turn back to ${num[p]}.</a>`).join(' Or ')}</p>
-<p class="hint">Go back to the last choice you made.</p></div>`);
+      `<div class="choice"><p class="choice-label">Try a different choice. ${back.map(p => `<a href="${file(p)}">Turn back to ${num[p]}.</a>`).join(' Or ')}</p></div>`);
   } else {
     body.push(`<p class="decision">${esc(s.prompt || 'What will you do?')}</p>`,
-      ...s.choices.map(c => link(c.next, c.label, c.hint, stamp(c))));
+      ...s.choices.map(c => link(c.next, c.label, stamp(c))));
   }
   body.push('</section>');
   return page('Section ' + n, body.join('\n'), 'bodymatter');
@@ -159,7 +158,6 @@ h2.title { font-size: 1.5em; margin: 0.8em 0 0.8em; }
 .choice { margin: 1em 0 0; page-break-inside: avoid; }
 .choice-label { font-weight: bold; margin: 0; }
 .turn { font-weight: normal; white-space: nowrap; }
-.hint { font-style: italic; font-size: 0.9em; margin: 0.2em 0 0; }
 .stamp { font-size: 0.75em; letter-spacing: 0.1em; border: 1px solid; padding: 0 0.3em; }
 .the-end { margin-top: 1.6em; text-align: center; font-size: 1.3em; font-style: italic; }
 .ending-name { text-align: center; font-size: 0.85em; letter-spacing: 0.1em; text-transform: uppercase; }
