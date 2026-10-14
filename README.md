@@ -35,6 +35,7 @@ Then open http://localhost:8000.
 | `styles.css` | How the game looks |
 | `favicon.svg`, `favicon.png`, `apple-touch-icon.png` | Browser and phone icons |
 | `og-image.jpg` | The preview image shown when the link is shared |
+| `book/kindle-cover.jpg`, `book/kindle-cover.html` | The Kindle eBook cover (1600x2560) and the page it was made from |
 | `BRANCHES.md` | A flowchart of every branch plus the full story text (**spoilers**) |
 | `story-map.txt`, `spine-draft.txt` | Planning notes from writing the story |
 | `tools/branches.js` | Rebuilds `BRANCHES.md` from the story |
