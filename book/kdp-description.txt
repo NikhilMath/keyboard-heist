@@ -4,7 +4,7 @@ You're the IT Support Manager. For months you've woken up, fixed problems, gone 
 
 Then the CEO sends a ticket. His printer needs a driver. You hate printer drivers.
 
-His keyboard is nothing special: a $149.99 model companies buy in bulk. But you type your name on it, and for the first time in twenty-two years, you notice a keyboard. So you buy the exact same one. It feels like nothing. It has to be his.
+His keyboard is nothing special, the kind companies buy in bulk. But you type your name on it, and for the first time in twenty-two years, you notice a keyboard. So you buy the exact same one. It feels like nothing. It has to be his.
 
 So you plan. A spreadsheet. A decoy. A building-wide internet outage. A hired grandmother. It's the most alive you've felt in months, and it's a crime. Or it will be.
 
