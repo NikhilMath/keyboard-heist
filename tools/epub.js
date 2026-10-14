@@ -1,9 +1,9 @@
 // Builds the Kindle eBook (EPUB 3) of the whole story from STORY and VIGNETTES in index.html.
 // Run from the repo root (needs node, Google Chrome or Microsoft Edge to draw the pictures, and /usr/bin/zip):
-//   node tools/epub.js ~/Downloads/Keyboard-Heist.epub
+//   node tools/epub.js            (writes book/keyboard-heist.epub; commit it with every story change)
 // The book is a gamebook: one numbered section per scene, each on its own page, every choice a link
 // that also says "Turn to N". Section 1 is the opening; the rest are shuffled with a fixed seed, so
-// rebuilding the same story gives the same numbers. Never commit the .epub: it spoils every scene.
+// rebuilding the same story gives the same numbers.
 
 const fs = require('fs');
 const os = require('os');
@@ -11,7 +11,7 @@ const path = require('path');
 const vm = require('vm');
 const { spawn, execFileSync } = require('child_process');
 
-const out = path.resolve(process.argv[2] || 'Keyboard-Heist.epub');
+const out = path.resolve(process.argv[2] || 'book/keyboard-heist.epub');
 const root = process.cwd();
 const html = fs.readFileSync(path.join(root, 'index.html'), 'utf8');
 

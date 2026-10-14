@@ -36,11 +36,12 @@ Then open http://localhost:8000.
 | `favicon.svg`, `favicon.png`, `apple-touch-icon.png` | Browser and phone icons |
 | `og-image.jpg` | The preview image shown when the link is shared |
 | `book/kindle-cover.jpg`, `book/kindle-cover.html` | The Kindle eBook cover (1600x2560) and the page it was made from |
+| `book/keyboard-heist.epub` | The Kindle eBook of the whole story (**spoilers**) |
 | `BRANCHES.md` | A flowchart of every branch plus the full story text (**spoilers**) |
 | `branches.html` | The same map as a page where you click any box to read that scene, at [keyboardheist.com/branches.html](https://keyboardheist.com/branches.html) (**spoilers**) |
 | `story-map.txt`, `spine-draft.txt` | Planning notes from writing the story |
 | `tools/branches.js` | Rebuilds `BRANCHES.md` and `branches.html` from the story |
-| `tools/epub.js` | Builds the Kindle eBook (EPUB) of the whole story, with the cover and every drawing |
+| `tools/epub.js` | Rebuilds `book/keyboard-heist.epub` from the story, with the cover and every drawing |
 | `story-lock.json`, `tools/lock.js` | The story is locked: you can add to it, but not change it. A fingerprint of every scene, and the check |
 | `AGENTS.md` | Instructions for AI assistants that work on this project |
 
