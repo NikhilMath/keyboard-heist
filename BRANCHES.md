@@ -4,6 +4,10 @@
 
 73 scenes, 10 real endings (solid green, solid red in Hell, or solid blue in space), 3 dead ends (dashed diamonds). Red boxes are Hell; blue boxes are the space mission.
 
+GitHub won’t let you click the boxes. For a map where every box opens its scene, use [keyboardheist.com/branches.html](https://keyboardheist.com/branches.html).
+
+<a name="map"></a>
+
 ```mermaid
 flowchart TD
   arrival["Quick printer help? 🙂"]:::scene
@@ -272,7 +276,7 @@ Each scene name jumps to its full text below; “code” opens it in `index.html
 
 ## The full story
 
-Every scene in story order, with its choices. Click a choice to jump to the scene it leads to.
+Every scene in story order, with its choices. Click a choice to jump to the scene it leads to, or “Back to the map” to return to the chart.
 
 <a name="arrival"></a>
 
@@ -293,6 +297,8 @@ A printer driver. You hate those.
 - [Head to his office.](#office) *Maybe walking somewhere will count as feeling something.*
 - [Reply, “Have you tried restarting the printer?”](#restart) *You deserve to ask. Once.*
 - [Look up the printer’s model in inventory.](#printer_model) *There’s still a professional somewhere inside you.*
+
+[↑ Back to the map](#map)
 
 <a name="office"></a>
 
@@ -324,6 +330,8 @@ Daniel is still on the phone. Your hands are still on the keyboard.
 - [Leave it. Come back for it later.](#plan) *You’d finish clean. You’d plan. That’s who you are.*
 - [Stand up. Walk away. Never think about this again.](#walk_away) *Everyone would tell you it’s the correct choice.*
 
+[↑ Back to the map](#map)
+
 <a name="plan"></a>
 
 ### The plan
@@ -345,6 +353,8 @@ Over her shoulder, her calendar: the company retreat, next Friday. Daniel brings
 - [Case the office.](#outage) *Professionally. You are a professional.*
 - [Just ask him about it.](#ask) *Normal. He loves talking about his stuff.*
 
+[↑ Back to the map](#map)
+
 <a name="outage"></a>
 
 ### The outage
@@ -362,6 +372,8 @@ You have two minutes. You walk into Daniel’s office. The keyboard is right the
 Next to it, on paper, because the internet is down: his retreat packing list. “Keyboard” is underlined twice.
 
 - [Back out. Think.](#grandmother) *You can’t steal it from a cabin in the woods.*
+
+[↑ Back to the map](#map)
 
 <a name="grandmother"></a>
 
@@ -384,6 +396,8 @@ The third introduces herself as Mrs. Cox. She reads the brief, asks about your c
 - [Hire Mrs. Cox.](#visit) *She’s far too good. That’s the point.*
 - [Forget it. Use your mother in Ohio.](#end_mom) *She’s fine. She picks up her phone. That may be a problem.*
 
+[↑ Back to the map](#map)
+
 <a name="visit"></a>
 
 ### The visit
@@ -403,6 +417,8 @@ He sends the email: “Family comes first. The retreat is canceled. Please keep 
 - [Pay her and move on.](#audit) *Cash. No receipt.*
 - [Let Mrs. Cox keep going.](#end_method) *She’s getting attached. So is he.*
 
+[↑ Back to the map](#map)
+
 <a name="audit"></a>
 
 ### The audit
@@ -417,6 +433,8 @@ Every keyboard is tagged. Your decoy isn’t. The moment anyone scans it, it’s
 
 - [Make a tag.](#swap) *You’re in IT. You’re allowed a label printer.*
 - [Skip it. Nobody checks.](#end_red) *Nobody ever checks. Probably.*
+
+[↑ Back to the map](#map)
 
 <a name="swap"></a>
 
@@ -436,6 +454,8 @@ He scans the keyboard on the desk. The forged tag beeps green. You have never be
 
 - [Look at him.](#choice) *Really look.*
 
+[↑ Back to the map](#map)
+
 <a name="choice"></a>
 
 ### The choice
@@ -454,6 +474,8 @@ You grab the keyboard and run anyway. Down the hall, past a fern and a poster th
 
 - **VIRTUE** [Go back with the inhaler.](#lie) *The keyboard is coming with you.*
 - **SIN** [Keep running.](#end_running) *He can’t be that sick. Right?*
+
+[↑ Back to the map](#map)
 
 <a name="lie"></a>
 
@@ -475,6 +497,8 @@ Your phone buzzes. Daniel: “Heard what you did today. Thank you. You saved a m
 
 - [Go home.](#end_plateau) *You’ve been waiting for this for weeks.*
 
+[↑ Back to the map](#map)
+
 <a name="end_plateau"></a>
 
 ### The plateau
@@ -494,6 +518,8 @@ That was the whole thing. That was all of it.
 Nothing is especially wrong. Nothing is especially interesting. You’ve reached the plateau, apparently, and the view is mostly Outlook.
 
 *The end.*
+
+[↑ Back to the map](#map)
 
 <a name="end_spare"></a>
 
@@ -525,6 +551,8 @@ You walk it back to his office instead. He plugs it in with a cable this time, �
 
 - [Go home. Try not to think about it.](#plan) *You will anyway.*
 
+[↑ Back to the map](#map)
+
 <a name="end_mom"></a>
 
 ### Forget it. Use your mother in Ohio.
@@ -542,6 +570,8 @@ She’s coming for a long visit. She has already booked the flight. The keyboard
 Daniel tells you to take all the time you need. “Family comes first,” he says, with a hand over his heart.
 
 - [Pick her up at the airport.](#mom_lands) *She sounded worried. Not about herself.*
+
+[↑ Back to the map](#map)
 
 <a name="mom_lands"></a>
 
@@ -562,6 +592,8 @@ That night, in her kitchen in Ohio, she tells you about the moon rock at the Arm
 - [Go in with a school field trip.](#field_trip) *Nobody counts the chaperones.*
 - [Go in at closing time.](#closing_time) *Your mom knows the guard. Your mom knows everybody.*
 
+[↑ Back to the map](#map)
+
 <a name="field_trip"></a>
 
 ### Go in with a school field trip.
@@ -578,6 +610,8 @@ On the bus home, a fourth grader asks what’s in her purse. “A rock,” she s
 
 - [Get it home.](#moon_rock) *Act natural. You’re a chaperone.*
 
+[↑ Back to the map](#map)
+
 <a name="closing_time"></a>
 
 ### Go in at closing time.
@@ -593,6 +627,8 @@ You have the whole museum to yourself. You lift the glass. Somehow you thought t
 On the way out, your mom hugs the guard. He tells her to come back soon. She says she will. She probably will.
 
 - [Get it home.](#moon_rock) *Drive the speed limit. Exactly the speed limit.*
+
+[↑ Back to the map](#map)
 
 <a name="moon_rock"></a>
 
@@ -613,6 +649,8 @@ You started with a CEO. Now it’s the government. Out of habit, you check the I
 - [Take the printer-driver ticket.](#printer_kennedy) *The task you hate most. Nobody on Earth wants it.*
 - [Hide in the cargo.](#crew_supplies) *Two crates marked “Crew supplies.” Close enough.*
 
+[↑ Back to the map](#map)
+
 <a name="printer_kennedy"></a>
 
 ### Take the printer-driver ticket.
@@ -629,6 +667,8 @@ IT can go anywhere. Nobody asks why. Not even at NASA. On launch morning, nobody
 
 - [Find somewhere to hide.](#liftoff) *Behind the seats. Very still. Very small.*
 
+[↑ Back to the map](#map)
+
 <a name="crew_supplies"></a>
 
 ### Hide in the cargo.
@@ -644,6 +684,8 @@ Hours later, you lift the lid an inch. You’re inside the capsule. Next to you,
 Four astronauts climb in and strap down. Nobody checks the crew supplies. Somewhere far below, someone starts a countdown.
 
 - [Stay very still.](#liftoff) *You’re crew supplies. Act like it.*
+
+[↑ Back to the map](#map)
 
 <a name="liftoff"></a>
 
@@ -664,6 +706,8 @@ It takes five days to reach the Moon. The keyboard is on the wall the whole way,
 - [Wait until they sleep.](#lights_out) *Even astronauts sleep. Eventually.*
 - [Let your mom distract them.](#mom_tour) *She has questions. So many questions.*
 
+[↑ Back to the map](#map)
+
 <a name="lights_out"></a>
 
 ### Wait until they sleep.
@@ -680,6 +724,8 @@ You peel the keyboard off the wall. Velcro is very loud at night. The lights com
 
 - [Hide it behind your back.](#toilet) *In a capsule this small.*
 
+[↑ Back to the map](#map)
+
 <a name="mom_tour"></a>
 
 ### Let your mom distract them.
@@ -695,6 +741,8 @@ She has already pressed it. The toilet makes a noise like a blender eating a spo
 While everyone stares at the toilet, you peel the keyboard off the wall. Velcro is very loud. Nobody hears it.
 
 - [Hide it behind your back.](#toilet) *Act casual. In zero gravity.*
+
+[↑ Back to the map](#map)
 
 <a name="toilet"></a>
 
@@ -713,6 +761,8 @@ You’re IT. Broken things come to you.
 - [Grab your mom. Take the escape pod.](#escape_pod) *Keyboard and all. Somebody else can fix the toilet.*
 - [Put the keyboard back. Fix the toilet.](#far_side) *It’s a ticket. You know what to do with tickets.*
 
+[↑ Back to the map](#map)
+
 <a name="escape_pod"></a>
 
 ### Grab your mom. Take the escape pod.
@@ -728,6 +778,8 @@ The pod swings once around the Moon and falls toward Earth. The keyboard is in y
 Three days later, you splash down in Lake Erie. A fishing boat picks you up. The captain doesn’t ask. Ohio doesn’t ask.
 
 - [Take it home.](#spice) *The keyboard. And your mom.*
+
+[↑ Back to the map](#map)
 
 <a name="spice"></a>
 
@@ -747,6 +799,8 @@ You didn’t need a keyboard. You needed a little spice.
 
 *The end.*
 
+[↑ Back to the map](#map)
+
 <a name="far_side"></a>
 
 ### Put the keyboard back. Fix the toilet.
@@ -765,6 +819,8 @@ Nothing is especially wrong. Everything is especially interesting.
 
 *The end.*
 
+[↑ Back to the map](#map)
+
 <a name="end_method"></a>
 
 ### Let Mrs. Cox keep going.
@@ -779,6 +835,8 @@ She catches your eye across the conference table and mouths: “You owe me.” S
 
 Nobody else knows. You never get near the keyboard again.
 
+[↑ Back to the map](#map)
+
 <a name="end_red"></a>
 
 ### Skip it. Nobody checks.
@@ -792,6 +850,8 @@ The auditor checks. He scans the keyboard on Daniel’s desk. It beeps once. Red
 He looks at the keyboard. He looks at you. He has seen this before, and he is sad about it. He calls Daniel in.
 
 Daniel arrives holding a granola bar. He looks at the keyboard, then at you. He is heartbroken. “I would’ve just given it to you.” You are asked to leave. The real keyboard was in your bag the whole time. It feels like nothing.
+
+[↑ Back to the map](#map)
 
 <a name="end_running"></a>
 
@@ -808,6 +868,8 @@ At the bottom, a sign: WELCOME TO HELL, PLEASE TAKE A NUMBER. A demon at the fro
 - **SIN** [Sign in. Keep the keyboard.](#hell_orientation) *Everyone brings something. You brought someone else’s.*
 - **VIRTUE** [Run back up and face it.](#hell_upstairs) *Up has to be somewhere. So does everything you ran from.*
 
+[↑ Back to the map](#map)
+
 <a name="hell_upstairs"></a>
 
 ### Run back up and face it.
@@ -821,6 +883,8 @@ HR is waiting. Daniel looks so disappointed you almost feel something. Security 
 You went back to face it. You’re just a day late, and nobody up here gives points for that.
 
 *The end.*
+
+[↑ Back to the map](#map)
 
 <a name="hell_orientation"></a>
 
@@ -837,6 +901,8 @@ The handle is warm. The balance is perfect. You poke the air, and the air seems 
 - **SIN** [Steal it. Walk out.](#hell_grab) *Nobody stops someone who looks busy.*
 - **VIRTUE** [Hand it back. Smile.](#hell_plan) *It isn’t yours.*
 
+[↑ Back to the map](#map)
+
 <a name="hell_grab"></a>
 
 ### Steal it. Walk out.
@@ -850,6 +916,8 @@ That night, Compliance counts. One pitchfork is missing. The nice demon pats eve
 - **SIN** [Say nothing. Let them take the fall.](#hell_quiet) *They’ll be fine in Ohio. Probably.*
 - **VIRTUE** [Give it back before morning.](#hell_committee) *Walk it over. Hope nobody asks why you had it.*
 
+[↑ Back to the map](#map)
+
 <a name="hell_committee"></a>
 
 ### Give it back before morning.
@@ -861,6 +929,8 @@ You walk it back before morning. The nice demon lights up so hard their tail kno
 Compliance has already written your name down. The committee meets every Tuesday, forever. Somebody has to take the minutes. It’s you. It will always be you.
 
 - [Take the minutes.](#hell_plateau) *Forever is a long meeting.*
+
+[↑ Back to the map](#map)
 
 <a name="hell_quiet"></a>
 
@@ -877,6 +947,8 @@ The pitchfork is yours now, unofficially. Every night you hide it from the count
 - **SIN** [Make a deal with the Devil.](#hell_devil) *He’s right there on the org chart.*
 - **VIRTUE** [Confess on Form 666. Bring them back.](#hell_form) *There’s always a form. Even for this.*
 
+[↑ Back to the map](#map)
+
 <a name="hell_form"></a>
 
 ### Confess on Form 666. Bring them back.
@@ -891,6 +963,8 @@ Window 4 stamps it PENDING. It will be pending for as long as Hell has windows.
 
 - [Wait.](#hell_plateau) *It’s pending.*
 
+[↑ Back to the map](#map)
+
 <a name="hell_devil"></a>
 
 ### The corner office
@@ -903,6 +977,8 @@ He scrolls through your soul for a long time. “It’s mostly Outlook,” he sa
 
 - **SIN** [Sell him Daniel’s keyboard.](#hell_job) *It was never yours to sell. That never stopped you.*
 - **VIRTUE** [Refuse. Walk out.](#hell_plateau) *Some things you don’t sell, even here.*
+
+[↑ Back to the map](#map)
 
 <a name="hell_job"></a>
 
@@ -920,6 +996,8 @@ You hate printer drivers, and you are extraordinary at this. You just weren’t 
 
 *The end.*
 
+[↑ Back to the map](#map)
+
 <a name="hell_plateau"></a>
 
 ### The lower plateau
@@ -936,6 +1014,8 @@ Nothing is especially wrong. Nothing is especially interesting. You’ve reached
 
 *The end.*
 
+[↑ Back to the map](#map)
+
 <a name="hell_plan"></a>
 
 ### The plan, again
@@ -951,6 +1031,8 @@ Every day at three, the nice demon leans their pitchfork on a table at the Torme
 - **SIN** [Swap it at the huddle. Hide the real one in the Lake of Fire.](#hell_lake) *Fish it out after the count. Nobody looks in the Lake of Fire. Probably.*
 - **VIRTUE** [Just ask for it.](#hell_ask) *They’re the nicest demon in Hell. It might work.*
 
+[↑ Back to the map](#map)
+
 <a name="hell_lake"></a>
 
 ### Swap it at the huddle. Hide the real one in the Lake of Fire.
@@ -965,6 +1047,8 @@ Compliance writes you up and assigns you to Lost and Found, until further notice
 
 - [Report to Lost and Found.](#hell_lost) *Bring a towel. It’s by a lake.*
 
+[↑ Back to the map](#map)
+
 <a name="hell_ask"></a>
 
 ### Just ask for it.
@@ -977,6 +1061,8 @@ They come back slower. “Whoever a demon gives their pitchfork to, for keeps, d
 
 - **SIN** [Say no thanks. Steal it at the huddle.](#hell_count) *Nobody gives it to you, nobody gives you the job.*
 - **VIRTUE** [Say no thanks. Let them keep it.](#hell_offer) *It’s theirs. It was always theirs.*
+
+[↑ Back to the map](#map)
 
 <a name="hell_count"></a>
 
@@ -994,6 +1080,8 @@ They hug you goodbye. You have the thing you wanted, and nobody left to show it 
 
 - [Take it to Lost and Found.](#hell_lost) *Somebody should have it. It isn’t you.*
 
+[↑ Back to the map](#map)
+
 <a name="hell_offer"></a>
 
 ### The Devil’s offer
@@ -1006,6 +1094,8 @@ They’ll get a new one, he says. He doesn’t want your soul. He’s seen it, a
 
 - **SIN** [Trade him Daniel’s keyboard.](#hell_trade) *It was the most important thing in your life last week.*
 - **VIRTUE** [Say no. Give it all back.](#hell_truth) *It isn’t yours to take. Neither is the keyboard.*
+
+[↑ Back to the map](#map)
 
 <a name="hell_trade"></a>
 
@@ -1021,6 +1111,8 @@ Through the open door, the Devil is still typing his name. You stand in the hall
 
 - [Drop it at Lost and Found.](#hell_lost) *Maybe it feels like something to somebody else.*
 
+[↑ Back to the map](#map)
+
 <a name="hell_lost"></a>
 
 ### Lost and Found
@@ -1035,6 +1127,8 @@ Nobody ever comes to claim anything, including you.
 
 *The end.*
 
+[↑ Back to the map](#map)
+
 <a name="hell_truth"></a>
 
 ### Say no. Give it all back.
@@ -1047,6 +1141,8 @@ Nobody has ever turned the Devil down to give something back. There isn’t a fo
 
 - [Get in the elevator.](#hell_return) *It only goes one direction for you now.*
 
+[↑ Back to the map](#map)
+
 <a name="hell_return"></a>
 
 ### Return to sender
@@ -1058,6 +1154,8 @@ The elevator has one button. The doors open next to the fern. The clock says 11:
 The keyboard is in your arms. The inhaler is under your shoe. Somewhere behind you, a man is wheezing.
 
 - [Go back with the inhaler.](#lie) *You said you’d give it all back. Start with this.*
+
+[↑ Back to the map](#map)
 
 <a name="restart"></a>
 
@@ -1076,6 +1174,8 @@ You have never won anything. You have never wanted to.
 - [Go to the ceremony.](#ceremony) *There will be granola bars.*
 - [Call in sick Friday.](#end_sick) *Awards are just attention with a plaque.*
 
+[↑ Back to the map](#map)
+
 <a name="ceremony"></a>
 
 ### The ceremony
@@ -1091,6 +1191,8 @@ The whole room is looking at you with its whole face. It’s the most attention 
 - [Say a few words.](#end_speech) *Say something true. It might be funny.*
 - [Say “thank you” and sit down.](#lemon) *Safe. Quiet. Familiar.*
 
+[↑ Back to the map](#map)
+
 <a name="end_sick"></a>
 
 ### Call in sick Friday.
@@ -1104,6 +1206,8 @@ You have never been so celebrated. You have never been so bored.
 On Monday, the plaque is on your desk and the soup is in your fridge. Somebody should say thank you.
 
 - [Go thank Daniel for the soup.](#office) *Manners. That’s all this is.*
+
+[↑ Back to the map](#map)
 
 <a name="end_speech"></a>
 
@@ -1121,6 +1225,8 @@ You don’t know what to say back. For once, that’s fine.
 
 - [Get a drink after work.](#jordan_drink) *You have nothing else to do tonight. You never do.*
 
+[↑ Back to the map](#map)
+
 <a name="walk_away"></a>
 
 ### Stand up. Walk away. Never think about this again.
@@ -1137,6 +1243,8 @@ You backspace it. You type it again. Your cursor hovers over Send.
 
 - [Send it.](#resigned) *Some feelings come with consequences.*
 - [Save it as a draft.](#draft) *Safe. Unsent. Yours.*
+
+[↑ Back to the map](#map)
 
 <a name="resigned"></a>
 
@@ -1157,6 +1265,8 @@ You could take it. You could take it back.
 - [Take the sabbatical.](#end_sabbatical) *Six weeks. Paid. You’ll be fine.*
 - [Say it was a typo.](#typo) *Recover. Retreat. Rewrite.*
 
+[↑ Back to the map](#map)
+
 <a name="end_sabbatical"></a>
 
 ### Take the sabbatical.
@@ -1170,6 +1280,8 @@ On day thirteen, you catch yourself typing on the arm of the couch. Your fingers
 On day fourteen, you email Daniel that you’re feeling much better. You aren’t. You’re just feeling something.
 
 - [Go back early.](#plan) *Rested enough. Probably.*
+
+[↑ Back to the map](#map)
 
 <a name="ask"></a>
 
@@ -1188,6 +1300,8 @@ He talks to you like you’re a person, not a ticket number. Somewhere in your b
 - [Let him finish.](#garage) *He has more. He always has more.*
 - [Ask if you could have it.](#end_founding) *Bold. He might say yes.*
 
+[↑ Back to the map](#map)
+
 <a name="garage"></a>
 
 ### The garage
@@ -1203,6 +1317,8 @@ He holds it out to you with both hands. It’s the thing you wanted. He’s just
 - [Take it.](#end_founding) *It’s what you came for. Is it what you wanted?*
 - [Borrow it for the weekend.](#end_borrowed) *A compromise. A very polite one.*
 - [Say you couldn’t possibly.](#declined) *You have a decoy in your bag. Have some shame.*
+
+[↑ Back to the map](#map)
 
 <a name="end_founding"></a>
 
@@ -1220,6 +1336,8 @@ At 2:14 a.m. you wake up. Something in the kitchen is typing.
 
 - [Go look.](#invoices) *You live alone.*
 
+[↑ Back to the map](#map)
+
 <a name="end_borrowed"></a>
 
 ### Borrow it for the weekend.
@@ -1233,6 +1351,8 @@ On Monday, you carry it back. “How was it?” Daniel asks. “Fine,” you say
 He sets it back on his desk. The second it’s his again, you want it again. That’s worse.
 
 - [Back to the plan.](#outage) *Borrowing was never the point.*
+
+[↑ Back to the map](#map)
 
 <a name="printer_model"></a>
 
@@ -1248,6 +1368,8 @@ Daniel replies in nine seconds. “You’re a lifesaver!! Come by, I want to tha
 
 - [Head to his office.](#office) *Maybe walking somewhere will count as feeling something.*
 
+[↑ Back to the map](#map)
+
 <a name="lemon"></a>
 
 ### Say “thank you” and sit down.
@@ -1262,6 +1384,8 @@ Afterward, Daniel catches you by the elevator. “Come by my office before you g
 
 - [Head to his office.](#office) *Maybe walking somewhere will count as feeling something.*
 
+[↑ Back to the map](#map)
+
 <a name="draft"></a>
 
 ### Save it as a draft.
@@ -1273,6 +1397,8 @@ You save it as a draft. It joins fourteen others. The oldest is from 2021 and ju
 It wasn’t quitting you liked. It was the feeling. You’ve only had it one other time lately, with your hands on a keyboard that wasn’t yours.
 
 - [Look it up.](#plan) *Just to be sure it’s normal.*
+
+[↑ Back to the map](#map)
 
 <a name="typo"></a>
 
@@ -1290,6 +1416,8 @@ It was the best ninety seconds you’ve had in a long time, and you didn’t eve
 
 - [Figure out how.](#plan) *You already know how.*
 
+[↑ Back to the map](#map)
+
 <a name="declined"></a>
 
 ### Say you couldn’t possibly.
@@ -1305,6 +1433,8 @@ In your bag, the decoy has never felt heavier. You eat the granola bar. It’s a
 You’re still doing this. You’re just going to feel worse about it.
 
 - [Back to the plan.](#outage) *Guilt is a feeling. Feelings are what you came for.*
+
+[↑ Back to the map](#map)
 
 <a name="invoices"></a>
 
@@ -1323,6 +1453,8 @@ You add the amounts, because you’re the kind of person who adds the amounts. I
 It has typed every invoice since the garage. Daniel told you that himself. He was proud of it.
 
 - [Take it back to him.](#wizard) *In the morning. Like a normal person.*
+
+[↑ Back to the map](#map)
 
 <a name="wizard"></a>
 
@@ -1347,6 +1479,8 @@ He’s evil the way a spreadsheet is evil. He’s never once had a single thing 
 - [Report him.](#end_report) *Somebody should do something about this. He doesn’t look worried.*
 - [Walk out and pretend you never saw it.](#pretend) *You’re very good at not noticing things.*
 
+[↑ Back to the map](#map)
+
 <a name="end_wizard"></a>
 
 ### Ask him to show you.
@@ -1366,6 +1500,8 @@ Danal hasn’t felt a single thing in centuries. He’s never noticed.
 Neither will you.
 
 *The end.*
+
+[↑ Back to the map](#map)
 
 <a name="refuse"></a>
 
@@ -1387,6 +1523,8 @@ It’s the first interesting thing that’s happened to either of you in years.
 
 *The end.*
 
+[↑ Back to the map](#map)
+
 <a name="end_report"></a>
 
 ### Report him.
@@ -1405,6 +1543,8 @@ You’re the fall guy. So now you sit at your desk and say nothing, and hope nob
 
 Maybe you shouldn’t have taken that ticket.
 
+[↑ Back to the map](#map)
+
 <a name="pretend"></a>
 
 ### Walk out and pretend you never saw it.
@@ -1420,6 +1560,8 @@ By lunch you’ve decided that none of it happened. There’s no realm. There’
 You still want it. That’s the part that doesn’t go away.
 
 - [Get back to the plan.](#outage) *Nothing has changed. You have a decoy in your bag.*
+
+[↑ Back to the map](#map)
 
 <a name="jordan_drink"></a>
 
@@ -1439,6 +1581,8 @@ Two hours later you’re still there. Neither of you has checked a phone once.
 
 - [See them again.](#jordan_weeks) *You already know you will.*
 
+[↑ Back to the map](#map)
+
 <a name="jordan_weeks"></a>
 
 ### See them again.
@@ -1455,6 +1599,8 @@ Jordan notices you’ve gone somewhere else. “Where’d you go?” they ask.
 
 - [Tell them everything.](#jordan_together) *The plateau. All of it.*
 - [Say you’re just tired.](#jordan_breakup) *It’s easier. It’s also a lie.*
+
+[↑ Back to the map](#map)
 
 <a name="jordan_together"></a>
 
@@ -1474,6 +1620,8 @@ Congratulations. You found love. You are no longer bored, worried about tickets,
 
 *The end.*
 
+[↑ Back to the map](#map)
+
 <a name="jordan_breakup"></a>
 
 ### Say you’re just tired.
@@ -1489,3 +1637,5 @@ Two months later, Jordan’s toothbrush is gone from the bathroom, and you don�
 You cry once, brief and confusing. Then a ticket pops up: Daniel, the printer, again. “Whenever you have a minute. Appreciate you!”
 
 - [Think about something else.](#office) *A printer is something else.*
+
+[↑ Back to the map](#map)
