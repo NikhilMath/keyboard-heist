@@ -1,6 +1,6 @@
 # Keyboard Heist
 
-A short choose-your-own-adventure office comedy that you play in your browser.
+A short choose-your-own-adventure comedy that you play in your browser.
 
 You're an IT Support Manager stuck on a dull plateau. A printer ticket takes you to the CEO's office, and his perfectly ordinary keyboard feels wonderful. Buying your own won't do. You have to steal his.
 
