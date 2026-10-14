@@ -10,7 +10,7 @@ GitHub won’t let you click the boxes. For a map where every box opens its scen
 
 ```mermaid
 flowchart TD
-  arrival["Quick printer help? 🙂"]:::scene
+  arrival["Quick printer help? :)"]:::scene
   office["Head to his office."]:::scene
   plan["The plan"]:::scene
   outage["The outage"]:::scene
@@ -200,7 +200,7 @@ Each scene name jumps to its full text below; “code” opens it in `index.html
 
 | Scene | Kind | Leads to | Code |
 | --- | --- | --- | --- |
-| [Quick printer help? 🙂](#arrival) `arrival` | Scene | [`office`](#office), [`restart`](#restart), [`printer_model`](#printer_model) | [code](index.html#L41) |
+| [Quick printer help? :)](#arrival) `arrival` | Scene | [`office`](#office), [`restart`](#restart), [`printer_model`](#printer_model) | [code](index.html#L41) |
 | [Head to his office.](#office) `office` | Scene | [`end_spare`](#end_spare), [`plan`](#plan), [`walk_away`](#walk_away) | [code](index.html#L74) |
 | [The plan](#plan) `plan` | Scene | [`outage`](#outage), [`ask`](#ask) | [code](index.html#L107) |
 | [The outage](#outage) `outage` | Scene | [`grandmother`](#grandmother) | [code](index.html#L131) |
@@ -280,7 +280,7 @@ Every scene in story order, with its choices. Click a choice to jump to the scen
 
 <a name="arrival"></a>
 
-### Quick printer help? 🙂
+### Quick printer help? :)
 
 `arrival` · Scene
 
@@ -289,7 +289,7 @@ You’re the IT Support Manager. You’ve spent the last few months waking up, f
 Then a ticket pops up...
 
 > **From:** Daniel Hall, CEO<br>
-> **Subject:** Quick printer help? 🙂<br>
+> **Subject:** Quick printer help? :)<br>
 > Hey! Having trouble getting the new printer working. Think it needs a driver? Whenever you have a minute. Appreciate you!
 
 A printer driver. You hate those.
