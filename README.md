@@ -37,6 +37,7 @@ Then open http://localhost:8000.
 | `og-image.jpg` | The preview image shown when the link is shared |
 | `book/kindle-cover.jpg`, `book/kindle-cover.html` | The Kindle eBook cover (1600x2560) and the page it was made from |
 | `book/keyboard-heist.epub` | The Kindle eBook of the whole story (**spoilers**) |
+| `book/kdp-description.txt` | The book description for its Amazon KDP listing |
 | `BRANCHES.md` | A flowchart of every branch plus the full story text (**spoilers**) |
 | `branches.html` | The same map as a page where you click any box to read that scene, at [keyboardheist.com/branches.html](https://keyboardheist.com/branches.html) (**spoilers**) |
 | `story-map.txt`, `spine-draft.txt` | Planning notes from writing the story |
