@@ -210,72 +210,72 @@ Each scene name jumps to its full text below; “code” opens it in `index.html
 | [The visit](#visit) `visit` | Scene | [`audit`](#audit), [`end_method`](#end_method) | [code](index.html#L174) |
 | [The audit](#audit) `audit` | Scene | [`swap`](#swap), [`end_red`](#end_red) | [code](index.html#L198) |
 | [The swap](#swap) `swap` | Scene | [`choice`](#choice) | [code](index.html#L219) |
-| [The choice](#choice) `choice` | Scene | [`lie`](#lie), [`end_running`](#end_running) | [code](index.html#L237) |
-| [The lie](#lie) `lie` | Scene | [`end_plateau`](#end_plateau) | [code](index.html#L262) |
-| [The plateau](#end_plateau) `end_plateau` | Real ending | (end) | [code](index.html#L281) |
-| [Take it. Right now.](#end_spare) `end_spare` | Scene | [`plan`](#plan) | [code](index.html#L297) |
-| [Forget it. Use your mother in Ohio.](#end_mom) `end_mom` | Scene | [`mom_lands`](#mom_lands) | [code](index.html#L321) |
-| [Pick her up at the airport.](#mom_lands) `mom_lands` (space) | Scene | [`field_trip`](#field_trip), [`closing_time`](#closing_time) | [code](index.html#L339) |
-| [Go in with a school field trip.](#field_trip) `field_trip` (space) | Scene | [`moon_rock`](#moon_rock) | [code](index.html#L364) |
-| [Go in at closing time.](#closing_time) `closing_time` (space) | Scene | [`moon_rock`](#moon_rock) | [code](index.html#L382) |
-| [The rock](#moon_rock) `moon_rock` (space) | Scene | [`printer_kennedy`](#printer_kennedy), [`crew_supplies`](#crew_supplies) | [code](index.html#L400) |
-| [Take the printer-driver ticket.](#printer_kennedy) `printer_kennedy` (space) | Scene | [`liftoff`](#liftoff) | [code](index.html#L424) |
-| [Hide in the cargo.](#crew_supplies) `crew_supplies` (space) | Scene | [`liftoff`](#liftoff) | [code](index.html#L442) |
-| [Liftoff](#liftoff) `liftoff` (space) | Scene | [`lights_out`](#lights_out), [`mom_tour`](#mom_tour) | [code](index.html#L460) |
-| [Wait until they sleep.](#lights_out) `lights_out` (space) | Scene | [`toilet`](#toilet) | [code](index.html#L484) |
-| [Let your mom distract them.](#mom_tour) `mom_tour` (space) | Scene | [`toilet`](#toilet) | [code](index.html#L502) |
-| [The toilet](#toilet) `toilet` (space) | Scene | [`escape_pod`](#escape_pod), [`far_side`](#far_side) | [code](index.html#L520) |
-| [Grab your mom. Take the escape pod.](#escape_pod) `escape_pod` (space) | Scene | [`spice`](#spice) | [code](index.html#L543) |
-| [A little spice](#spice) `spice` (space) | Real ending | (end) | [code](index.html#L561) |
-| [The far side](#far_side) `far_side` (space) | Real ending | (end) | [code](index.html#L577) |
-| [Method](#end_method) `end_method` | Dead end | (end) | [code](index.html#L593) |
-| [Asset not found](#end_red) `end_red` | Dead end | (end) | [code](index.html#L605) |
-| [Keep running.](#end_running) `end_running` (Hell) | Scene | [`hell_orientation`](#hell_orientation), [`hell_upstairs`](#hell_upstairs) | [code](index.html#L617) |
-| [Not the hero](#hell_upstairs) `hell_upstairs` (Hell) | Real ending | (end) | [code](index.html#L641) |
-| [Orientation](#hell_orientation) `hell_orientation` (Hell) | Scene | [`hell_grab`](#hell_grab), [`hell_plan`](#hell_plan) | [code](index.html#L655) |
-| [Steal it. Walk out.](#hell_grab) `hell_grab` (Hell) | Scene | [`hell_quiet`](#hell_quiet), [`hell_committee`](#hell_committee) | [code](index.html#L679) |
-| [Give it back before morning.](#hell_committee) `hell_committee` (Hell) | Scene | [`hell_plateau`](#hell_plateau) | [code](index.html#L702) |
-| [Say nothing. Let them take the fall.](#hell_quiet) `hell_quiet` (Hell) | Scene | [`hell_devil`](#hell_devil), [`hell_form`](#hell_form) | [code](index.html#L718) |
-| [Confess on Form 666. Bring them back.](#hell_form) `hell_form` (Hell) | Scene | [`hell_plateau`](#hell_plateau) | [code](index.html#L742) |
-| [The corner office](#hell_devil) `hell_devil` (Hell) | Scene | [`hell_job`](#hell_job), [`hell_plateau`](#hell_plateau) | [code](index.html#L759) |
-| [Driver unavailable](#hell_job) `hell_job` (Hell) | Real ending | (end) | [code](index.html#L782) |
-| [The lower plateau](#hell_plateau) `hell_plateau` (Hell) | Real ending | (end) | [code](index.html#L797) |
-| [The plan, again](#hell_plan) `hell_plan` (Hell) | Scene | [`hell_lake`](#hell_lake), [`hell_ask`](#hell_ask) | [code](index.html#L812) |
-| [Swap it at the huddle. Hide the real one in the Lake of Fire.](#hell_lake) `hell_lake` (Hell) | Scene | [`hell_lost`](#hell_lost) | [code](index.html#L836) |
-| [Just ask for it.](#hell_ask) `hell_ask` (Hell) | Scene | [`hell_count`](#hell_count), [`hell_offer`](#hell_offer) | [code](index.html#L853) |
-| [Say no thanks. Steal it at the huddle.](#hell_count) `hell_count` (Hell) | Scene | [`hell_lost`](#hell_lost) | [code](index.html#L877) |
-| [The Devil’s offer](#hell_offer) `hell_offer` (Hell) | Scene | [`hell_trade`](#hell_trade), [`hell_truth`](#hell_truth) | [code](index.html#L896) |
-| [Trade him Daniel’s keyboard.](#hell_trade) `hell_trade` (Hell) | Scene | [`hell_lost`](#hell_lost) | [code](index.html#L919) |
-| [Lost and found](#hell_lost) `hell_lost` (Hell) | Real ending | (end) | [code](index.html#L937) |
-| [Say no. Give it all back.](#hell_truth) `hell_truth` (Hell) | Scene | [`hell_return`](#hell_return) | [code](index.html#L951) |
-| [Return to sender](#hell_return) `hell_return` (Hell) | Scene | [`lie`](#lie), [`hell_own_keyboard`](#hell_own_keyboard) | [code](index.html#L968) |
-| [Your own keyboard](#hell_own_keyboard) `hell_own_keyboard` (Hell) | Real ending | (end) | [code](index.html#L989) |
-| [Have you tried restarting the printer?](#restart) `restart` | Scene | [`ceremony`](#ceremony), [`end_sick`](#end_sick) | [code](index.html#L1005) |
-| [The ceremony](#ceremony) `ceremony` | Scene | [`end_speech`](#end_speech), [`lemon`](#lemon) | [code](index.html#L1027) |
-| [Call in sick Friday.](#end_sick) `end_sick` | Scene | [`office`](#office) | [code](index.html#L1048) |
-| [Say a few words.](#end_speech) `end_speech` | Scene | [`jordan_drink`](#jordan_drink) | [code](index.html#L1064) |
-| [Stand up. Walk away. Never think about this again.](#walk_away) `walk_away` | Scene | [`resigned`](#resigned), [`draft`](#draft) | [code](index.html#L1081) |
-| [The resignation](#resigned) `resigned` | Scene | [`end_sabbatical`](#end_sabbatical), [`typo`](#typo) | [code](index.html#L1103) |
-| [Take the sabbatical.](#end_sabbatical) `end_sabbatical` | Scene | [`plan`](#plan) | [code](index.html#L1126) |
-| [Just ask him about it.](#ask) `ask` | Scene | [`garage`](#garage), [`end_founding`](#end_founding) | [code](index.html#L1142) |
-| [The garage](#garage) `garage` | Scene | [`end_founding`](#end_founding), [`end_borrowed`](#end_borrowed), [`declined`](#declined) | [code](index.html#L1164) |
-| [The founding keyboard](#end_founding) `end_founding` | Scene | [`invoices`](#invoices) | [code](index.html#L1190) |
-| [Borrow it for the weekend.](#end_borrowed) `end_borrowed` | Scene | [`outage`](#outage) | [code](index.html#L1207) |
-| [Look up the printer’s model in inventory.](#printer_model) `printer_model` | Scene | [`office`](#office) | [code](index.html#L1223) |
-| [Say “thank you” and sit down.](#lemon) `lemon` | Scene | [`office`](#office) | [code](index.html#L1239) |
-| [Save it as a draft.](#draft) `draft` | Scene | [`plan`](#plan) | [code](index.html#L1255) |
-| [Say it was a typo.](#typo) `typo` | Scene | [`plan`](#plan) | [code](index.html#L1271) |
-| [Say you couldn’t possibly.](#declined) `declined` | Scene | [`outage`](#outage) | [code](index.html#L1289) |
-| [Go look.](#invoices) `invoices` | Scene | [`wizard`](#wizard) | [code](index.html#L1306) |
-| [Take it back to him.](#wizard) `wizard` | Scene | [`end_wizard`](#end_wizard), [`refuse`](#refuse), [`end_report`](#end_report), [`pretend`](#pretend) | [code](index.html#L1324) |
-| [Eleven years](#end_wizard) `end_wizard` | Real ending | (end) | [code](index.html#L1358) |
-| [The first no](#refuse) `refuse` | Real ending | (end) | [code](index.html#L1374) |
-| [The fall guy](#end_report) `end_report` | Dead end | (end) | [code](index.html#L1390) |
-| [Walk out and pretend you never saw it.](#pretend) `pretend` | Scene | [`outage`](#outage) | [code](index.html#L1404) |
-| [Get a drink after work.](#jordan_drink) `jordan_drink` | Scene | [`jordan_weeks`](#jordan_weeks) | [code](index.html#L1421) |
-| [See them again.](#jordan_weeks) `jordan_weeks` | Scene | [`jordan_together`](#jordan_together), [`jordan_breakup`](#jordan_breakup) | [code](index.html#L1439) |
-| [The one who didn’t laugh](#jordan_together) `jordan_together` | Real ending | (end) | [code](index.html#L1461) |
-| [Say you’re just tired.](#jordan_breakup) `jordan_breakup` | Scene | [`office`](#office) | [code](index.html#L1476) |
+| [The choice](#choice) `choice` | Scene | [`lie`](#lie), [`end_running`](#end_running) | [code](index.html#L238) |
+| [The lie](#lie) `lie` | Scene | [`end_plateau`](#end_plateau) | [code](index.html#L263) |
+| [The plateau](#end_plateau) `end_plateau` | Real ending | (end) | [code](index.html#L282) |
+| [Take it. Right now.](#end_spare) `end_spare` | Scene | [`plan`](#plan) | [code](index.html#L298) |
+| [Forget it. Use your mother in Ohio.](#end_mom) `end_mom` | Scene | [`mom_lands`](#mom_lands) | [code](index.html#L322) |
+| [Pick her up at the airport.](#mom_lands) `mom_lands` (space) | Scene | [`field_trip`](#field_trip), [`closing_time`](#closing_time) | [code](index.html#L340) |
+| [Go in with a school field trip.](#field_trip) `field_trip` (space) | Scene | [`moon_rock`](#moon_rock) | [code](index.html#L365) |
+| [Go in at closing time.](#closing_time) `closing_time` (space) | Scene | [`moon_rock`](#moon_rock) | [code](index.html#L383) |
+| [The rock](#moon_rock) `moon_rock` (space) | Scene | [`printer_kennedy`](#printer_kennedy), [`crew_supplies`](#crew_supplies) | [code](index.html#L401) |
+| [Take the printer-driver ticket.](#printer_kennedy) `printer_kennedy` (space) | Scene | [`liftoff`](#liftoff) | [code](index.html#L425) |
+| [Hide in the cargo.](#crew_supplies) `crew_supplies` (space) | Scene | [`liftoff`](#liftoff) | [code](index.html#L443) |
+| [Liftoff](#liftoff) `liftoff` (space) | Scene | [`lights_out`](#lights_out), [`mom_tour`](#mom_tour) | [code](index.html#L461) |
+| [Wait until they sleep.](#lights_out) `lights_out` (space) | Scene | [`toilet`](#toilet) | [code](index.html#L485) |
+| [Let your mom distract them.](#mom_tour) `mom_tour` (space) | Scene | [`toilet`](#toilet) | [code](index.html#L503) |
+| [The toilet](#toilet) `toilet` (space) | Scene | [`escape_pod`](#escape_pod), [`far_side`](#far_side) | [code](index.html#L521) |
+| [Grab your mom. Take the escape pod.](#escape_pod) `escape_pod` (space) | Scene | [`spice`](#spice) | [code](index.html#L544) |
+| [A little spice](#spice) `spice` (space) | Real ending | (end) | [code](index.html#L562) |
+| [The far side](#far_side) `far_side` (space) | Real ending | (end) | [code](index.html#L578) |
+| [Method](#end_method) `end_method` | Dead end | (end) | [code](index.html#L594) |
+| [Asset not found](#end_red) `end_red` | Dead end | (end) | [code](index.html#L606) |
+| [Keep running.](#end_running) `end_running` (Hell) | Scene | [`hell_orientation`](#hell_orientation), [`hell_upstairs`](#hell_upstairs) | [code](index.html#L618) |
+| [Not the hero](#hell_upstairs) `hell_upstairs` (Hell) | Real ending | (end) | [code](index.html#L642) |
+| [Orientation](#hell_orientation) `hell_orientation` (Hell) | Scene | [`hell_grab`](#hell_grab), [`hell_plan`](#hell_plan) | [code](index.html#L656) |
+| [Steal it. Walk out.](#hell_grab) `hell_grab` (Hell) | Scene | [`hell_quiet`](#hell_quiet), [`hell_committee`](#hell_committee) | [code](index.html#L680) |
+| [Give it back before morning.](#hell_committee) `hell_committee` (Hell) | Scene | [`hell_plateau`](#hell_plateau) | [code](index.html#L703) |
+| [Say nothing. Let them take the fall.](#hell_quiet) `hell_quiet` (Hell) | Scene | [`hell_devil`](#hell_devil), [`hell_form`](#hell_form) | [code](index.html#L719) |
+| [Confess on Form 666. Bring them back.](#hell_form) `hell_form` (Hell) | Scene | [`hell_plateau`](#hell_plateau) | [code](index.html#L743) |
+| [The corner office](#hell_devil) `hell_devil` (Hell) | Scene | [`hell_job`](#hell_job), [`hell_plateau`](#hell_plateau) | [code](index.html#L760) |
+| [Driver unavailable](#hell_job) `hell_job` (Hell) | Real ending | (end) | [code](index.html#L783) |
+| [The lower plateau](#hell_plateau) `hell_plateau` (Hell) | Real ending | (end) | [code](index.html#L798) |
+| [The plan, again](#hell_plan) `hell_plan` (Hell) | Scene | [`hell_lake`](#hell_lake), [`hell_ask`](#hell_ask) | [code](index.html#L813) |
+| [Swap it at the huddle. Hide the real one in the Lake of Fire.](#hell_lake) `hell_lake` (Hell) | Scene | [`hell_lost`](#hell_lost) | [code](index.html#L837) |
+| [Just ask for it.](#hell_ask) `hell_ask` (Hell) | Scene | [`hell_count`](#hell_count), [`hell_offer`](#hell_offer) | [code](index.html#L854) |
+| [Say no thanks. Steal it at the huddle.](#hell_count) `hell_count` (Hell) | Scene | [`hell_lost`](#hell_lost) | [code](index.html#L878) |
+| [The Devil’s offer](#hell_offer) `hell_offer` (Hell) | Scene | [`hell_trade`](#hell_trade), [`hell_truth`](#hell_truth) | [code](index.html#L897) |
+| [Trade him Daniel’s keyboard.](#hell_trade) `hell_trade` (Hell) | Scene | [`hell_lost`](#hell_lost) | [code](index.html#L920) |
+| [Lost and found](#hell_lost) `hell_lost` (Hell) | Real ending | (end) | [code](index.html#L938) |
+| [Say no. Give it all back.](#hell_truth) `hell_truth` (Hell) | Scene | [`hell_return`](#hell_return) | [code](index.html#L952) |
+| [Return to sender](#hell_return) `hell_return` (Hell) | Scene | [`lie`](#lie), [`hell_own_keyboard`](#hell_own_keyboard) | [code](index.html#L969) |
+| [Your own keyboard](#hell_own_keyboard) `hell_own_keyboard` (Hell) | Real ending | (end) | [code](index.html#L990) |
+| [Have you tried restarting the printer?](#restart) `restart` | Scene | [`ceremony`](#ceremony), [`end_sick`](#end_sick) | [code](index.html#L1006) |
+| [The ceremony](#ceremony) `ceremony` | Scene | [`end_speech`](#end_speech), [`lemon`](#lemon) | [code](index.html#L1028) |
+| [Call in sick Friday.](#end_sick) `end_sick` | Scene | [`office`](#office) | [code](index.html#L1049) |
+| [Say a few words.](#end_speech) `end_speech` | Scene | [`jordan_drink`](#jordan_drink) | [code](index.html#L1065) |
+| [Stand up. Walk away. Never think about this again.](#walk_away) `walk_away` | Scene | [`resigned`](#resigned), [`draft`](#draft) | [code](index.html#L1082) |
+| [The resignation](#resigned) `resigned` | Scene | [`end_sabbatical`](#end_sabbatical), [`typo`](#typo) | [code](index.html#L1104) |
+| [Take the sabbatical.](#end_sabbatical) `end_sabbatical` | Scene | [`plan`](#plan) | [code](index.html#L1127) |
+| [Just ask him about it.](#ask) `ask` | Scene | [`garage`](#garage), [`end_founding`](#end_founding) | [code](index.html#L1143) |
+| [The garage](#garage) `garage` | Scene | [`end_founding`](#end_founding), [`end_borrowed`](#end_borrowed), [`declined`](#declined) | [code](index.html#L1165) |
+| [The founding keyboard](#end_founding) `end_founding` | Scene | [`invoices`](#invoices) | [code](index.html#L1191) |
+| [Borrow it for the weekend.](#end_borrowed) `end_borrowed` | Scene | [`outage`](#outage) | [code](index.html#L1208) |
+| [Look up the printer’s model in inventory.](#printer_model) `printer_model` | Scene | [`office`](#office) | [code](index.html#L1225) |
+| [Say “thank you” and sit down.](#lemon) `lemon` | Scene | [`office`](#office) | [code](index.html#L1241) |
+| [Save it as a draft.](#draft) `draft` | Scene | [`plan`](#plan) | [code](index.html#L1257) |
+| [Say it was a typo.](#typo) `typo` | Scene | [`plan`](#plan) | [code](index.html#L1273) |
+| [Say you couldn’t possibly.](#declined) `declined` | Scene | [`outage`](#outage) | [code](index.html#L1291) |
+| [Go look.](#invoices) `invoices` | Scene | [`wizard`](#wizard) | [code](index.html#L1308) |
+| [Take it back to him.](#wizard) `wizard` | Scene | [`end_wizard`](#end_wizard), [`refuse`](#refuse), [`end_report`](#end_report), [`pretend`](#pretend) | [code](index.html#L1326) |
+| [Eleven years](#end_wizard) `end_wizard` | Real ending | (end) | [code](index.html#L1360) |
+| [The first no](#refuse) `refuse` | Real ending | (end) | [code](index.html#L1376) |
+| [The fall guy](#end_report) `end_report` | Dead end | (end) | [code](index.html#L1392) |
+| [Walk out and pretend you never saw it.](#pretend) `pretend` | Scene | [`outage`](#outage) | [code](index.html#L1406) |
+| [Get a drink after work.](#jordan_drink) `jordan_drink` | Scene | [`jordan_weeks`](#jordan_weeks) | [code](index.html#L1423) |
+| [See them again.](#jordan_weeks) `jordan_weeks` | Scene | [`jordan_together`](#jordan_together), [`jordan_breakup`](#jordan_breakup) | [code](index.html#L1441) |
+| [The one who didn’t laugh](#jordan_together) `jordan_together` | Real ending | (end) | [code](index.html#L1463) |
+| [Say you’re just tired.](#jordan_breakup) `jordan_breakup` | Scene | [`office`](#office) | [code](index.html#L1478) |
 
 ## The full story
 
@@ -449,7 +449,9 @@ Every keyboard is tagged. Your decoy isn’t. The moment anyone scans it, it’s
 
 `swap` · Scene
 
-The supply closet. An asset tag is a barcode and a serial number. You copy one, change a digit, and add the new number to the asset list. IT has the password. The night cleaner asks if you’re working late. “Inventory.” He does not ask about the barcode.
+The supply closet. An asset tag is a barcode and a serial number. IT has the password to the asset list, so you look up Daniel’s keyboard and print its tag again, digit for digit. The night cleaner asks if you’re working late. “Inventory.” He does not ask about the barcode.
+
+You’d swap them tonight, but security locks Daniel’s office at six, and it’s the one door IT doesn’t have a key to. It will have to be tomorrow, in the middle of the audit.
 
 The auditor arrives at nine sharp with a scanner, a clipboard, and a face like an unopened envelope. He counts everything twice. He likes you. You’re the only one who answers his questions with numbers, which is worse.
 
@@ -1383,6 +1385,8 @@ At 2:14 a.m. you wake up. Something in the kitchen is typing. You live alone.
 `end_borrowed` · Scene
 
 You take it home for the weekend. You type your name. You type the alphabet. You type a very short letter to nobody. Nothing.
+
+The decoy sits next to it on the kitchen table. You could give him back either one. You can’t think of a reason to bother.
 
 On Monday, you carry it back. “How was it?” Daniel asks. “Fine,” you say. “It’s a keyboard.” He laughs, delighted, as if you’ve said something profound.
 
