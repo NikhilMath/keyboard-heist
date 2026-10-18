@@ -351,7 +351,7 @@ You’re early the next morning. You open a spreadsheet. Column A: Daniel’s sc
 
 IT can go anywhere. Nobody asks why. Daniel eats lunch at 12:15 and leaves his door open. Always. His assistant, Marcy, sits outside it and sees everything.
 
-Over her shoulder, her calendar: the company retreat, next Friday. Daniel brings his own keyboard to every offsite. She calls it “the founding keyboard.” He started the company on it. Once it leaves the building, your chance is gone.
+Over her shoulder, her calendar: the company retreat, next Friday. Daniel brings his own keyboard to every offsite. She calls it “the founding keyboard.” He started the company on it. You want it before it leaves the building.
 
 - [Case the office.](#outage) *Professionally. You are a professional.*
 - [Just ask him about it.](#ask) *Normal. He loves talking about his stuff.*
@@ -386,7 +386,7 @@ He’ll pack it himself. If anything about it seems off, the first question will
 
 `grandmother` · Scene
 
-You can’t steal it at the retreat. A cabin in the woods, forty coworkers, nowhere to hide. Once the keyboard leaves the building, it’s gone.
+You can’t steal it at the retreat. A cabin in the woods, forty coworkers, nowhere to hide. And you’re not waiting until it comes back.
 
 The retreat has to be canceled. You can’t cancel it. Daniel can.
 
