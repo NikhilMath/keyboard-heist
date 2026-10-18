@@ -1,7 +1,7 @@
 {
   "about": "Fingerprints of the locked story. You can add to it (new scenes, new paragraphs at the end of a scene, new choices after its existing ones) but not change it. Only the user can unlock a change, by saying so in chat. See \"Story lock\" in AGENTS.md. Rewrite this file only with tools/lock.js relock or lock-all.",
   "lockedOn": "2026-10-13",
-  "updated": "2026-10-14",
+  "updated": "2026-10-18",
   "scenes": {
     "arrival": {
       "rest": "0e21de59b2b123",
@@ -107,7 +107,7 @@
     "swap": {
       "rest": "04abd02cbd40cc",
       "text": [
-        "03c481c70332d7",
+        "1fe281220bc7ed",
         "1acc011fab1b66",
         "093d4c25167717",
         "0103456e8b1241",
