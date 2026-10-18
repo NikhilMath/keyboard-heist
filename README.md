@@ -9,7 +9,7 @@ You're an IT Support Manager stuck on a dull plateau. A printer ticket takes you
 ## How to play
 
 - Read each scene, then pick one of the choices underneath it.
-- Some choices lead to a **real ending** ("The end."). Others lead to a **dead end**, which sends you back to your last choice so you can try again.
+- Every path leads to a **real ending** ("The end."). Use **Previous choice** to go back and try another way.
 - Some choices are stamped **SIN** or **VIRTUE**. Pay attention to them.
 - **Your map** shows every branch you've found. Click any dot to jump back to that scene.
 - **Your journey** lists the scenes on your current path. Click one to go back to it.

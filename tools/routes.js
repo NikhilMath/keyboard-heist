@@ -36,6 +36,8 @@ for (const id of ids) {
   if (n.ending && (n.choices || []).length) err(id + ' is an ending with choices');
   if (!n.ending && !n.checkpoint && !(n.choices || []).length) err(id + ' has no way out');
   if (n.ending && !n.name) err(id + ' is an ending without a name');
+  // No dead ends (user, 2026-10-18): every ending is a real one, or the choice rejoins the story.
+  if (n.ending && !n.finale) err(id + ' is a dead end; make it a real ending (finale) or rejoin the story');
   if (id !== 'arrival' && !drawings.has(id)) err(id + ' has no drawing');
 }
 

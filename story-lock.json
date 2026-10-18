@@ -353,22 +353,26 @@
       "choices": []
     },
     "end_method": {
-      "rest": "1021da10b9ba7b",
+      "rest": "0920b932b9d84e",
       "text": [
         "07ba5537e5fab0",
         "1f51c85995bc35",
         "1715c725ea58ad",
-        "051ca2b42a76bd"
+        "051ca2b42a76bd",
+        "05fafddf526160",
+        "18f8bd3c628e3b"
       ],
       "choices": []
     },
     "end_red": {
-      "rest": "021fda87addfb5",
+      "rest": "1e6093e67b2b67",
       "text": [
         "075c1986b200c9",
         "144b9e794761f2",
         "03dca5f90c3241",
-        "14ac59e1469a97"
+        "14ac59e1469a97",
+        "095cd940f9441b",
+        "01cc190e94975d"
       ],
       "choices": []
     },
@@ -826,13 +830,14 @@
       "choices": []
     },
     "end_report": {
-      "rest": "09789059cf8e10",
+      "rest": "0fc7f8a2eb86bf",
       "text": [
         "0e9878e9730a0d",
         "13f382a6a9b59a",
         "01d61018bd2222",
         "08c86011c82b20",
         "024d896e640de0",
+        "0022a3c35e4ad5",
         "0c801f7c82f6ea"
       ],
       "choices": []

@@ -133,7 +133,7 @@ function section(id) {
 
 const finales = ids.filter(id => STORY[id].finale);
 const deadEnds = ids.filter(id => STORY[id].ending && !STORY[id].finale);
-const words = n => ['zero', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'ten', 'eleven', 'twelve'][n] || String(n);
+const words = n => ['zero', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'ten', 'eleven', 'twelve', 'thirteen', 'fourteen', 'fifteen', 'sixteen', 'seventeen', 'eighteen', 'nineteen', 'twenty'][n] || String(n);
 
 const titlePage = page(TITLE, `<section class="title-page" epub:type="titlepage">
 <p class="kicker">${esc(KICKER)}</p>
@@ -149,7 +149,7 @@ const howTo = page('How to read this book', `<section class="how-to" epub:type="
 <p>At the end of each section, pick what you’ll do next and tap it. Every choice also gives its section number, so you can find it on the Contents page if a tap misses.</p>
 <p>The sections are shuffled on purpose. The page after a section is never the next part of your story, so tap a choice instead of turning the page. To undo a tap, use your reader’s Back button.</p>
 <p>Some choices are stamped SIN or VIRTUE. Pay attention to them.</p>
-<p>Some paths reach a real ending: “The end.” Others hit a dead end, which sends you back to try a different choice. There are ${words(finales.length)} real endings and ${words(deadEnds.length)} dead ends.</p>
+<p>${deadEnds.length ? `Some paths reach a real ending: “The end.” Others hit a dead end, which sends you back to try a different choice. There are ${words(finales.length)} real endings and ${words(deadEnds.length)} dead ends.` : `Every path reaches a real ending: “The end.” There are ${words(finales.length)} of them.`}</p>
 <p class="again"><a href="${file('arrival')}">Begin at Section 1.</a></p>
 </section>`, 'frontmatter');
 
