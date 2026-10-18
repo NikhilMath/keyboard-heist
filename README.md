@@ -45,6 +45,7 @@ Then open http://localhost:8000.
 | `tools/branches.js` | Rebuilds `BRANCHES.md` and `branches.html` from the story |
 | `tools/epub.js` | Rebuilds `book/keyboard-heist.epub` from the story, with the cover and every drawing |
 | `tools/pdf.js` | Rebuilds `book/keyboard-heist.pdf` from the story |
+| `tools/routes.js` | Checks every route through the story for broken links, loops and things mentioned before they're introduced |
 | `story-lock.json`, `tools/lock.js` | The story is locked: you can add to it, but not change it. A fingerprint of every scene, and the check |
 | `AGENTS.md` | Instructions for AI assistants that work on this project |
 
