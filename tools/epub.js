@@ -263,8 +263,10 @@ ${sections.map(([h, l]) => `<li><a href="${h}">${l}</a></li>`).join('\n')}
 </body>
 </html>
 `);
+  // playOrder follows reading order, and two points to the same file share one ("Sections" and "Section 1"), as the NCX rules ask.
   let play = 0;
-  const point = ([href, label], kids = '') => `<navPoint id="p${++play}" playOrder="${play}"><navLabel><text>${label}</text></navLabel><content src="${href}"/>${kids}</navPoint>`;
+  const playOf = {};
+  const point = ([href, label], kids = '') => `<navPoint id="p${++play}" playOrder="${playOf[href] ??= Object.keys(playOf).length + 1}"><navLabel><text>${label}</text></navLabel><content src="${href}"/>${kids}</navPoint>`;
   w('OEBPS/toc.ncx', `<?xml version="1.0" encoding="utf-8"?>
 <ncx xmlns="http://www.daisy.org/z3986/2005/ncx/" version="2005-1" xml:lang="en">
 <head><meta name="dtb:uid" content="${BOOK_ID}"/><meta name="dtb:depth" content="2"/><meta name="dtb:totalPageCount" content="0"/><meta name="dtb:maxPageNumber" content="0"/></head>
