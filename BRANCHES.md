@@ -729,7 +729,7 @@ Astronauts sleep in bags strapped to the walls. You wait until all four are brea
 
 You push off toward the keyboard. You push off a little too hard.
 
-You sail past it, spin, and kick something behind a panel. It makes a noise like a blender eating a spoon. Then it makes no noise at all.
+You sail past it, spin, and kick the toilet. Something behind its panel makes a noise like a blender eating a spoon. Then it makes no noise at all.
 
 You peel the keyboard off the wall. Velcro is very loud at night. The lights come on.
 
