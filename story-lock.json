@@ -408,8 +408,9 @@
     "hell_grab": {
       "rest": "0e5862bfdd8f4a",
       "text": [
-        "0fc484c7a5d913",
-        "110102089f784b"
+        "1ff4e51d5b8baa",
+        "02b391023717c8",
+        "1c8ff9a23112b2"
       ],
       "choices": [
         "109f44caca1b06",
@@ -453,15 +454,15 @@
       "rest": "11804f99a8377e",
       "text": [
         "0517a79fc55352",
-        "1362cad91a1910"
+        "0e8a1e284fba7a"
       ],
       "choices": [
-        "045edd9f9c54b7",
-        "049c1f06f884ac"
+        "032ba3730c7acd",
+        "1e395f78eed592"
       ]
     },
     "hell_job": {
-      "rest": "084199c6c09201",
+      "rest": "1f036cf38816d5",
       "text": [
         "11fb77255fb828",
         "18a2af965a217d",

@@ -134,7 +134,7 @@ flowchart TD
   hell_quiet -->|"SIN: Make a deal with the Devil."| hell_devil
   hell_quiet -->|"VIRTUE: Confess on Form 666. Bring them back."| hell_form
   hell_form -->|"Wait."| hell_plateau
-  hell_devil -->|"SIN: Sell him Daniel’s keyboard."| hell_job
+  hell_devil -->|"SIN: Trade him the keyboard."| hell_job
   hell_devil -->|"VIRTUE: Refuse. Walk out."| hell_plateau
   hell_plan -->|"SIN: Swap it at the huddle. Hide the real one in the Lake of Fire."| hell_lake
   hell_plan -->|"VIRTUE: Just ask for it."| hell_ask
@@ -922,9 +922,9 @@ The handle is warm. The balance is perfect. You poke the air, and the air seems 
 
 `hell_grab` · Scene · Hell
 
-You walk out of the safety video holding the pitchfork, like you have somewhere to be. Nobody stops you.
+The nice demon starts organizing the deviled eggs and turns their back to you. You walk out of the safety video holding the pitchfork, like you have somewhere to be. Nobody stops you.
 
-That night, Compliance counts. One pitchfork is missing. The nice demon pats every pocket twice. “Losing an implement is a transfer offense,” Compliance says. “Up. Middle management. Ohio.” The nice demon has until morning.
+That night, you watch Compliance count the assets. You hid the pitchfork where nobody will find it, and you’re curious what will happen. One pitchfork is missing. The nice demon pats every pocket twice. “Losing an implement is a transfer offense,” Compliance says. “Up. Middle management. Ohio.” The nice demon has until morning.
 
 It never crosses their mind to ask you.
 
@@ -988,16 +988,16 @@ Window 4 stamps it PENDING. It will be pending for as long as Hell has windows.
 
 The Devil’s door is always open. You ask him to sign the pitchfork over to you, for keeps. Your soul in exchange, if that’s still how it works.
 
-He scrolls through your soul for a long time. “It’s mostly emails and tickets,” he says, not unkindly. His eyes drift to the keyboard under your arm.
+He scrolls through your soul for a long time. “I don’t want it,” he says, not unkindly. “It’s all just emails and tickets.” His eyes drift to the keyboard under your arm.
 
-- **SIN** [Sell him Daniel’s keyboard.](#hell_job) *It was never yours to sell. That never stopped you.*
-- **VIRTUE** [Refuse. Walk out.](#hell_plateau) *Some things you don’t sell, even here.*
+- **SIN** [Trade him the keyboard.](#hell_job) *It was never yours to trade. That never stopped you.*
+- **VIRTUE** [Refuse. Walk out.](#hell_plateau) *Some things you don’t trade, even here.*
 
 [↑ Back to the map](#map)
 
 <a name="hell_job"></a>
 
-### Sell him Daniel’s keyboard.
+### Trade him the keyboard.
 
 `hell_job` · Real ending: Driver unavailable · Hell
 
