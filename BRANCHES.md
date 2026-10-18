@@ -135,7 +135,7 @@ flowchart TD
   hell_quiet -->|"VIRTUE: Confess on Form 666. Bring them back."| hell_form
   hell_form -->|"Wait."| hell_plateau
   hell_devil -->|"SIN: Trade him the keyboard."| hell_job
-  hell_devil -->|"VIRTUE: Refuse. Walk out."| hell_plateau
+  hell_devil -->|"VIRTUE: Don’t trade Daniel’s keyboard. Walk out."| hell_plateau
   hell_plan -->|"SIN: Swap it at the huddle. Hide the real one in the Lake of Fire."| hell_lake
   hell_plan -->|"VIRTUE: Just ask for it."| hell_ask
   hell_lake -->|"Report to Lost and Found."| hell_lost
@@ -991,7 +991,7 @@ The Devil’s door is always open. You ask him to sign the pitchfork over to you
 He scrolls through your soul for a long time. “I don’t want it,” he says, not unkindly. “It’s all just emails and tickets.” His eyes drift to the keyboard under your arm.
 
 - **SIN** [Trade him the keyboard.](#hell_job) *It was never yours to trade. That never stopped you.*
-- **VIRTUE** [Refuse. Walk out.](#hell_plateau) *Some things you don’t trade, even here.*
+- **VIRTUE** [Don’t trade Daniel’s keyboard. Walk out.](#hell_plateau) *Some things you don’t trade, even here.*
 
 [↑ Back to the map](#map)
 
