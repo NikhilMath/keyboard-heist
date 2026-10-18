@@ -172,7 +172,7 @@ flowchart TD
   typo -->|"Figure out how."| plan
   declined -->|"Back to the plan."| outage
   invoices -->|"Take it back to him."| wizard
-  wizard -->|"Ask him to show you."| end_wizard
+  wizard -->|"Say yes. Ask him to show you how."| end_wizard
   wizard -->|"Tell him no."| refuse
   wizard -->|"Report him."| end_report
   wizard -->|"Walk out and pretend you never saw it."| pretend
@@ -455,7 +455,7 @@ You’d swap them tonight, but security locks Daniel’s office at six, and it�
 
 The auditor arrives at nine sharp with a scanner, a clipboard, and a face like an unopened envelope. He counts everything twice. He likes you. You’re the only one who answers his questions with numbers, which is worse.
 
-You give him the tour, steering him away from Daniel’s office. He steers back. It is the last item on his list. You get there first.
+You give him the tour and save Daniel’s office for last. While he counts the staplers next door, you slip ahead.
 
 The office is empty. The decoy goes on the desk. The real keyboard goes on the chair, for a second, while you straighten the cable. Footsteps. The auditor is in the doorway, scanner up.
 
@@ -544,9 +544,9 @@ Daniel is in the hallway, phone already lowered. “Oh! What are you doing with 
 
 “Oh no, that happened before!” He’s delighted to help. “Just unplug the little receiver and plug it back in. Don’t even need to reset anything.”
 
-He does it for you, right there in the hallway. It works. Of course it works. “Honestly, keep it! I’ve got a spare in a drawer.” He holds it out to you with both hands.
+He takes it back to his desk and does it for you. It works. Of course it works. “Honestly, keep it! I’ve got a spare in a drawer.” He holds it out to you with both hands, receiver and all.
 
-It slips. It hits the floor. The space bar skates down the hall. Something inside makes a small, final sound.
+It slips. It hits the floor. The space bar skates out into the hall. Something inside makes a small, final sound.
 
 Daniel looks at it. “Oh. Never mind. I’ll use the spare.”
 
@@ -576,7 +576,7 @@ She calls you back at six. “Who is Daniel and why is he so nice to me? Are you
 
 She’s coming for a long visit. She has already booked the flight. The keyboard is still on Daniel’s desk.
 
-Daniel tells you to take all the time you need. “Family comes first,” he says, with a hand over his heart.
+Daniel cancels the retreat and tells you to take all the time you need. “Family comes first,” he says, with a hand over his heart.
 
 - [Pick her up at the airport.](#mom_lands) *She sounded worried. Not about herself.*
 
@@ -822,7 +822,7 @@ You Velcro the keyboard back to the wall. Then you take the panel off the toilet
 
 Houston talks you through it. Something small is jammed in the fan. You don’t ask what. You get it out. The fan spins. Nobody shakes your hand. Everybody thanks you.
 
-That night, Orion swings behind the Moon. There’s no signal back there. No Houston. No Daniel. No emails. No tickets.
+That night, the capsule swings behind the Moon. There’s no signal back there. No Houston. No Daniel. No emails. No tickets.
 
 Your mom holds the moon rock up to the window, right next to the Moon. “Look,” she says. “It’s home.”
 
@@ -1520,7 +1520,7 @@ His name also isn’t Daniel Hall. It is Danal, seventh and most evil wizard of 
 
 He’s evil the way a spreadsheet is evil. He’s never once had a single thing to worry about. That’s what you’ve been looking at this whole time. That’s the face you wanted. “It could be yours,” he says.
 
-- [Ask him to show you.](#end_wizard) *You already know what you’re going to say.*
+- [Say yes. Ask him to show you how.](#end_wizard) *You already know what you’re going to say.*
 - [Tell him no.](#refuse) *You came here for a keyboard, not a career in sorcery.*
 - [Report him.](#end_report) *Somebody should do something about this. He doesn’t look worried.*
 - [Walk out and pretend you never saw it.](#pretend) *You’re very good at not noticing things.*
@@ -1529,7 +1529,7 @@ He’s evil the way a spreadsheet is evil. He’s never once had a single thing 
 
 <a name="end_wizard"></a>
 
-### Ask him to show you.
+### Say yes. Ask him to show you how.
 
 `end_wizard` · Real ending: Eleven years
 
@@ -1583,7 +1583,7 @@ You tell him you’re going to report him. He isn’t worried. He’s never worr
 
 He turns his monitor toward you. Eleven years of invoices. Every one of them is now signed with your name.
 
-You typed it into his keyboard yourself, that first day in his office. Twice.
+You typed it into his keyboard yourself, that first day in his office. More than once.
 
 You’re the fall guy. So now you sit at your desk and say nothing, and hope nobody else ever looks closely enough to catch him, because if they do, they’ll catch you.
 
