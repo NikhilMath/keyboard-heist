@@ -6,6 +6,8 @@
 //   osascript -l JavaScript tools/lock.js            (or: node tools/lock.js)
 // Only after the user has unlocked something in chat and the change is done:
 //   osascript -l JavaScript tools/lock.js relock     accepts the new version of the scenes already locked
+//   osascript -l JavaScript tools/lock.js relock swap hell_ask   accepts only the scenes (and drawings) named,
+//                                                    so unlocked additions elsewhere stay unlocked
 //   osascript -l JavaScript tools/lock.js lock-all   locks everything in the story as it is now
 // Never relock a change the user did not unlock.
 
@@ -81,10 +83,14 @@ const today = new Date().toISOString().slice(0, 10);
 const about = 'Fingerprints of the locked story. You can add to it (new scenes, new paragraphs at the end of a scene, new choices after its existing ones) but not change it. Only the user can unlock a change, by saying so in chat. See "Story lock" in AGENTS.md. Rewrite this file only with tools/lock.js relock or lock-all.';
 
 if (mode !== 'check') {
+  // Ids after "relock" limit it to those scenes and drawings; every other locked fingerprint stays as it was.
+  const only = mode === 'relock' && lock ? args.slice(args.indexOf('relock') + 1) : [];
+  const unknown = only.filter(id => !(id in lock.scenes) && !(id in lock.drawings));
+  if (unknown.length) { console.log('Story lock: relock stopped. Not locked, so nothing to relock: ' + unknown.join(', ') + '.'); quit(1); }
   const next = { about, lockedOn: lock ? lock.lockedOn : today, updated: today, scenes: {}, drawings: {} };
   for (const kind of ['scenes', 'drawings']) {
     const ids = mode === 'lock-all' || !lock ? Object.keys(now[kind]) : Object.keys(lock[kind]).filter(id => id in now[kind]);
-    for (const id of ids) next[kind][id] = now[kind][id];
+    for (const id of ids) next[kind][id] = only.length && !only.includes(id) ? lock[kind][id] : now[kind][id];
   }
   write(lockFile, JSON.stringify(next, null, 2) + '\n');
   console.log(`Story lock: ${mode} wrote ${Object.keys(next.scenes).length} scenes and ${Object.keys(next.drawings).length} drawings to story-lock.json.`);

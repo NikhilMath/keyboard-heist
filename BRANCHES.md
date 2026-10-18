@@ -144,7 +144,7 @@ flowchart TD
   hell_count -->|"Take it to Lost and Found."| hell_lost
   hell_offer -->|"SIN: Trade him Daniel’s keyboard."| hell_trade
   hell_offer -->|"VIRTUE: Say no. Give it all back."| hell_truth
-  hell_trade -->|"Drop it at Lost and Found."| hell_lost
+  hell_trade -->|"Drop the pitchfork at Lost and Found."| hell_lost
   hell_truth -->|"Get in the elevator."| hell_return
   hell_return -->|"Go back with the inhaler."| lie
   hell_return -->|"Give back the inhaler. Then the keyboard."| hell_own_keyboard
@@ -287,7 +287,7 @@ Every scene in story order, with its choices. Click a choice to jump to the scen
 
 `arrival` · Scene
 
-You’re the IT Support Manager. You’ve spent the last few months waking up, fixing problems, going home, and waiting until it’s reasonable to go to bed. Nothing is especially wrong. Nothing is especially interesting. You’ve reached the plateau, apparently, and the view is mostly Outlook.
+You’re the IT Support Manager. You’ve spent the last few months waking up, fixing problems, going home, and waiting until it’s reasonable to go to bed. Nothing is especially wrong. Nothing is especially interesting. You’ve reached the plateau, apparently, and the view is mostly emails and tickets.
 
 Then a ticket pops up...
 
@@ -518,7 +518,7 @@ You wait for the rest of it. The part where it was worth it. You give it a minut
 
 That was the whole thing. That was all of it.
 
-Nothing is especially wrong. Nothing is especially interesting. You’ve reached the plateau, apparently, and the view is mostly Outlook.
+Nothing is especially wrong. Nothing is especially interesting. You’ve reached the plateau, apparently, and the view is mostly emails and tickets.
 
 *The end.*
 
@@ -544,7 +544,7 @@ It slips. It hits the floor. The space bar skates down the hall. Something insid
 
 Daniel looks at it. “Oh. Never mind. I’ll use the spare.”
 
-You go back to your desk, where Outlook is waiting.
+You go back to your desk, where your emails and tickets are waiting.
 
 You step away for coffee. When you come back, it’s on your desk, the space bar in a sandwich bag. A Post-it in Daniel’s handwriting: “Can you save him?”
 
@@ -814,7 +814,7 @@ You Velcro the keyboard back to the wall. Then you take the panel off the toilet
 
 Houston talks you through it. Something small is jammed in the fan. You don’t ask what. You get it out. The fan spins. Nobody shakes your hand. Everybody thanks you.
 
-That night, Orion swings behind the Moon. There’s no signal back there. No Houston. No Daniel. No Outlook.
+That night, Orion swings behind the Moon. There’s no signal back there. No Houston. No Daniel. No emails. No tickets.
 
 Your mom holds the moon rock up to the window, right next to the Moon. “Look,” she says. “It’s home.”
 
@@ -976,7 +976,7 @@ Window 4 stamps it PENDING. It will be pending for as long as Hell has windows.
 
 The Devil’s door is always open. You ask him to sign the pitchfork over to you, for keeps. Your soul in exchange, if that’s still how it works.
 
-He scrolls through your soul for a long time. “It’s mostly Outlook,” he says, not unkindly. His eyes drift to the keyboard under your arm.
+He scrolls through your soul for a long time. “It’s mostly emails and tickets,” he says, not unkindly. His eyes drift to the keyboard under your arm.
 
 - **SIN** [Sell him Daniel’s keyboard.](#hell_job) *It was never yours to sell. That never stopped you.*
 - **VIRTUE** [Refuse. Walk out.](#hell_plateau) *Some things you don’t sell, even here.*
@@ -1060,7 +1060,7 @@ Compliance writes you up and assigns you to Lost and Found, until further notice
 
 You just ask. It’s the most honest you’ve been in weeks. The nice demon lights up. “Of course! Gosh! Let me check something.”
 
-They come back slower. “Whoever a demon gives their pitchfork to, for keeps, does that demon’s job. It’s in the bylaws. Mine is printer drivers. Every driver that won’t install, anywhere.”
+They come back slower. “Whoever a demon gives their pitchfork to, for keeps, does that demon’s job. It’s in the bylaws. My job is to break printer drivers. Every driver that won’t install, anywhere.”
 
 - **SIN** [Say no thanks. Steal it at the huddle.](#hell_count) *Nobody gives it to you, nobody gives you the job.*
 - **VIRTUE** [Say no thanks. Let them keep it.](#hell_offer) *It’s theirs. It was always theirs.*
@@ -1093,7 +1093,7 @@ They hug you goodbye. You have the thing you wanted, and nobody left to show it 
 
 The next morning, the Devil calls you in. “I hear you asked. Nobody asks.” He’s holding the nice demon’s pitchfork. “Yours, no job attached. I wrote the bylaws. I can skip a page.”
 
-They’ll get a new one, he says. He doesn’t want your soul. He’s seen it, and it’s mostly Outlook. His eyes drift to the keyboard under your arm.
+They’ll get a new one, he says. He doesn’t want your soul. He’s seen it, and it’s mostly emails and tickets. His eyes drift to the keyboard under your arm.
 
 - **SIN** [Trade him Daniel’s keyboard.](#hell_trade) *It was the most important thing in your life last week.*
 - **VIRTUE** [Say no. Give it all back.](#hell_truth) *It isn’t yours to take. Neither is the keyboard.*
@@ -1112,7 +1112,7 @@ By lunch, the pitchfork is yours, fair and square, with a receipt. You poke the 
 
 Through the open door, the Devil is still typing his name. You stand in the hallway, listening to someone else be happy.
 
-- [Drop it at Lost and Found.](#hell_lost) *Maybe it feels like something to somebody else.*
+- [Drop the pitchfork at Lost and Found.](#hell_lost) *Maybe it feels like something to somebody else.*
 
 [↑ Back to the map](#map)
 

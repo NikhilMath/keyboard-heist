@@ -6,7 +6,7 @@
     "arrival": {
       "rest": "0e21de59b2b123",
       "text": [
-        "16761bbbad1b98",
+        "137ee66d852bff",
         "15a30f9134be2a"
       ],
       "choices": [
@@ -153,7 +153,7 @@
         "0e06cd5bcd8bbe",
         "09fc5ddeca0e80",
         "1f1905eec056c2",
-        "038ebdafecc482"
+        "1f958cac28983f"
       ],
       "choices": []
     },
@@ -167,7 +167,7 @@
         "05e7ff7644ee9e",
         "02c8554a8931bc",
         "09b8ddd9aa5c3d",
-        "07bdcfede9b164",
+        "0371e4ac766116",
         "174fb2fd73dae6",
         "006591d45a2f72",
         "1064af03c5c8bf"
@@ -344,7 +344,7 @@
       "text": [
         "06dc66bb778ba2",
         "081b4c564e5d91",
-        "1e812da8d51848",
+        "0d2b9416c276bc",
         "0345ddc509c589",
         "19d388d105e124"
       ],
@@ -451,7 +451,7 @@
       "rest": "11804f99a8377e",
       "text": [
         "0517a79fc55352",
-        "09514a4a8e5397"
+        "1362cad91a1910"
       ],
       "choices": [
         "045edd9f9c54b7",
@@ -505,7 +505,7 @@
       "rest": "08d172e5a23eeb",
       "text": [
         "1630d211baa02f",
-        "1b8290b8fda702"
+        "0b56ffb68b72ad"
       ],
       "choices": [
         "01c62f3685fbe7",
@@ -528,7 +528,7 @@
       "rest": "117711c6b6ba4f",
       "text": [
         "0ba5a1903ca634",
-        "184e8b9679b3d9"
+        "10591d6daae539"
       ],
       "choices": [
         "17caa05b605b70",
@@ -543,7 +543,7 @@
         "14a26e66909bd5"
       ],
       "choices": [
-        "115d713484f8a9"
+        "129ee18bf1df8b"
       ]
     },
     "hell_lost": {
