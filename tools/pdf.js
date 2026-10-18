@@ -1,8 +1,8 @@
 // Builds a PDF of the whole story from STORY and VIGNETTES in index.html, to email, read on a screen or print.
 // Run from the repo root (needs node, and Google Chrome or Microsoft Edge to lay out the pages):
-//   node tools/pdf.js             (writes book/keyboard-heist.pdf; commit it with every story change)
+//   node tools/pdf.js             (writes book/keyboard-heist.pdf; only when the user asks, since 2026-10-17)
 // It is the same gamebook as tools/epub.js, on 6x9 inch pages behind the Kindle cover (book/kindle-cover.jpg):
-// one numbered section per scene, each starting on its own page, every choice a link that also says
+// one numbered section per page (a scene plus any scenes joined onto it), each starting on its own page, every choice a link that also says
 // "Turn to N", so it works on paper too. The numbering is copied from tools/epub.js (same seed, same
 // shuffle), so Section N is the same scene in both books; change the two together.
 
@@ -40,6 +40,16 @@ const VIGNETTES = vm.runInNewContext('(' + html.slice(vStart, html.indexOf('\n};
 const cover = html.match(/id="cover-art"[^>]*aria-label="([^"]*)"[^>]*>(<svg[\s\S]*?<\/svg>)/);
 const art = id => VIGNETTES[id] || (id === 'arrival' ? { alt: cover[1], svg: cover[2] } : null);
 
+// Joined pages, exactly as in tools/epub.js and the game: a one-button scene whose next scene has no other
+// way in shares a section with it, the old button's words becoming an italic line between them.
+const waysIn = {};
+for (const id of ids) for (const c of STORY[id].choices || []) waysIn[c.next] = (waysIn[c.next] || 0) + 1;
+const joinsNext = id => { const ch = STORY[id].choices; return ch && ch.length === 1 && waysIn[ch[0].next] === 1 ? ch[0].next : null; };
+const chain = id => { const out = [id]; for (let n; (n = joinsNext(out.at(-1)));) out.push(n); return out; };
+const joined = new Set(ids.map(joinsNext).filter(Boolean));
+const heads = ids.filter(id => !joined.has(id));
+const last = id => chain(id).at(-1);
+
 // Section numbers, exactly as in tools/epub.js: 1 is the opening, the rest are shuffled, and no
 // section leads to the very next number, so the next page never looks like the next part of your story.
 function rng(seed) {
@@ -51,16 +61,16 @@ function rng(seed) {
   };
 }
 const rand = rng(SEED);
-const order = ['arrival', ...ids.filter(id => id !== 'arrival')];
+const order = ['arrival', ...heads.filter(id => id !== 'arrival')];
 for (let i = order.length - 1; i > 1; i--) { const j = 1 + Math.floor(rand() * i); [order[i], order[j]] = [order[j], order[i]]; }
-const leadsNext = o => o.findIndex((id, i) => i + 1 < o.length && (STORY[id].choices || []).some(c => c.next === o[i + 1]));
+const leadsNext = o => o.findIndex((id, i) => i + 1 < o.length && (STORY[last(id)].choices || []).some(c => c.next === o[i + 1]));
 for (let tries = 0, bad; (bad = leadsNext(order)) >= 0; tries++) {
   if (tries > 10000) throw new Error('Could not shuffle the sections');
   const a = bad + 1, b = 1 + Math.floor(rand() * (order.length - 1));
   [order[a], order[b]] = [order[b], order[a]];
 }
 const num = Object.fromEntries(order.map((id, i) => [id, i + 1]));
-const parents = id => order.filter(p => (STORY[p].choices || []).some(c => c.next === id));
+const parents = id => order.filter(p => (STORY[last(p)].choices || []).some(c => c.next === id));
 
 const esc = s => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
 const paras = list => (list || []).map(t => `<p>${esc(t)}</p>`).join('\n');
@@ -69,16 +79,21 @@ const stamp = c => c.stamp ? `<span class="stamp ${c.stamp}">${esc(c.stamp.toUpp
 const link = (id, label, turn = 'Turn to') => `<a class="choice" href="#s${num[id]}"><span class="label">${label}</span><span class="turn">${turn} ${num[id]}</span></a>`;
 
 function section(id) {
-  const s = STORY[id], n = num[id], pic = art(id);
+  const parts = chain(id), s = STORY[parts.at(-1)], n = num[id];
   const body = [`<section class="scene${s.hell ? ' hell' : s.space ? ' space' : ''}" id="s${n}">`, `<h1 class="number">Section ${n}</h1>`];
-  if (pic) body.push(`<div class="art" role="img" aria-label="${esc(pic.alt)}">${pic.svg}</div>`);
-  body.push(`<p class="title">${esc(s.title)}</p>`, paras(s.text));
-  if (s.ticket) body.push(`<div class="ticket">
-<p><b>From:</b> ${esc(s.ticket.from)}</p>
-<p><b>Subject:</b> ${esc(s.ticket.subject)}</p>
-<p>${esc(s.ticket.body)}</p>
+  parts.forEach((part, k) => {
+    const p = STORY[part], pic = art(part);
+    if (k) body.push(`<p class="join">${esc(STORY[parts[k - 1]].choices[0].label)}</p>`);
+    if (pic) body.push(`<div class="art" role="img" aria-label="${esc(pic.alt)}">${pic.svg}</div>`);
+    if (!k) body.push(`<p class="title">${esc(p.title)}</p>`);
+    body.push(paras(p.text));
+    if (p.ticket) body.push(`<div class="ticket">
+<p><b>From:</b> ${esc(p.ticket.from)}</p>
+<p><b>Subject:</b> ${esc(p.ticket.subject)}</p>
+<p>${esc(p.ticket.body)}</p>
 </div>`);
-  body.push(paras(s.afterTicket));
+    body.push(paras(p.afterTicket));
+  });
   if (s.finale) {
     body.push(`<p class="the-end">${esc(s.prompt || 'The end.')}</p>`,
       `<p class="ending-name">Ending: ${esc(s.name || s.title)}</p>`,
@@ -121,6 +136,7 @@ section { break-before: page; }
 .ticket { margin: 0.9em 0; padding: 0.55em 0.85em 0.1em; border: 1px solid #d8ddd3; border-radius: 8px; background: #f4f3ed; font: 9.5pt/1.45 Arial, Helvetica, sans-serif; break-inside: avoid; }
 .ticket p { margin: 0 0 0.45em; }
 .decision { margin: 0.9em 0 0.45em; font-style: italic; color: #4c5a53; break-after: avoid; }
+.join { margin: 1em 0; text-align: center; font-style: italic; color: #4c5a53; break-after: avoid; }
 .choice { display: flex; justify-content: space-between; align-items: baseline; gap: 0.8em; margin: 0 0 0.35em; padding: 0.38em 0.7em; border: 1px solid #c3cbbf; border-radius: 8px; text-decoration: none; break-inside: avoid; }
 .choice .label { font-weight: bold; }
 .choice .turn { white-space: nowrap; font: bold 7.5pt Arial, Helvetica, sans-serif; letter-spacing: 0.1em; text-transform: uppercase; color: #4f6b58; }
@@ -205,11 +221,11 @@ ${finales.map(id => `<li>${esc(STORY[id].name || STORY[id].title)}</li>`).join('
 // The screen width above matches the printed text width, so this measures the printed layout.
 const PAGE = 7.7 * 96;
 for (const s of document.querySelectorAll('.scene')) {
-  const pic = s.querySelector('.art');
-  for (let w = 60; pic && s.offsetHeight > PAGE && w >= 40; w -= 5) pic.style.width = w + '%';
+  const pics = [...s.querySelectorAll('.art')];
+  for (let w = 60; pics.length && s.offsetHeight > PAGE && w >= 40; w -= 5) pics.forEach(pic => { pic.style.width = w + '%'; });
   if (s.offsetHeight > PAGE) s.classList.add('tight');
-  // Still too long: it runs onto a second page anyway, so give it back its full-size drawing and text.
-  if (s.offsetHeight > PAGE) { s.classList.remove('tight'); if (pic) pic.style.width = ''; }
+  // Still too long: it runs onto a second page anyway, so give it back its full-size drawings and text.
+  if (s.offsetHeight > PAGE) { s.classList.remove('tight'); pics.forEach(pic => { pic.style.width = ''; }); }
 }
 </script>
 </body>
@@ -228,5 +244,5 @@ const p = spawn(browser, ['--headless=new', '--disable-gpu', '--no-first-run', '
 p.on('exit', () => {
   fs.rmSync(work, { recursive: true, force: true });
   if (!fs.existsSync(out)) { console.error('The browser did not write ' + out); process.exit(1); }
-  console.log(`Wrote ${out}: ${order.length} sections, ${order.filter(art).length} pictures, ${finales.length} endings, ${deadEnds.length} dead ends.`);
+  console.log(`Wrote ${out}: ${order.length} sections, ${ids.filter(art).length} pictures, ${finales.length} endings, ${deadEnds.length} dead ends.`);
 });

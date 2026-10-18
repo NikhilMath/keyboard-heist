@@ -67,6 +67,8 @@ h2 {
   color: #46554d;
 }
 .prose p { margin: 0 0 16px; }
+/* On a joined page, the old one-option button sits between the two scenes as a beat. */
+.prose p.join { margin: 28px 0; text-align: center; font-style: italic; color: var(--muted); }
 
 /* Art panel */
 .art {

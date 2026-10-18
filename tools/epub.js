@@ -1,10 +1,10 @@
 // Builds the Kindle eBook (EPUB 3) of the whole story from STORY and VIGNETTES in index.html.
 // Run from the repo root (needs node, Google Chrome or Microsoft Edge to draw the pictures, and /usr/bin/zip):
-//   node tools/epub.js            (writes book/keyboard-heist.epub; commit it with every story change)
+//   node tools/epub.js            (writes book/keyboard-heist.epub; only when the user asks, since 2026-10-17)
 // The cover is not inside the book: KDP takes book/kindle-cover.jpg as its own upload (user's request, 2026-10-14).
-// The book is a gamebook: one numbered section per scene, each on its own page, every choice a link
-// that also says "Turn to N". Section 1 is the opening; the rest are shuffled with a fixed seed, so
-// rebuilding the same story gives the same numbers.
+// The book is a gamebook: one numbered section per page, each on its own page, every choice a link
+// that also says "Turn to N". A page is a scene plus any scenes joined onto it (see JOINED PAGES below).
+// Section 1 is the opening; the rest are shuffled with a fixed seed, so rebuilding the same story gives the same numbers.
 
 const fs = require('fs');
 const os = require('os');
@@ -42,6 +42,17 @@ const VIGNETTES = vm.runInNewContext('(' + html.slice(vStart, html.indexOf('\n};
 const cover = html.match(/id="cover-art"[^>]*aria-label="([^"]*)"[^>]*>(<svg[\s\S]*?<\/svg>)/);
 const art = id => VIGNETTES[id] || (id === 'arrival' ? { alt: cover[1], svg: cover[2] } : null);
 
+// JOINED PAGES (user's direction, 2026-10-17), exactly as the game does it: a one-button scene whose next scene has
+// no other way in shares a section with it, the old button's words becoming an italic line between them.
+// Sections exist only for the first scene of each page; every choice in the book leads to one.
+const waysIn = {};
+for (const id of ids) for (const c of STORY[id].choices || []) waysIn[c.next] = (waysIn[c.next] || 0) + 1;
+const joinsNext = id => { const ch = STORY[id].choices; return ch && ch.length === 1 && waysIn[ch[0].next] === 1 ? ch[0].next : null; };
+const chain = id => { const out = [id]; for (let n; (n = joinsNext(out.at(-1)));) out.push(n); return out; };
+const joined = new Set(ids.map(joinsNext).filter(Boolean));
+const heads = ids.filter(id => !joined.has(id));
+const last = id => chain(id).at(-1);
+
 // Section numbers: 1 is the opening, the rest are shuffled. No section may lead to the very next
 // number, so a reader who swipes forward instead of tapping a choice never lands on a scene that fits.
 function rng(seed) {
@@ -53,9 +64,9 @@ function rng(seed) {
   };
 }
 const rand = rng(SEED);
-const order = ['arrival', ...ids.filter(id => id !== 'arrival')];
+const order = ['arrival', ...heads.filter(id => id !== 'arrival')];
 for (let i = order.length - 1; i > 1; i--) { const j = 1 + Math.floor(rand() * i); [order[i], order[j]] = [order[j], order[i]]; }
-const leadsNext = o => o.findIndex((id, i) => i + 1 < o.length && (STORY[id].choices || []).some(c => c.next === o[i + 1]));
+const leadsNext = o => o.findIndex((id, i) => i + 1 < o.length && (STORY[last(id)].choices || []).some(c => c.next === o[i + 1]));
 for (let tries = 0, bad; (bad = leadsNext(order)) >= 0; tries++) {
   if (tries > 10000) throw new Error('Could not shuffle the sections');
   const a = bad + 1, b = 1 + Math.floor(rand() * (order.length - 1));
@@ -63,7 +74,7 @@ for (let tries = 0, bad; (bad = leadsNext(order)) >= 0; tries++) {
 }
 const num = Object.fromEntries(order.map((id, i) => [id, i + 1]));
 const file = id => 'section-' + String(num[id]).padStart(3, '0') + '.xhtml';
-const parents = id => order.filter(p => (STORY[p].choices || []).some(c => c.next === id));
+const parents = id => order.filter(p => (STORY[last(p)].choices || []).some(c => c.next === id));
 
 const esc = s => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
 const page = (title, body, type = '') => `<?xml version="1.0" encoding="utf-8"?>
@@ -87,16 +98,21 @@ const link = (id, label, pre = '') => `<div class="choice">
 </div>`;
 
 function section(id) {
-  const s = STORY[id], n = num[id], pic = art(id);
+  const parts = chain(id), s = STORY[parts.at(-1)], n = num[id];
   const body = [`<section class="scene" epub:type="chapter" id="s${n}">`, `<h1 class="number">Section ${n}</h1>`];
-  if (pic) body.push(`<div class="art"><img src="../images/${id}.png" alt="${esc(pic.alt)}"/></div>`);
-  body.push(`<h2 class="title">${esc(s.title)}</h2>`, paras(s.text));
-  if (s.ticket) body.push(`<div class="ticket">
-<p><b>From:</b> ${esc(s.ticket.from)}</p>
-<p><b>Subject:</b> ${esc(s.ticket.subject)}</p>
-<p>${esc(s.ticket.body)}</p>
+  parts.forEach((part, k) => {
+    const p = STORY[part], pic = art(part);
+    if (k) body.push(`<p class="join">${esc(STORY[parts[k - 1]].choices[0].label)}</p>`);
+    if (pic) body.push(`<div class="art"><img src="../images/${part}.png" alt="${esc(pic.alt)}"/></div>`);
+    if (!k) body.push(`<h2 class="title">${esc(p.title)}</h2>`);
+    body.push(paras(p.text));
+    if (p.ticket) body.push(`<div class="ticket">
+<p><b>From:</b> ${esc(p.ticket.from)}</p>
+<p><b>Subject:</b> ${esc(p.ticket.subject)}</p>
+<p>${esc(p.ticket.body)}</p>
 </div>`);
-  body.push(paras(s.afterTicket));
+    body.push(paras(p.afterTicket));
+  });
   if (s.finale) {
     body.push(`<p class="the-end">${esc(s.prompt || 'The end.')}</p>`,
       `<p class="ending-name">Ending: ${esc(s.name || s.title)}</p>`,
@@ -168,6 +184,7 @@ h2.title { font-size: 1.5em; margin: 0.8em 0 0.8em; }
 .ticket { border: 1px solid #888; padding: 0.6em 0.9em; margin: 1em 0; }
 .ticket p { margin: 0 0 0.4em; }
 .decision { margin-top: 1.6em; font-style: italic; }
+.join { margin: 1.4em 0; text-align: center; font-style: italic; }
 .choice { margin: 1em 0 0; page-break-inside: avoid; }
 .choice-label { font-weight: bold; margin: 0; }
 .turn { font-weight: normal; white-space: nowrap; }
@@ -203,7 +220,7 @@ const draw = id => new Promise((done, fail) => {
 
 (async () => {
   for (const dir of ['META-INF', 'OEBPS/text', 'OEBPS/images', 'draw']) fs.mkdirSync(path.join(work, dir), { recursive: true });
-  const pictures = order.filter(art);
+  const pictures = ids.filter(art);
   for (let i = 0; i < pictures.length; i += 6) await Promise.all(pictures.slice(i, i + 6).map(draw));
 
   const w = (f, text) => fs.writeFileSync(path.join(work, f), text);
@@ -285,7 +302,7 @@ ${toc.map(t => t[1] === 'Sections' ? point(t, '\n' + sections.map(s => point([s[
 <item id="nav" href="nav.xhtml" media-type="application/xhtml+xml" properties="nav"/>
 <item id="ncx" href="toc.ncx" media-type="application/x-dtbncx+xml"/>
 <item id="css" href="style.css" media-type="text/css"/>
-${order.filter(art).map(id => `<item id="img-${id}" href="images/${id}.png" media-type="image/png"/>`).join('\n')}
+${pictures.map(id => `<item id="img-${id}" href="images/${id}.png" media-type="image/png"/>`).join('\n')}
 ${spine.map(f => `<item id="${f}" href="text/${f}.xhtml" media-type="application/xhtml+xml"/>`).join('\n')}
 </manifest>
 <spine toc="ncx">
