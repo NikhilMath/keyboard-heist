@@ -271,11 +271,11 @@ Each scene name jumps to its full text below; “code” opens it in `index.html
 | [Eleven years](#end_wizard) `end_wizard` | Real ending | (end) | [code](index.html#L1370) |
 | [The first no](#refuse) `refuse` | Real ending | (end) | [code](index.html#L1386) |
 | [The fall guy](#end_report) `end_report` | Real ending | (end) | [code](index.html#L1402) |
-| [Walk out and pretend you never saw it.](#pretend) `pretend` | Scene | [`outage`](#outage) | [code](index.html#L1419) |
-| [Get a drink after work.](#jordan_drink) `jordan_drink` | Scene | [`jordan_weeks`](#jordan_weeks) | [code](index.html#L1436) |
-| [See them again.](#jordan_weeks) `jordan_weeks` | Scene | [`jordan_together`](#jordan_together), [`jordan_breakup`](#jordan_breakup) | [code](index.html#L1454) |
-| [The one who didn’t laugh](#jordan_together) `jordan_together` | Real ending | (end) | [code](index.html#L1476) |
-| [Say you’re just tired.](#jordan_breakup) `jordan_breakup` | Scene | [`office`](#office) | [code](index.html#L1491) |
+| [Walk out and pretend you never saw it.](#pretend) `pretend` | Scene | [`outage`](#outage) | [code](index.html#L1420) |
+| [Get a drink after work.](#jordan_drink) `jordan_drink` | Scene | [`jordan_weeks`](#jordan_weeks) | [code](index.html#L1437) |
+| [See them again.](#jordan_weeks) `jordan_weeks` | Scene | [`jordan_together`](#jordan_together), [`jordan_breakup`](#jordan_breakup) | [code](index.html#L1455) |
+| [The one who didn’t laugh](#jordan_together) `jordan_together` | Real ending | (end) | [code](index.html#L1477) |
+| [Say you’re just tired.](#jordan_breakup) `jordan_breakup` | Scene | [`office`](#office) | [code](index.html#L1492) |
 
 ## The full story
 
@@ -1603,9 +1603,11 @@ You typed it into his keyboard yourself, that first day in his office. More than
 
 You’re the fall guy. So now you sit at your desk and say nothing, and hope nobody else ever looks closely enough to catch him, because if they do, they’ll catch you.
 
-Still, you’re not bored. Every knock on the door could be the FBI. Every Tuesday, a new batch of invoices goes out with your name on it.
+Every knock on the door could be the FBI. Every Tuesday, a new batch of invoices goes out with your name on it.
 
 Maybe you shouldn’t have taken that ticket.
+
+You’re not bored anymore, but you’re not really having a good time.
 
 *The end.*
 
