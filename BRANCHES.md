@@ -79,7 +79,7 @@ flowchart TD
     closing_time["Go in at closing time."]:::spaceScene
     moon_rock["The rock"]:::spaceScene
     printer_kennedy["Take the printer-driver ticket."]:::spaceScene
-    crew_supplies["Hide in the cargo."]:::spaceScene
+    crew_supplies["Hide in the rocket’s cargo."]:::spaceScene
     liftoff["Liftoff"]:::spaceScene
     lights_out["Wait until they sleep."]:::spaceScene
     mom_tour["Let your mom distract them."]:::spaceScene
@@ -114,7 +114,7 @@ flowchart TD
   field_trip -->|"Get it home."| moon_rock
   closing_time -->|"Get it home."| moon_rock
   moon_rock -->|"Take the printer-driver ticket."| printer_kennedy
-  moon_rock -->|"Hide in the cargo."| crew_supplies
+  moon_rock -->|"Hide in the rocket’s cargo."| crew_supplies
   printer_kennedy -->|"Find somewhere to hide."| liftoff
   crew_supplies -->|"Stay very still."| liftoff
   liftoff -->|"Wait until they sleep."| lights_out
@@ -220,7 +220,7 @@ Each scene name jumps to its full text below; “code” opens it in `index.html
 | [Go in at closing time.](#closing_time) `closing_time` (space) | Scene | [`moon_rock`](#moon_rock) | [code](index.html#L383) |
 | [The rock](#moon_rock) `moon_rock` (space) | Scene | [`printer_kennedy`](#printer_kennedy), [`crew_supplies`](#crew_supplies) | [code](index.html#L401) |
 | [Take the printer-driver ticket.](#printer_kennedy) `printer_kennedy` (space) | Scene | [`liftoff`](#liftoff) | [code](index.html#L425) |
-| [Hide in the cargo.](#crew_supplies) `crew_supplies` (space) | Scene | [`liftoff`](#liftoff) | [code](index.html#L443) |
+| [Hide in the rocket’s cargo.](#crew_supplies) `crew_supplies` (space) | Scene | [`liftoff`](#liftoff) | [code](index.html#L443) |
 | [Liftoff](#liftoff) `liftoff` (space) | Scene | [`lights_out`](#lights_out), [`mom_tour`](#mom_tour) | [code](index.html#L461) |
 | [Wait until they sleep.](#lights_out) `lights_out` (space) | Scene | [`toilet`](#toilet) | [code](index.html#L485) |
 | [Let your mom distract them.](#mom_tour) `mom_tour` (space) | Scene | [`toilet`](#toilet) | [code](index.html#L503) |
@@ -327,7 +327,7 @@ You’ve been typing on keyboards for twenty-two years. You have never noticed a
 
 You type a whole sentence: “Something is wrong with me.” You backspace it. The backspace also feels wonderful.
 
-Daniel is still on the phone. Your hands are still on the keyboard.
+Daniel is still on the phone. Your hands are still on the keyboard. Whatever you came down here for, you’ve forgotten it.
 
 - [Take it. Right now.](#end_spare) *You could be out of the building in ninety seconds. Probably.*
 - [Leave it. Come back for it later.](#plan) *You’d finish clean. You’d plan. That’s who you are.*
@@ -633,7 +633,7 @@ At 4:55 you’re in the museum, studying a spacesuit very hard. At five, the lig
 
 The guard knows your mom. She asks about his grandkids. He gets out his phone. She says “Oh, look at him” forty-one times.
 
-You have the whole museum to yourself. You lift the glass. Somehow you thought the Moon would be heavier.
+You have the whole museum to yourself. You lift the glass and pick up the Moon. Somehow you thought it would be heavier. Your mom sets a rock from her garden in its place.
 
 On the way out, your mom hugs the guard. He tells her to come back soon. She says she will. She probably will.
 
@@ -658,7 +658,7 @@ Your mom turns the TV up. “They don’t keep the good stuff in Ohio,” she sa
 You started with a CEO. Now it’s the government. Out of habit, you check the IT contract boards. Kennedy Space Center has posted a printer-driver ticket.
 
 - [Take the printer-driver ticket.](#printer_kennedy) *The task you hate most. Nobody on Earth wants it.*
-- [Hide in the cargo.](#crew_supplies) *Two crates marked “Crew supplies.” Close enough.*
+- [Hide in the rocket’s cargo.](#crew_supplies) *Two crates marked “Crew supplies.” Close enough.*
 
 [↑ Back to the map](#map)
 
@@ -682,11 +682,11 @@ IT can go anywhere. Nobody asks why. Not even at NASA. On launch morning, nobody
 
 <a name="crew_supplies"></a>
 
-### Hide in the cargo.
+### Hide in the rocket’s cargo.
 
 `crew_supplies` · Scene · Space
 
-Two crates are marked “Crew supplies.” You and your mom are crew supplies now. She packs sandwiches.
+At NASA’s research center in Cleveland, two crates are marked “Crew supplies.” You and your mom are crew supplies now. She packs sandwiches.
 
 A forklift lifts you. A truck drives you somewhere flat and hot. An elevator goes up for a very long time.
 
@@ -922,7 +922,7 @@ The handle is warm. The balance is perfect. You poke the air, and the air seems 
 
 You walk out of the safety video holding the pitchfork, like you have somewhere to be. Nobody stops you.
 
-That night, Compliance counts. One pitchfork is missing. The nice demon pats every pocket twice. “Losing an implement is a transfer offense,” Compliance says. “Up. Middle management. Ohio.” They have until morning.
+That night, Compliance counts. One pitchfork is missing. The nice demon pats every pocket twice. “Losing an implement is a transfer offense,” Compliance says. “Up. Middle management. Ohio.” The nice demon has until morning.
 
 - **SIN** [Say nothing. Let them take the fall.](#hell_quiet) *They’ll be fine in Ohio. Probably.*
 - **VIRTUE** [Give it back before morning.](#hell_committee) *Walk it over. Hope nobody asks why you had it.*
@@ -1017,7 +1017,7 @@ You hate printer drivers, and you are extraordinary at this. You just weren’t 
 
 One good deed, a little late. Down here, that counts for exactly nothing. Nobody is cheering. The Lake of Fire hums.
 
-You get a cubicle and a lot of Tuesdays. Somewhere, a pitchfork leans against a wall. It feels like a pitchfork. It always did. What you felt at orientation was never the pitchfork.
+You get a cubicle and a lot of Tuesdays. Daniel’s keyboard is in the bottom drawer. Somewhere, a pitchfork leans against a wall. It feels like a pitchfork. It always did. What you felt at orientation was never the pitchfork.
 
 You wait for the rest of it. You give it a thousand years.
 
@@ -1089,7 +1089,7 @@ At the huddle, the nice demon hugs forty demons, one at a time. On hug forty, yo
 
 The decoy passes. Then the nice demon looks at it. “This isn’t mine. It doesn’t feel like mine.” Compliance: “Transfer offense. Up. Middle management. Ohio.”
 
-They hug you goodbye. You have the thing you wanted, and nobody left to show it to.
+The nice demon hugs you goodbye. You have the thing you wanted, and nobody left to show it to.
 
 That night, you poke the air with it. Nothing. It felt perfect when it was theirs. Now it’s just a pitchfork. If they ever come back for it, they’ll know where to look.
 
