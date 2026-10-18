@@ -13,6 +13,7 @@ You're an IT Support Manager stuck on a dull plateau. A printer ticket takes you
 - Some choices are stamped **SIN** or **VIRTUE**. Pay attention to them.
 - **Your map** shows every branch you've found. Click any dot to jump back to that scene.
 - **Your journey** lists the scenes on your current path. Click one to go back to it.
+- Every page has its own link (like `keyboardheist.com/#the-swap`), so you can send someone straight to it, and your browser's Back and Forward buttons move between pages.
 - Your progress saves in your browser. **Start over and do NOT clear history** restarts the story but keeps everything you've found. **Start over AND clear history** wipes it all.
 
 ## Run it on your own computer

@@ -1672,7 +1672,7 @@ function render(focus=false){
  const journey=document.getElementById('journey');journey.replaceChildren();path.forEach((id,i)=>{const li=document.createElement('li');
   if(i>=start){li.textContent=STORY[id].title;if(i===path.length-1)li.setAttribute('aria-current','step');}
   else{const link=document.createElement('button');link.className='journey-link';link.textContent=STORY[id].title;link.addEventListener('click',()=>{path=path.slice(0,i+1);render(true);});li.append(link);}
-  journey.append(li);});path.forEach(id=>seen.add(id));persist();tally();drawMap();updateHeaderVisual();updateTheme();
+  journey.append(li);});path.forEach(id=>seen.add(id));persist();tally();drawMap();updateHeaderVisual();updateTheme();syncURL();
  if(focus){
   title.focus({preventScroll:true});
   if(!vignetteArt.hidden)asideEl.scrollIntoView({block:'start'});
@@ -1793,6 +1793,29 @@ const narrowScreen=window.matchMedia('(max-width: 760px)');
 function placeMap(){(narrowScreen.matches?mobileMapSlot:mainEl).append(mapBox);}
 placeMap();
 narrowScreen.addEventListener('change',()=>{placeMap();updateHeaderVisual();});
+// Page links (user's request, 2026-10-18): every page has its own address, named after its title
+// (keyboardheist.com/#the-swap; the opening has none), so you can link to a page, and the browser's
+// Back and Forward step through pages. A link keeps your own route if that page is on it; otherwise it
+// opens on the shortest route, like a map jump, and the pages on the way count as found.
+// Each history entry remembers its whole path, so Back and Forward return to the exact route.
+const PAGE_SLUG={},SLUG_PAGE={};
+ALL_SCENES.filter(id=>!ALL_SCENES.some(p=>joinsNext(p)===id)).forEach(id=>{
+ let slug=STORY[id].title.toLowerCase().replace(/[’']/g,'').replace(/[^a-z0-9]+/g,'-').replace(/^-+|-+$/g,'');
+ if(!slug||slug in SLUG_PAGE||document.getElementById(slug))slug=id;
+ PAGE_SLUG[id]=slug;SLUG_PAGE[slug]=id;
+});
+// A scene id works in the address too (#swap), so old or hand-made links still land.
+function linkedScene(){let h='';try{h=decodeURIComponent(location.hash.slice(1));}catch{}return SLUG_PAGE[h]||(Object.hasOwn(STORY,h)?h:null);}
+function followLink(){const id=linkedScene();if(!id)return;const at=path.indexOf(id);if(at>=0)path=path.slice(0,at+1);else{const r=routeTo(id);if(r)path=r;}}
+let replaceURL=true;
+function syncURL(){
+ const id=path[pageStart()],hash=id==='arrival'?'':'#'+PAGE_SLUG[id];
+ const url=hash||location.pathname+location.search;
+ try{if(replaceURL||location.hash===hash)history.replaceState({path},'',url);else history.pushState({path},'',url);}catch{}
+ replaceURL=false;
+}
+addEventListener('popstate',e=>{const p=e.state?.path;if(validPath(p))path=p;else followLink();replaceURL=true;render(true);});
+followLink();
 render();
 </script>
 </body>
