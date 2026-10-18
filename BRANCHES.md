@@ -907,7 +907,7 @@ You went back to face it. You’re just a day late, and nobody up here gives poi
 
 Orientation: no windows, a hum someone chose on purpose, deviled eggs. Compliance counts the chairs twice and opens a file with your name on it.
 
-The demon who brought the eggs is so happy you’re here their tail wags. The nicest demon in Hell, everyone says, a little tiredly. They hand you their pitchfork to “get a feel for it” during the safety video.
+The demon who brought the eggs is so happy you’re here their tail wags. The nicest demon in Hell, everyone says, a little tiredly. The nice demon hands you their pitchfork during the safety video. “Get a feel for what it’s like. People are always curious.”
 
 The handle is warm. The balance is perfect. You poke the air, and the air seems grateful. The keyboard under your other arm feels like nothing now. Uh oh.
 
