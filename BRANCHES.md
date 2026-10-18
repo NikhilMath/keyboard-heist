@@ -246,36 +246,36 @@ Each scene name jumps to its full text below; “code” opens it in `index.html
 | [Say no thanks. Steal it at the huddle.](#hell_count) `hell_count` (Hell) | Scene | [`hell_lost`](#hell_lost) | [code](index.html#L873) |
 | [The Devil’s offer](#hell_offer) `hell_offer` (Hell) | Scene | [`hell_trade`](#hell_trade), [`hell_truth`](#hell_truth) | [code](index.html#L891) |
 | [Trade him Daniel’s keyboard.](#hell_trade) `hell_trade` (Hell) | Scene | [`hell_lost`](#hell_lost) | [code](index.html#L914) |
-| [Lost and found](#hell_lost) `hell_lost` (Hell) | Real ending | (end) | [code](index.html#L931) |
-| [Say no. Give it all back.](#hell_truth) `hell_truth` (Hell) | Scene | [`hell_return`](#hell_return) | [code](index.html#L945) |
-| [Return to sender](#hell_return) `hell_return` (Hell) | Scene | [`lie`](#lie), [`hell_own_keyboard`](#hell_own_keyboard) | [code](index.html#L962) |
-| [Your own keyboard](#hell_own_keyboard) `hell_own_keyboard` (Hell) | Real ending | (end) | [code](index.html#L983) |
-| [Have you tried restarting the printer?](#restart) `restart` | Scene | [`ceremony`](#ceremony), [`end_sick`](#end_sick) | [code](index.html#L999) |
-| [The ceremony](#ceremony) `ceremony` | Scene | [`end_speech`](#end_speech), [`lemon`](#lemon) | [code](index.html#L1021) |
-| [Call in sick Friday.](#end_sick) `end_sick` | Scene | [`office`](#office) | [code](index.html#L1042) |
-| [Say a few words.](#end_speech) `end_speech` | Scene | [`jordan_drink`](#jordan_drink) | [code](index.html#L1058) |
-| [Stand up. Walk away. Never think about this again.](#walk_away) `walk_away` | Scene | [`resigned`](#resigned), [`draft`](#draft) | [code](index.html#L1075) |
-| [The resignation](#resigned) `resigned` | Scene | [`end_sabbatical`](#end_sabbatical), [`typo`](#typo) | [code](index.html#L1097) |
-| [Take the sabbatical.](#end_sabbatical) `end_sabbatical` | Scene | [`plan`](#plan) | [code](index.html#L1120) |
-| [Just ask him about it.](#ask) `ask` | Scene | [`garage`](#garage), [`end_founding`](#end_founding) | [code](index.html#L1136) |
-| [The garage](#garage) `garage` | Scene | [`end_founding`](#end_founding), [`end_borrowed`](#end_borrowed), [`declined`](#declined) | [code](index.html#L1158) |
-| [The founding keyboard](#end_founding) `end_founding` | Scene | [`invoices`](#invoices) | [code](index.html#L1184) |
-| [Borrow it for the weekend.](#end_borrowed) `end_borrowed` | Scene | [`outage`](#outage) | [code](index.html#L1201) |
-| [Look up the printer’s model in inventory.](#printer_model) `printer_model` | Scene | [`office`](#office) | [code](index.html#L1217) |
-| [Say “thank you” and sit down.](#lemon) `lemon` | Scene | [`office`](#office) | [code](index.html#L1233) |
-| [Save it as a draft.](#draft) `draft` | Scene | [`plan`](#plan) | [code](index.html#L1249) |
-| [Say it was a typo.](#typo) `typo` | Scene | [`plan`](#plan) | [code](index.html#L1264) |
-| [Say you couldn’t possibly.](#declined) `declined` | Scene | [`outage`](#outage) | [code](index.html#L1281) |
-| [Go look.](#invoices) `invoices` | Scene | [`wizard`](#wizard) | [code](index.html#L1298) |
-| [Take it back to him.](#wizard) `wizard` | Scene | [`end_wizard`](#end_wizard), [`refuse`](#refuse), [`end_report`](#end_report), [`pretend`](#pretend) | [code](index.html#L1316) |
-| [Eleven years](#end_wizard) `end_wizard` | Real ending | (end) | [code](index.html#L1350) |
-| [The first no](#refuse) `refuse` | Real ending | (end) | [code](index.html#L1366) |
-| [The fall guy](#end_report) `end_report` | Dead end | (end) | [code](index.html#L1382) |
-| [Walk out and pretend you never saw it.](#pretend) `pretend` | Scene | [`outage`](#outage) | [code](index.html#L1396) |
-| [Get a drink after work.](#jordan_drink) `jordan_drink` | Scene | [`jordan_weeks`](#jordan_weeks) | [code](index.html#L1413) |
-| [See them again.](#jordan_weeks) `jordan_weeks` | Scene | [`jordan_together`](#jordan_together), [`jordan_breakup`](#jordan_breakup) | [code](index.html#L1431) |
-| [The one who didn’t laugh](#jordan_together) `jordan_together` | Real ending | (end) | [code](index.html#L1453) |
-| [Say you’re just tired.](#jordan_breakup) `jordan_breakup` | Scene | [`office`](#office) | [code](index.html#L1468) |
+| [Lost and found](#hell_lost) `hell_lost` (Hell) | Real ending | (end) | [code](index.html#L932) |
+| [Say no. Give it all back.](#hell_truth) `hell_truth` (Hell) | Scene | [`hell_return`](#hell_return) | [code](index.html#L946) |
+| [Return to sender](#hell_return) `hell_return` (Hell) | Scene | [`lie`](#lie), [`hell_own_keyboard`](#hell_own_keyboard) | [code](index.html#L963) |
+| [Your own keyboard](#hell_own_keyboard) `hell_own_keyboard` (Hell) | Real ending | (end) | [code](index.html#L984) |
+| [Have you tried restarting the printer?](#restart) `restart` | Scene | [`ceremony`](#ceremony), [`end_sick`](#end_sick) | [code](index.html#L1000) |
+| [The ceremony](#ceremony) `ceremony` | Scene | [`end_speech`](#end_speech), [`lemon`](#lemon) | [code](index.html#L1022) |
+| [Call in sick Friday.](#end_sick) `end_sick` | Scene | [`office`](#office) | [code](index.html#L1043) |
+| [Say a few words.](#end_speech) `end_speech` | Scene | [`jordan_drink`](#jordan_drink) | [code](index.html#L1059) |
+| [Stand up. Walk away. Never think about this again.](#walk_away) `walk_away` | Scene | [`resigned`](#resigned), [`draft`](#draft) | [code](index.html#L1076) |
+| [The resignation](#resigned) `resigned` | Scene | [`end_sabbatical`](#end_sabbatical), [`typo`](#typo) | [code](index.html#L1098) |
+| [Take the sabbatical.](#end_sabbatical) `end_sabbatical` | Scene | [`plan`](#plan) | [code](index.html#L1121) |
+| [Just ask him about it.](#ask) `ask` | Scene | [`garage`](#garage), [`end_founding`](#end_founding) | [code](index.html#L1137) |
+| [The garage](#garage) `garage` | Scene | [`end_founding`](#end_founding), [`end_borrowed`](#end_borrowed), [`declined`](#declined) | [code](index.html#L1159) |
+| [The founding keyboard](#end_founding) `end_founding` | Scene | [`invoices`](#invoices) | [code](index.html#L1185) |
+| [Borrow it for the weekend.](#end_borrowed) `end_borrowed` | Scene | [`outage`](#outage) | [code](index.html#L1202) |
+| [Look up the printer’s model in inventory.](#printer_model) `printer_model` | Scene | [`office`](#office) | [code](index.html#L1218) |
+| [Say “thank you” and sit down.](#lemon) `lemon` | Scene | [`office`](#office) | [code](index.html#L1234) |
+| [Save it as a draft.](#draft) `draft` | Scene | [`plan`](#plan) | [code](index.html#L1250) |
+| [Say it was a typo.](#typo) `typo` | Scene | [`plan`](#plan) | [code](index.html#L1265) |
+| [Say you couldn’t possibly.](#declined) `declined` | Scene | [`outage`](#outage) | [code](index.html#L1282) |
+| [Go look.](#invoices) `invoices` | Scene | [`wizard`](#wizard) | [code](index.html#L1299) |
+| [Take it back to him.](#wizard) `wizard` | Scene | [`end_wizard`](#end_wizard), [`refuse`](#refuse), [`end_report`](#end_report), [`pretend`](#pretend) | [code](index.html#L1317) |
+| [Eleven years](#end_wizard) `end_wizard` | Real ending | (end) | [code](index.html#L1351) |
+| [The first no](#refuse) `refuse` | Real ending | (end) | [code](index.html#L1367) |
+| [The fall guy](#end_report) `end_report` | Dead end | (end) | [code](index.html#L1383) |
+| [Walk out and pretend you never saw it.](#pretend) `pretend` | Scene | [`outage`](#outage) | [code](index.html#L1397) |
+| [Get a drink after work.](#jordan_drink) `jordan_drink` | Scene | [`jordan_weeks`](#jordan_weeks) | [code](index.html#L1414) |
+| [See them again.](#jordan_weeks) `jordan_weeks` | Scene | [`jordan_together`](#jordan_together), [`jordan_breakup`](#jordan_breakup) | [code](index.html#L1432) |
+| [The one who didn’t laugh](#jordan_together) `jordan_together` | Real ending | (end) | [code](index.html#L1454) |
+| [Say you’re just tired.](#jordan_breakup) `jordan_breakup` | Scene | [`office`](#office) | [code](index.html#L1469) |
 
 ## The full story
 
@@ -1111,6 +1111,8 @@ The Devil types his name on Daniel’s keyboard. Then again. “Oh,” he says. 
 By lunch, the pitchfork is yours, fair and square, with a receipt. You poke the air. Nothing. It only ever felt like something when it wasn’t yours.
 
 Through the open door, the Devil is still typing his name. You stand in the hallway, listening to someone else be happy.
+
+You don’t want the pitchfork. The nice demon already has a new one. In Hell, things nobody wants end up at Lost and Found.
 
 - [Drop the pitchfork at Lost and Found.](#hell_lost) *Maybe it feels like something to somebody else.*
 
