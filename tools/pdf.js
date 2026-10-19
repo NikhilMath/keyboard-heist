@@ -19,6 +19,7 @@ const html = fs.readFileSync(path.join(root, 'index.html'), 'utf8');
 const TITLE = 'Keyboard Heist';
 const AUTHOR = 'Nikhil Math';
 const KICKER = 'A pick-your-path comedy';
+const DEDICATION = 'Dedicated to all the bored IT workers out there.'; // the user's words, 2026-10-18; its own page after the title page
 const SEED = 'keyboard-heist';
 
 // STORY is JSON inside the script; cut it out by matching braces (skipping strings), like tools/branches.js.
@@ -156,6 +157,7 @@ section { break-before: page; }
 .book-title span { display: block; }
 .book-title i { display: block; color: #557a34; }
 .tagline { font-style: italic; }
+.dedication p { margin-top: 2.6in; text-align: center; font-size: 12pt; font-style: italic; }
 .author { margin-top: 0.7in; font-size: 14pt; }
 .copyright { margin-top: auto; margin-bottom: 0; font-size: 8.5pt; color: #69756e; }
 .front h1 { margin: 0 0 0.3in; text-align: center; font: bold 10pt Arial, Helvetica, sans-serif; letter-spacing: 0.2em; font-variant-caps: all-small-caps; color: #69756e; }
@@ -185,6 +187,10 @@ ${css}</style>
 <p class="tagline">Steal a keyboard just to feel something.</p>
 <p class="author">${esc(AUTHOR)}</p>
 <p class="copyright">Copyright © ${new Date().getFullYear()} ${esc(AUTHOR)}</p>
+</section>
+
+<section class="front dedication">
+<p>${esc(DEDICATION)}</p>
 </section>
 
 <section class="front how-to" id="how-to-read">

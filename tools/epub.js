@@ -20,6 +20,7 @@ const TITLE = 'Keyboard Heist';
 const AUTHOR = 'Nikhil Math';
 const AUTHOR_SORT = 'Math, Nikhil';
 const KICKER = 'A pick-your-path comedy';
+const DEDICATION = 'Dedicated to all the bored IT workers out there.'; // the user's words, 2026-10-18; its own page after the title page
 const BOOK_ID = 'urn:uuid:5e4da200-4fde-472d-bde6-2060e9ed6c02'; // keep: KDP and readers track the book by it
 const SEED = 'keyboard-heist';
 
@@ -143,6 +144,10 @@ const titlePage = page(TITLE, `<section class="title-page" epub:type="titlepage"
 <p class="copyright">Copyright © ${new Date().getFullYear()} ${esc(AUTHOR)}</p>
 </section>`, 'frontmatter');
 
+const dedicationPage = page('Dedication', `<section class="dedication" epub:type="dedication">
+<p>${esc(DEDICATION)}</p>
+</section>`, 'frontmatter');
+
 const howTo = page('How to read this book', `<section class="how-to" epub:type="preface">
 <h1 class="number">How to read this book</h1>
 <p>Don’t read this book front to back. Start at Section 1.</p>
@@ -206,6 +211,7 @@ h2.title { font-size: 1.5em; margin: 0.8em 0 0.8em; }
 .tagline { font-style: italic; }
 .author { font-size: 1.2em; margin-top: 3em; }
 .copyright { font-size: 0.8em; margin-top: 5em; }
+.dedication { text-align: center; padding-top: 30%; font-style: italic; }
 .endings ul { margin: 1em 0; }
 .endings li { margin: 0 0 0.4em; }
 .contents ul { list-style: none; margin: 1em 0 1.6em; padding: 0; }
@@ -240,6 +246,7 @@ const draw = id => new Promise((done, fail) => {
 `);
   w('OEBPS/style.css', css);
   w('OEBPS/text/title.xhtml', titlePage);
+  w('OEBPS/text/dedication.xhtml', dedicationPage);
   w('OEBPS/text/how-to-read.xhtml', howTo);
   w('OEBPS/text/contents.xhtml', contents);
   w('OEBPS/text/endings.xhtml', endingsPage);
@@ -286,7 +293,7 @@ ${toc.map(t => t[1] === 'Sections' ? point(t, '\n' + sections.map(s => point([s[
 </ncx>
 `);
 
-  const spine = ['title', 'how-to-read', 'contents', ...order.map(id => file(id).replace('.xhtml', '')), 'endings', 'acknowledgments'];
+  const spine = ['title', 'dedication', 'how-to-read', 'contents', ...order.map(id => file(id).replace('.xhtml', '')), 'endings', 'acknowledgments'];
   const modified = new Date().toISOString().replace(/\.\d+Z$/, 'Z');
   w('OEBPS/content.opf', `<?xml version="1.0" encoding="utf-8"?>
 <package xmlns="http://www.idpf.org/2007/opf" version="3.0" unique-identifier="book-id" xml:lang="en">
