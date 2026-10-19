@@ -113,6 +113,8 @@ function section(id) {
 
 const finales = ids.filter(id => STORY[id].finale);
 const deadEnds = ids.filter(id => STORY[id].ending && !STORY[id].finale);
+// The last page (user's request, 2026-10-18), the same words as the EPUB's, from book/acknowledgments.md.
+const thanks = fs.readFileSync(path.join(root, 'book', 'acknowledgments.md'), 'utf8').replace(/^#.*/, '').trim().split(/\n\s*\n/).map(p => p.replace(/\s+/g, ' '));
 const words = n => ['zero', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'ten', 'eleven', 'twelve', 'thirteen', 'fourteen', 'fifteen', 'sixteen', 'seventeen', 'eighteen', 'nineteen', 'twenty'][n] || String(n);
 
 const css = `@page { size: 6in 9in; margin: 0.6in 0.62in 0.6in; }
@@ -201,6 +203,7 @@ ${css}</style>
 <li><a href="#how-to-read">How to read this book</a></li>
 <li><a href="#s1">Section 1: start here</a></li>
 <li><a href="#endings">The endings</a></li>
+<li><a href="#acknowledgments">Acknowledgments</a></li>
 </ul>
 <p>Every section, by number:</p>
 <div class="numbers">${order.map(id => `<a href="#s${num[id]}">${num[id]}</a>`).join('')}</div>
@@ -215,6 +218,11 @@ ${order.map(section).join('\n\n')}
 ${finales.map(id => `<li>${esc(STORY[id].name || STORY[id].title)}</li>`).join('\n')}
 </ul>
 <p class="again"><a href="#s1">Start over at Section 1.</a></p>
+</section>
+
+<section class="front acknowledgments" id="acknowledgments">
+<h1>Acknowledgments</h1>
+${paras(thanks)}
 </section>
 <script>
 // A section too long for one page gets a smaller drawing, so few sections spill onto a second page.

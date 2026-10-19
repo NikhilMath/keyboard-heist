@@ -40,6 +40,7 @@ Then open http://localhost:8000.
 | `book/keyboard-heist.epub` | The Kindle eBook of the whole story (**spoilers**) |
 | `book/keyboard-heist.pdf` | The same book as a PDF to email, read on screen or print, with the cover and every drawing (**spoilers**) |
 | `book/kdp-description.txt` | The book description for its Amazon KDP listing |
+| [`book/acknowledgments.md`](book/acknowledgments.md) | The book's acknowledgments, its last page |
 | `BRANCHES.md` | A flowchart of every branch plus the full story text (**spoilers**) |
 | `branches.html` | The same map as a page where you click any box to read that scene, at [keyboardheist.com/branches.html](https://keyboardheist.com/branches.html) (**spoilers**) |
 | `story-map.txt`, `spine-draft.txt` | Planning notes from writing the story |

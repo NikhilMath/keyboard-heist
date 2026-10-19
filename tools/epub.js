@@ -160,6 +160,7 @@ const contents = page('Contents', `<section class="contents" epub:type="toc" id=
 <li><a href="how-to-read.xhtml">How to read this book</a></li>
 <li><a href="${file('arrival')}">Section 1: start here</a></li>
 <li><a href="endings.xhtml">The endings</a></li>
+<li><a href="acknowledgments.xhtml">Acknowledgments</a></li>
 </ul>
 <p>Every section, by number:</p>
 <p class="numbers">${order.map(id => `<a href="${file(id)}">${num[id]}</a>`).join(' ')}</p>
@@ -172,6 +173,13 @@ const endingsPage = page('The endings', `<section class="endings" epub:type="bac
 ${finales.map(id => `<li>${esc(STORY[id].name || STORY[id].title)}</li>`).join('\n')}
 </ul>
 <p class="again"><a href="${file('arrival')}">Start over at Section 1.</a></p>
+</section>`, 'backmatter');
+
+// The last page (user's request, 2026-10-18). Its words live in book/acknowledgments.md (GitHub shows it as a page), one paragraph per blank line under the heading.
+const thanks = fs.readFileSync(path.join(root, 'book', 'acknowledgments.md'), 'utf8').replace(/^#.*/, '').trim().split(/\n\s*\n/).map(p => p.replace(/\s+/g, ' '));
+const thanksPage = page('Acknowledgments', `<section class="acknowledgments" epub:type="acknowledgments">
+<h1 class="number">Acknowledgments</h1>
+${paras(thanks)}
 </section>`, 'backmatter');
 
 const css = `body { margin: 0; }
@@ -235,10 +243,11 @@ const draw = id => new Promise((done, fail) => {
   w('OEBPS/text/how-to-read.xhtml', howTo);
   w('OEBPS/text/contents.xhtml', contents);
   w('OEBPS/text/endings.xhtml', endingsPage);
+  w('OEBPS/text/acknowledgments.xhtml', thanksPage);
   for (const id of order) w('OEBPS/text/' + file(id), section(id));
 
   // Table of contents: a short top level, with every section number nested under "Sections".
-  const toc = [['text/title.xhtml', 'Title page'], ['text/how-to-read.xhtml', 'How to read this book'], ['text/contents.xhtml', 'Contents'], ['text/' + file('arrival'), 'Sections'], ['text/endings.xhtml', 'The endings']];
+  const toc = [['text/title.xhtml', 'Title page'], ['text/how-to-read.xhtml', 'How to read this book'], ['text/contents.xhtml', 'Contents'], ['text/' + file('arrival'), 'Sections'], ['text/endings.xhtml', 'The endings'], ['text/acknowledgments.xhtml', 'Acknowledgments']];
   const sections = order.map(id => ['text/' + file(id), 'Section ' + num[id]]);
   w('OEBPS/nav.xhtml', `<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE html>
@@ -277,7 +286,7 @@ ${toc.map(t => t[1] === 'Sections' ? point(t, '\n' + sections.map(s => point([s[
 </ncx>
 `);
 
-  const spine = ['title', 'how-to-read', 'contents', ...order.map(id => file(id).replace('.xhtml', '')), 'endings'];
+  const spine = ['title', 'how-to-read', 'contents', ...order.map(id => file(id).replace('.xhtml', '')), 'endings', 'acknowledgments'];
   const modified = new Date().toISOString().replace(/\.\d+Z$/, 'Z');
   w('OEBPS/content.opf', `<?xml version="1.0" encoding="utf-8"?>
 <package xmlns="http://www.idpf.org/2007/opf" version="3.0" unique-identifier="book-id" xml:lang="en">
