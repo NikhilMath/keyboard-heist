@@ -5,6 +5,10 @@
 // one numbered section per page (a scene plus any scenes joined onto it), each starting on its own page, every choice a link that also says
 // "Turn to N", so it works on paper too. The numbering is copied from tools/epub.js (same seed, same
 // shuffle), so Section N is the same scene in both books; change the two together.
+//   node tools/pdf.js --paperback (writes book/keyboard-heist-paperback.pdf, the KDP paperback interior, user's request 2026-10-18):
+// no cover (KDP takes the cover as its own file), no Contents page (paper has no links to tap), a how-to-read page
+// worded for paper only, the title page, dedication, how-to-read page and Section 1 each on a right-hand page,
+// and an even page count.
 
 const fs = require('fs');
 const os = require('os');
@@ -12,7 +16,9 @@ const path = require('path');
 const vm = require('vm');
 const { spawn } = require('child_process');
 
-const out = path.resolve(process.argv[2] || 'book/keyboard-heist.pdf');
+const PAPERBACK = process.argv.includes('--paperback');
+const args = process.argv.slice(2).filter(a => a !== '--paperback');
+const out = path.resolve(args[0] || (PAPERBACK ? 'book/keyboard-heist-paperback.pdf' : 'book/keyboard-heist.pdf'));
 const root = process.cwd();
 const html = fs.readFileSync(path.join(root, 'index.html'), 'utf8');
 
@@ -168,42 +174,15 @@ section { break-before: page; }
 .endings li { margin: 0 0 0.55em; padding-left: 1.6em; position: relative; }
 @media screen { body { width: 4.76in; } }
 .endings li::before { content: ""; position: absolute; left: 0; top: 0.25em; width: 0.85em; height: 0.85em; border: 1.5px solid #69756e; border-radius: 2px; }
+.blank { height: 1in; }
 `;
 
-const page = `<!doctype html>
-<html lang="en">
-<head>
-<meta charset="utf-8">
-<title>${TITLE}</title>
-<style>
-${css}</style>
-</head>
-<body>
-<div class="cover"><img src="cover.jpg" alt="The cover: Keyboard Heist, a pick-your-path comedy by ${esc(AUTHOR)}."></div>
-
-<section class="front title-page">
-<p class="kicker">${esc(KICKER)}</p>
-<p class="book-title"><span>Keyboard</span><i>Heist.</i></p>
-<p class="tagline">Steal a keyboard just to feel something.</p>
-<p class="author">${esc(AUTHOR)}</p>
-<p class="copyright">Copyright © ${new Date().getFullYear()} ${esc(AUTHOR)}</p>
-</section>
-
-<section class="front dedication">
-<p>${esc(DEDICATION)}</p>
-</section>
-
-<section class="front how-to" id="how-to-read">
-<h1>How to read this book</h1>
-<p>Don’t read this book front to back. Start at Section 1.</p>
-<p>At the end of each section, pick what you’ll do next. On a screen, click or tap your choice. On paper, turn to the section number it gives: every section starts on a new page with its number at the top.</p>
-<p>The sections are shuffled on purpose. The page after a section is never the next part of your story, so follow your choice instead of turning the page. To undo a click, use your PDF reader’s Back button.</p>
-<p>Some choices are stamped <span class="stamp sin">SIN</span> or <span class="stamp virtue">VIRTUE</span>. Pay attention to them.</p>
-<p>${deadEnds.length ? `Some paths reach a real ending: “The end.” Others hit a dead end, which sends you back to try a different choice. There are ${words(finales.length)} real endings and ${words(deadEnds.length)} dead ends.` : `Every path reaches a real ending: “The end.” There are ${words(finales.length)} of them.`}</p>
-<p class="again"><a href="#s1">Begin at Section 1.</a></p>
-</section>
-
-<section class="front contents" id="contents">
+// An empty page in the paperback, so the next section starts on a right-hand page or the page count comes out even.
+const blank = PAPERBACK ? '<section class="blank"></section>' : '';
+const howTo = PAPERBACK ? `<p>At the end of each section, pick what you’ll do next and turn to the section number it gives. Every section starts on a new page with its number at the top.</p>
+<p>The sections are shuffled on purpose. The page after a section is never the next part of your story, so follow your choice instead of turning the page. If you might want to go back, keep a finger in the page you came from.</p>` : `<p>At the end of each section, pick what you’ll do next. On a screen, click or tap your choice. On paper, turn to the section number it gives: every section starts on a new page with its number at the top.</p>
+<p>The sections are shuffled on purpose. The page after a section is never the next part of your story, so follow your choice instead of turning the page. To undo a click, use your PDF reader’s Back button.</p>`;
+const contents = PAPERBACK ? blank : `<section class="front contents" id="contents">
 <h1>Contents</h1>
 <ul>
 <li><a href="#how-to-read">How to read this book</a></li>
@@ -213,7 +192,43 @@ ${css}</style>
 </ul>
 <p>Every section, by number:</p>
 <div class="numbers">${order.map(id => `<a href="#s${num[id]}">${num[id]}</a>`).join('')}</div>
+</section>`;
+
+const page = pad => `<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>${TITLE}</title>
+<style>
+${css}</style>
+</head>
+<body>
+${PAPERBACK ? '' : `<div class="cover"><img src="cover.jpg" alt="The cover: Keyboard Heist, a pick-your-path comedy by ${esc(AUTHOR)}."></div>`}
+
+<section class="front title-page">
+<p class="kicker">${esc(KICKER)}</p>
+<p class="book-title"><span>Keyboard</span><i>Heist.</i></p>
+<p class="tagline">Steal a keyboard just to feel something.</p>
+<p class="author">${esc(AUTHOR)}</p>
+<p class="copyright">Copyright © ${new Date().getFullYear()} ${esc(AUTHOR)}</p>
 </section>
+${blank}
+
+<section class="front dedication">
+<p>${esc(DEDICATION)}</p>
+</section>
+${blank}
+
+<section class="front how-to" id="how-to-read">
+<h1>How to read this book</h1>
+<p>Don’t read this book front to back. Start at Section 1.</p>
+${howTo}
+<p>Some choices are stamped <span class="stamp sin">SIN</span> or <span class="stamp virtue">VIRTUE</span>. Pay attention to them.</p>
+<p>${deadEnds.length ? `Some paths reach a real ending: “The end.” Others hit a dead end, which sends you back to try a different choice. There are ${words(finales.length)} real endings and ${words(deadEnds.length)} dead ends.` : `Every path reaches a real ending: “The end.” There are ${words(finales.length)} of them.`}</p>
+<p class="again"><a href="#s1">Begin at Section 1.</a></p>
+</section>
+
+${contents}
 
 ${order.map(section).join('\n\n')}
 
@@ -230,6 +245,7 @@ ${finales.map(id => `<li>${esc(STORY[id].name || STORY[id].title)}</li>`).join('
 <h1>Acknowledgments</h1>
 ${paras(thanks)}
 </section>
+${pad ? blank : ''}
 <script>
 // A section too long for one page gets a smaller drawing, so few sections spill onto a second page.
 // The screen width above matches the printed text width, so this measures the printed layout.
@@ -250,13 +266,19 @@ for (const s of document.querySelectorAll('.scene')) {
 const browser = ['/Applications/Google Chrome.app/Contents/MacOS/Google Chrome', '/Applications/Microsoft Edge.app/Contents/MacOS/Microsoft Edge'].find(fs.existsSync);
 if (!browser) throw new Error('Needs Google Chrome or Microsoft Edge to lay out the pages');
 const work = fs.mkdtempSync(path.join(os.tmpdir(), 'kh-pdf-'));
-fs.writeFileSync(path.join(work, 'book.html'), page);
 fs.copyFileSync(path.join(root, 'book/kindle-cover.jpg'), path.join(work, 'cover.jpg'));
-fs.rmSync(out, { force: true });
-const p = spawn(browser, ['--headless=new', '--disable-gpu', '--no-first-run', '--no-default-browser-check', '--user-data-dir=' + path.join(work, 'profile'),
-  '--no-pdf-header-footer', '--generate-pdf-document-outline', '--print-to-pdf=' + out, 'file://' + path.join(work, 'book.html')], { stdio: 'ignore' });
-p.on('exit', () => {
-  fs.rmSync(work, { recursive: true, force: true });
-  if (!fs.existsSync(out)) { console.error('The browser did not write ' + out); process.exit(1); }
-  console.log(`Wrote ${out}: ${order.length} sections, ${ids.filter(art).length} pictures, ${finales.length} endings, ${deadEnds.length} dead ends.`);
-});
+const pageCount = () => (fs.readFileSync(out, 'latin1').match(/\/Type\s*\/Page\b/g) || []).length;
+const print = pad => {
+  fs.writeFileSync(path.join(work, 'book.html'), page(pad));
+  fs.rmSync(out, { force: true });
+  const p = spawn(browser, ['--headless=new', '--disable-gpu', '--no-first-run', '--no-default-browser-check', '--user-data-dir=' + path.join(work, 'profile'),
+    '--no-pdf-header-footer', '--generate-pdf-document-outline', '--print-to-pdf=' + out, 'file://' + path.join(work, 'book.html')], { stdio: 'ignore' });
+  p.on('exit', () => {
+    if (!fs.existsSync(out)) { fs.rmSync(work, { recursive: true, force: true }); console.error('The browser did not write ' + out); process.exit(1); }
+    // A printed book has an even number of pages, so an odd paperback gets a blank last page.
+    if (PAPERBACK && !pad && pageCount() % 2) return print(true);
+    fs.rmSync(work, { recursive: true, force: true });
+    console.log(`Wrote ${out}: ${pageCount()} pages, ${order.length} sections, ${ids.filter(art).length} pictures, ${finales.length} endings, ${deadEnds.length} dead ends.`);
+  });
+};
+print(false);
