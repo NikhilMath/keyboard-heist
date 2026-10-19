@@ -5,7 +5,8 @@
 //   node tools/paperback-cover.js
 // The front copies the Kindle cover's design (book/kindle-cover.html) at 6x9. The back-cover words live in book/back-cover.txt,
 // one paragraph per blank line: the first is set large as the lead, the last as the closing line.
-// The spine is left plain: at 84 pages it is under 0.2 in, too thin for readable spine text.
+// Spine text (user's request: KDP allows it above 79 pages): the title and author in capitals, running top to bottom, sized
+// so the capitals clear the spine's edges by KDP's 0.0625 in. Capitals have no descenders, so their cap height is all that has to fit.
 // KDP prints the ISBN barcode itself, in the lower right of the back cover, so that corner stays empty.
 
 const fs = require('fs');
@@ -30,6 +31,21 @@ const esc = s => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(
 const words = fs.readFileSync(path.join(root, 'book/back-cover.txt'), 'utf8').trim().split(/\n\s*\n/).map(p => esc(p.replace(/\s+/g, ' ')));
 const lead = words.shift(), closing = words.pop();
 
+// The spine, drawn in points. SVG's rotate(90) runs the text down the spine with the tops of the letters toward the front
+// cover, the way a US paperback reads lying face up. A baseline at x puts the capitals between x and x + cap height,
+// so centering the cap height centers the letters across the spine.
+// Measured on a render at 576 px/in: round and italic capitals run about 9% past the cap height, mostly below the
+// baseline, so the size keeps 20% spare and the baseline moves 0.022 em toward the front to center the ink itself.
+const SPINE_CLEAR = 0.0625 * 72, CAP = { Georgia: 0.693, Arial: 0.716 }; // cap heights per point of font size
+const sw = spine * 72, sl = TRIM_H * 72, room = sw - 2 * SPINE_CLEAR;
+const fit = (font, want) => Math.min(want, room / CAP[font] / 1.2);
+const titlePt = fit('Georgia', 7), authorPt = fit('Arial', 6.5);
+const baseline = (font, pt) => ((sw - pt * CAP[font]) / 2 + 0.022 * pt).toFixed(3);
+const spineText = room <= 0 ? '' : `<svg class="spine" viewBox="0 0 ${sw} ${sl}" xmlns="http://www.w3.org/2000/svg">
+<text transform="translate(${baseline('Georgia', titlePt)} ${0.6 * 72}) rotate(90)" font-family="Georgia, serif" font-weight="bold" font-size="${titlePt.toFixed(2)}" letter-spacing="0.9" fill="#f2f0e6">KEYBOARD <tspan font-style="italic" fill="#d8eeaa">HEIST.</tspan></text>
+<text transform="translate(${baseline('Arial', authorPt)} ${sl - 0.6 * 72}) rotate(90)" text-anchor="end" font-family="Arial, Helvetica, sans-serif" font-weight="bold" font-size="${authorPt.toFixed(2)}" letter-spacing="1.2" fill="#c4d4c4">${esc(AUTHOR.toUpperCase())}</text>
+</svg>`;
+
 // The front's sizes are the Kindle cover's pixels (1600x2560) scaled so its 2560 px height becomes the 9 in trim.
 const page = `<!doctype html>
 <html lang="en">
@@ -42,6 +58,7 @@ html { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
 body { margin: 0; width: ${W}in; height: ${H}in; overflow: hidden; position: relative; background: #193b37; color: #f2f0e6; font-family: Georgia, serif; }
 .panel { position: absolute; top: ${BLEED}in; width: ${TRIM_W}in; height: ${TRIM_H}in; }
 .back { left: ${BLEED}in; padding: 0.8in 0.65in 0; box-sizing: border-box; }
+.spine { position: absolute; left: ${BLEED + TRIM_W}in; top: ${BLEED}in; width: ${spine}in; height: ${TRIM_H}in; }
 .front { left: ${BLEED + TRIM_W + spine}in; --k: calc(${TRIM_H}in / 2560); display: flex; flex-direction: column; align-items: center; }
 .kicker { margin-top: calc(230 * var(--k)); font: bold calc(46 * var(--k)) Arial, Helvetica, sans-serif; letter-spacing: calc(14 * var(--k)); color: #c4d4c4; }
 h1 { margin: calc(70 * var(--k)) 0 0; font-size: calc(280 * var(--k)); line-height: 1; letter-spacing: calc(-8 * var(--k)); text-align: center; }
@@ -65,6 +82,7 @@ ${words.map(p => `<p>${p}</p>`).join('\n')}
 <p class="closing">${closing}</p>
 <p class="byline">KEYBOARD HEIST · ${esc(AUTHOR.toUpperCase())}</p>
 </section>
+${spineText}
 <section class="panel front">
 <div class="kicker">A PICK-YOUR-PATH COMEDY</div>
 <h1><span>Keyboard</span><em>Heist.</em></h1>
@@ -96,5 +114,6 @@ p.on('exit', () => {
     return exact.length === w.length && Math.abs(+w - want) < 2 ? pre + exact : m;
   });
   fs.writeFileSync(out, pdf, 'latin1');
-  console.log(`Wrote ${out}: ${W.toFixed(3)} x ${H.toFixed(3)} in for ${pages} interior pages, spine ${spine.toFixed(3)} in.`);
+  console.log(`Wrote ${out}: ${W.toFixed(3)} x ${H.toFixed(3)} in for ${pages} interior pages, spine ${spine.toFixed(3)} in` +
+    (spineText ? `, spine text ${titlePt.toFixed(2)} pt title and ${authorPt.toFixed(2)} pt author.` : ', no spine text (too thin).'));
 });
