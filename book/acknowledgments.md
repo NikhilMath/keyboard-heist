@@ -4,7 +4,7 @@ Before anything else: at the end of the day, everyone has impacted me in some wa
 
 When it comes to this book, tons of people enjoyed the game, but there are a few I want to thank in particular.
 
-My parents, Shivanand and Usha Math, for letting me nurture the comedic side of me.
+My parents, Shivanand and Usha Math, for letting me nurture the comedic, introspective side of myself.
 
 Gaurav Dhiman, for suggesting at just the right time that coding was something I should look into. He is the reason I took my coding bootcamp, which led me to making this pick-your-path story.
 
