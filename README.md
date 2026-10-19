@@ -40,6 +40,7 @@ Then open http://localhost:8000.
 | `book/keyboard-heist.epub` | The Kindle eBook of the whole story (**spoilers**) |
 | `book/keyboard-heist.pdf` | The same book as a PDF to email, read on screen or print, with the cover and every drawing (**spoilers**) |
 | `book/keyboard-heist-paperback.pdf` | The same book laid out for a printed paperback (6x9 inches, no cover; **spoilers**) |
+| `book/paperback-cover.pdf`, [`book/back-cover.txt`](book/back-cover.txt) | The paperback's wraparound cover (back, spine and front) and the words on its back |
 | `book/kdp-description.txt` | The book description for its Amazon KDP listing |
 | [`book/acknowledgments.md`](book/acknowledgments.md) | The book's acknowledgments, its last page |
 | `BRANCHES.md` | A flowchart of every branch plus the full story text (**spoilers**) |
@@ -48,6 +49,7 @@ Then open http://localhost:8000.
 | `tools/branches.js` | Rebuilds `BRANCHES.md` and `branches.html` from the story |
 | `tools/epub.js` | Rebuilds `book/keyboard-heist.epub` from the story, with the cover and every drawing |
 | `tools/pdf.js` | Rebuilds `book/keyboard-heist.pdf` from the story (`--paperback` rebuilds the paperback) |
+| `tools/paperback-cover.js` | Rebuilds `book/paperback-cover.pdf` (run it after the paperback, since the spine width follows its page count) |
 | `tools/routes.js` | Checks every route through the story for broken links, loops and things mentioned before they're introduced |
 | `story-lock.json`, `tools/lock.js` | The story is locked: you can add to it, but not change it. A fingerprint of every scene, and the check |
 | `AGENTS.md` | Instructions for AI assistants that work on this project |
